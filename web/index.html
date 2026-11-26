@@ -45,6 +45,15 @@ nav.top a.tab[aria-current="page"] { background: var(--lime); color: var(--lime-
 h1 { font: 800 clamp(44px, 9vw, 88px)/.92 var(--display); letter-spacing: -.035em; margin: 0; text-wrap: balance }
 h1 mark { background: var(--lime); color: var(--lime-ink); padding: 0 .08em }
 .hero p { margin: 0; font-size: 20px; max-width: 46ch }
+.live { display: flex; align-items: center; gap: 16px; background: var(--ink); color: #f6f5ef; text-decoration: none; border-radius: 18px; padding: 14px 20px; margin-top: 12px; width: fit-content; max-width: 100% }
+.live-n { font: 800 clamp(48px, 9vw, 72px)/1 var(--display); color: var(--lime); letter-spacing: -.03em }
+.live-t { display: grid; gap: 2px; font-size: 16px } .live-t b { font-size: 20px } .live-t span { opacity: .8 }
+.live:hover .live-t b { text-decoration: underline }
+.anti { font-weight: 700 }
+.usp { list-style: none; padding: 0; margin: 8px 0 0; display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px }
+.usp li { border: 2px solid var(--ink); border-radius: 14px; padding: 12px 14px; display: grid; gap: 4px; align-content: start; background: var(--surface); font-size: 16px }
+.usp li b { font: 800 19px/1.1 var(--display) }
+@media (max-width: 720px) { .usp { grid-template-columns: 1fr } .live { padding: 12px 14px } }
 h2 { font: 800 30px/1.05 var(--display); letter-spacing: -.02em; margin: 0; text-wrap: balance }
 h3 { font: 700 22px/1.25 var(--body); margin: 0 }
 .panel { background: var(--surface); border: 2px solid var(--ink); border-radius: 18px; padding: 20px; display: grid; gap: 16px }
@@ -150,8 +159,15 @@ th { font-family: var(--mono); font-size: 12px; text-transform: uppercase; color
   <div id="v-find">
     <header class="hero">
       <span class="mono muted">Work. Without the performance.</span>
-      <h1>Find work.<br><mark>Skip the noise.</mark></h1>
-      <p>Set your rules once. Every result follows them. Anything we can't confirm is shown separately, never mixed in.</p>
+      <h1>Every UK contract.<br><mark>One search.</mark><br>Zero noise.</h1>
+      <a class="live" href="#results" id="hero-live"><span class="live-n" id="hero-n">…</span>
+        <span class="live-t"><b id="hero-what">roles match your search right now</b><span id="hero-src">Checking the sources…</span></span></a>
+      <p class="anti">This is a utility, not a social network. No feed. No posts. No “thrilled to announce”. Just the work that fits.</p>
+      <ul class="usp">
+        <li><b>One search, every source.</b><span id="usp-src">Employer job boards, agencies and job sites, checked every 15 minutes. Close the other 14 tabs.</span></li>
+        <li><b>Filters that actually hold.</b><span>Contract means contract. Remote means remote. If the advert doesn't say, we tell you. We never guess.</span></li>
+        <li><b>Your evenings back.</b><span>Set it once, get pinged when something new fits, apply at the source, log off.</span></li>
+      </ul>
     </header>
 
     <form class="panel" id="search" aria-label="Your requirements" onsubmit="return false">
@@ -197,7 +213,7 @@ th { font-family: var(--mono); font-size: 12px; text-transform: uppercase; color
       <p class="muted" style="margin:0;font-size:14px">Check now opens the run page: press “Run workflow”. Results appear here in about 5 minutes.</p>
     </section>
 
-    <section class="results" aria-labelledby="h-res">
+    <section class="results" id="results" aria-labelledby="h-res">
       <div class="reshead"><span class="count-big" id="n-exact">0</span><h2 id="h-res">exact matches</h2></div>
       <ol class="cards" id="exact"></ol>
       <div id="empty" class="empty" hidden></div>
@@ -269,8 +285,8 @@ const OPTS = {
   rate: [["any", "Any"], ["400", "£400+"], ["500", "£500+"], ["600", "£600+"]],
   ir35: [["any", "Any"], ["outside", "Outside only"]],
 };
-const DEFAULT = { q: "Business analyst", eng: ["day"], where: "remote", posted: "1", rate: "any", ir35: "any", related: [] };
-let F = Object.assign(clone(DEFAULT), store.get("filters", {}));
+const DEFAULT = { q: "Business analyst", eng: ["day", "fixed"], where: "hybrid", posted: "7", rate: "any", ir35: "any", related: [] };
+let F = Object.assign(clone(DEFAULT), store.get("filters_v2", {}));
 const ENG = { "Day-rate contract": "day", "Fixed-term employment": "fixed", "Temporary": "temp", "Permanent": "perm" };
 const RELATED = {
   "business analyst": ["Technical business analyst", "Business process analyst", "Business systems analyst", "Data business analyst", "Product owner", "Change analyst", "Functional analyst"],
@@ -396,11 +412,13 @@ function summaryTags(f) {
     f.rate !== "any" ? lab("rate", f.rate) + " a day" : null, f.ir35 === "outside" ? "Outside IR35" : null].filter(Boolean);
 }
 function renderFind() {
-  store.set("filters", F);
+  store.set("filters_v2", F);
   $("#summary").innerHTML = summaryTags(F).map(t => `<span class="tag">${esc(t)}</span>`).join("");
   $("#rel-picked").textContent = F.related.length ? "Also including: " + F.related.join(", ") : "";
   const [ex, un] = split(F);
   $("#n-exact").textContent = ex.length;
+  if ($("#hero-n")) { $("#hero-n").textContent = ex.length.toLocaleString("en-GB");
+    $("#hero-what").textContent = (ex.length === 1 ? "role matches" : "roles match") + " your search right now"; }
   $("#h-res").textContent = ex.length === 1 ? "exact match" : "exact matches";
   $("#exact").innerHTML = ex.map(j => card(j)).join("");
   const em = $("#empty");
@@ -625,6 +643,8 @@ function adapt(x, src) {
   const setP = () => $("#st-pause").textContent = paused() ? "Resume alerts" : "Pause alerts";
   setP(); $("#st-pause").onclick = () => { store.set("alerts_paused", !paused()); setP(); toast(paused() ? "Alerts paused. Your search still runs." : "Alerts back on."); };
   $("#st-edit").onclick = () => { $("#q").focus(); $("#search").scrollIntoView({ behavior: "smooth" }); };
+  $("#hero-src").textContent = `${status.active_sources} sources · ${status.listed_jobs.toLocaleString("en-GB")} live roles checked · updated ${ukTime(lr.finished_at)}`;
+  $("#usp-src").textContent = `${status.active_sources} employer job boards, agencies and job sites, checked every 15 minutes. Close the other 14 tabs.`;
   $("#feedline").innerHTML = `Last check ${ukTime(lr.finished_at)} UK time · ${status.active_sources} active sources · ${status.listed_jobs} relevant roles listed. <a href="#admin">Source health</a>`;
   const live = sources.filter(s => s.status === "active");
   $("#feeds").innerHTML = live.slice().sort((a, b) => (b.last_job_count || 0) - (a.last_job_count || 0)).map(r => `<tr><td>${esc(r.org_name)}</td><td>${esc(r.connector)}</td><td>${r.last_job_count ?? "–"}</td><td>${esc(r.health)}</td></tr>`).join("");

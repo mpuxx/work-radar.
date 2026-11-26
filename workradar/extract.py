@@ -210,9 +210,15 @@ class Labeller:
             return "Remote"
         if "hybrid" in w:
             return self.put("attendance", "Hybrid", "feed_field", f"Feed: {self.raw.get('workplace') or self.raw.get('location')}")
-        m, q = find(r"\bfully remote\b|\bremote[- ]first\b|\b100% remote\b|\bremote \(uk\)|\bremote,? uk\b|\bwork from home\b", self.text)
+        m, q = find(r"\bfully remote\b|\bremote[- ]first\b|\b100% remote\b|\bremote \(uk\)|\bremote,? uk\b|\bwork from home\b|"
+                    r"\blocation\s*[:\-]\s*remote\b|\|\s*remote\s*\||\bremote (?:working|role|position|contract|based)\b|"
+                    r"\b(?:work|working|based) remotely\b", self.text)
         if m:
-            return self.put("attendance", "Remote", "explicit", q)
+            self.put("attendance", "Remote", "explicit", q)
+            m2, q2 = find(r"occasional (?:travel|visits?)|ad[- ]hoc (?:travel|visits?)|travel to (?:the )?(?:office|client|london)", self.text)
+            if m2:
+                self.issues.append("Remote, but advert mentions office or client visits: " + q2)
+            return "Remote"
         m, q = find(r"\bhybrid\b", self.text)
         if m:
             return self.put("attendance", "Hybrid", "explicit", q)
