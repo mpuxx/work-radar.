@@ -286,7 +286,7 @@ def run(db, candidates, limit=None, assess_fn=assess):
     fresh = {r[0] for r in db.execute("SELECT candidate_id FROM discovery_candidates WHERE state='activated' AND assessed_at > ?",
                                        (D.iso(D.now() - dt.timedelta(days=3)),))}
     todo = [c for c in (candidates[:limit] if limit else candidates)
-            if (c.get("candidate_id") or D.sha("cand", c.get("org_id") or slugify(c["name"]))) not in fresh]
+            if c.get("retired") or (c.get("candidate_id") or D.sha("cand", c.get("org_id") or slugify(c["name"]))) not in fresh]
     results = []
     # Assess in parallel (network only); write one at a time. Per-host limits in http.py still apply.
     with cf.ThreadPoolExecutor(max_workers=int(os.environ.get("WORKRADAR_DISCOVERY_WORKERS", "8"))) as ex:
