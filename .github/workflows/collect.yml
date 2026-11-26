@@ -83,7 +83,9 @@ jobs:
           n=$(gh api "repos/$REPO/actions/workflows/collect.yml/runs?event=schedule&created=>$since" --jq .total_count)
           queued=0
           for st in queued pending waiting; do
-            q=$(gh api "repos/$REPO/actions/runs?status=$st" --jq .total_count); queued=$((queued + q))
+            for wf in collect.yml discover.yml; do
+              q=$(gh api "repos/$REPO/actions/workflows/$wf/runs?status=$st" --jq .total_count); queued=$((queued + q))
+            done
           done
           disc=$(gh api "repos/$REPO/actions/workflows/discover.yml/runs?status=in_progress" --jq .total_count)
           echo "scheduled runs in last 30 min: $n; waiting runs: $queued; discovery running: $disc"
