@@ -1834,13 +1834,13 @@
  {
   "name": "Understanding Recruitment",
   "kind": "agency",
-  "domain": "understandingrecruitment.co.uk",
+  "domain": "understandingrecruitment.com",
   "sectors": [
    "IT / change recruitment"
   ],
   "hints": [],
   "origin": "desk research 2026-11-26: UK IT/change contract recruitment agency; own careers site to be scanned on the runner",
-  "careers_url": "https://www.understandingrecruitment.co.uk/jobs",
+  "careers_url": "https://www.understandingrecruitment.com/job-search/",
   "target_sector": true
  },
  {
@@ -9423,5 +9423,18 @@
   "careers_url": null,
   "target_sector": true,
   "retired": "Not connected: no API, RSS or JobPosting data found; Terms of Service (terms-of-service-2026) prohibit text/data mining and web scraping and allow personal, non-commercial use only. Needs written permission or a feed from hello@ifyoucouldjobs.com. Its employers are checked directly instead."
+ },
+ {
+  "name": "Nicoll Curtin",
+  "kind": "agency",
+  "domain": "nicollcurtin.com",
+  "sectors": [
+   "technology",
+   "digital"
+  ],
+  "hints": [],
+  "origin": "Mike asked for UK specialist tech agencies (2026-11-26)",
+  "careers_url": "https://www.nicollcurtin.com/jobs/",
+  "target_sector": true
  }
 ]

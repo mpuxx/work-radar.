@@ -188,5 +188,26 @@ class Safety(Base):
         self.assertEqual(export.jobs(self.db), [])
 
 
+
+
+class Feeds(unittest.TestCase):
+    def test_17_agency_xml_feed(self):
+        from unittest import mock
+        from workradar import connectors
+        xml = """<?xml version="1.0" encoding="utf-8"?><source><publisher><![CDATA[Example Agency]]></publisher>
+          <job><title><![CDATA[Business Analyst]]></title><date><![CDATA[2026-11-20T10:00:00Z]]></date>
+          <referencenumber><![CDATA[123]]></referencenumber><url><![CDATA[https://example.com/jobs/ba-123?source=Indeed]]></url>
+          <company><![CDATA[Example Agency]]></company><city><![CDATA[London]]></city><country><![CDATA[GB]]></country>
+          <description><![CDATA[<p>6 month contract, outside IR35, £550 per day.</p>]]></description></job></source>"""
+        with mock.patch.object(connectors.http, "get_text", return_value=(xml, {})):
+            jobs = connectors.xmlfeed({"board_id": "https://example.com/jobs.xml", "org_name": "Example Agency", "org_kind": "agency"})
+        self.assertEqual(len(jobs), 1)
+        j = jobs[0]
+        self.assertEqual(j["title"], "Business Analyst")
+        self.assertEqual(j["job_url"], "https://example.com/jobs/ba-123")
+        self.assertEqual(j["agency_name"], "Example Agency")
+        self.assertTrue(j["published_at"].startswith("2026-11-20"))
+
+
 if __name__ == "__main__":
     unittest.main()

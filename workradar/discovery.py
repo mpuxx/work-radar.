@@ -91,7 +91,9 @@ def scan_careers(url):
     return hints, unsup, None
 
 
-FEED_PATHS = ["/jobs/rss", "/jobs.rss", "/jobs/feed", "/feed/jobs", "/rss/jobs", "/job-feed", "/jobs/rss.xml", "/vacancies/rss", "/jobs?format=rss"]
+# Includes the job feeds that common agency website platforms publish: WordPress job plugins (?feed=job_feed) and /jobs.xml.
+FEED_PATHS = ["/jobs/rss", "/jobs.rss", "/jobs/feed", "/feed/jobs", "/rss/jobs", "/job-feed", "/jobs/rss.xml", "/vacancies/rss", "/jobs?format=rss",
+              "/jobs.xml", "/?feed=job_feed"]
 
 
 def probe_feeds(domain):
@@ -107,8 +109,11 @@ def probe_feeds(domain):
             text, h = http.get_text(url, accept="application/rss+xml, application/xml", timeout=12, retries=0)
         except Exception:
             continue
-        if re.search(r"<rss|<feed", text[:500], re.I) and "<item" in text:
+        if re.search(r"<rss|<feed", text[:1500], re.I) and "<item" in text:
             found.append(("rss", url))
+            break
+        if re.search(r"<source[\s>]", text[:1500]) and "<job>" in text:
+            found.append(("xmlfeed", url))
             break
     return found
 
@@ -200,7 +205,7 @@ def assess(cand):
         base = dict(connector=conn, board_id=board, region=region, relevance=rel, identity=why)
         if not ok:
             return dict(base, state="review", reason=f"Feed works but identity unconfirmed ({why})")
-        if cand.get("kind") == "agency" and conn == "rss" and rel["relevant_titles"] >= 1:
+        if cand.get("kind") == "agency" and conn in ("rss", "xmlfeed") and rel["relevant_titles"] >= 1:
             return dict(base, state="activated", reason=f"UK agency feed: {rel['relevant_titles']} relevant roles now; identity: {why}")
         if rel["relevant_uk"] >= 1:
             return dict(base, state="activated", reason=f"{rel['relevant_uk']} relevant UK roles now; identity: {why}")

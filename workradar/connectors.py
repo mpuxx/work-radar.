@@ -259,6 +259,25 @@ def rss(src, get=None):
     return out
 
 
+def xmlfeed(src, get=None):
+    """Publisher job XML feed in the common job-board syndication format (<source><job>...), as agencies publish for job boards."""
+    text, _ = http.get_text(src["board_id"], accept="application/xml, text/xml")
+    root = ET.fromstring(text)
+    jobs = root.findall(".//job")
+    _need(root.tag == "source" or jobs, "xmlfeed: not a job feed")
+    out = []
+    for it in jobs:
+        f = lambda k: (it.findtext(k) or "").strip()
+        pub, prec = _iso(f("date") or None)
+        place = ", ".join(x for x in [f("city"), f("country")] if x)
+        out.append(_job(source_job_id=f("referencenumber") or f("requisitionid") or f("url"), title=strip_html(f("title")),
+                        description=strip_html(f("description")), location=place, employment_type=f("jobtype"),
+                        pay_text=f("salary"), published_at=pub, published_precision=prec, job_url=re.sub(r"[?&]source=Indeed$", "", f("url")),
+                        agency_name=src.get("org_name") if src.get("org_kind") == "agency" else None,
+                        employer_name=src.get("org_name") if src.get("org_kind") == "employer" else (f("company") if src.get("org_kind") != "agency" else None)))
+    return out
+
+
 # ---------------- job boards with keys (agencies advertise here) ----------------
 from .taxonomy import SEARCH_TERMS as SEARCHES, batch as _batch
 
@@ -552,7 +571,7 @@ def findatender(src, get=http.get_json):
 CONNECTORS = {"contractsfinder": contractsfinder, "greenhouse": greenhouse, "lever": lever, "ashby": ashby, "smartrecruiters": smartrecruiters, "workable": workable,
               "recruitee": recruitee, "personio": personio, "pinpoint": pinpoint,
               "remotive": remotive, "himalayas": himalayas, "remoteok": remoteok, "jobicy": jobicy, "arbeitnow": arbeitnow,
-              "adzuna": adzuna, "careerjet": careerjet, "themuse": themuse, "workingnomads": workingnomads, "findatender": findatender, "jsonld": jsonld, "rss": rss, "reed": reed, "jooble": jooble}
+              "adzuna": adzuna, "careerjet": careerjet, "themuse": themuse, "workingnomads": workingnomads, "findatender": findatender, "jsonld": jsonld, "rss": rss, "xmlfeed": xmlfeed, "reed": reed, "jooble": jooble}
 
 API_HOST = {"greenhouse": "boards-api.greenhouse.io", "lever": "api.lever.co", "ashby": "api.ashbyhq.com",
             "smartrecruiters": "api.smartrecruiters.com", "workable": "apply.workable.com", "reed": "www.reed.co.uk", "jooble": "jooble.org",
@@ -572,6 +591,7 @@ ACCESS = {
     "personio": "Public XML job feed, no key",
     "jsonld": "Public schema.org JobPosting on careers pages; robots.txt checked",
     "rss": "Published RSS job feed",
+    "xmlfeed": "Published job XML feed that the agency syndicates to job boards",
     "reed": "Reed Jobseeker API, free key, basic auth (reed.co.uk/developers)",
     "jooble": "Jooble REST API, free key, 100 requests/day",
     "pinpoint": "Public Pinpoint postings JSON, no key",
@@ -587,6 +607,6 @@ ACCESS = {
     "findatender": "UK Find a Tender OCDS API, open data, no key",
     "contractsfinder": "UK Government Contracts Finder OCDS API, open data, no key (Open Government Licence)",
 }
-INTERVAL = {"workable": 60, "reed": 120, "jooble": 360, "jsonld": 60, "rss": 30, "contractsfinder": 60, "remotive": 60, "himalayas": 60,
+INTERVAL = {"workable": 60, "reed": 120, "jooble": 360, "jsonld": 60, "rss": 30, "xmlfeed": 60, "contractsfinder": 60, "remotive": 60, "himalayas": 60,
             "remoteok": 60, "jobicy": 60, "arbeitnow": 120, "adzuna": 120, "careerjet": 120, "pinpoint": 30, "themuse": 120, "workingnomads": 60, "findatender": 120}
 DAILY_CAP = {"jooble": 95, "reed": 900, "adzuna": 240, "careerjet": 300, "remoteok": 48}
