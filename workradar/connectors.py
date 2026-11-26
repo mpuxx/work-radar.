@@ -327,7 +327,7 @@ def jooble(src, get=http.get_json, budget=12):
 
 def contractsfinder(src, get=http.get_json):
     """UK public-sector tenders (bids, not jobs). Kept in their own source so the app can show them apart."""
-    d = get("https://www.contractsfinder.service.gov.uk/Published/Notices/OCDS/Search?stages=tender&limit=100")
+    d = get("https://www.contractsfinder.service.gov.uk/Published/Notices/OCDS/Search?stages=tender&limit=100", timeout=90)
     _need(isinstance(d.get("releases"), list), "contractsfinder: no releases list")
     out = []
     for r in d["releases"]:

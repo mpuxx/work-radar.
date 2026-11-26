@@ -163,8 +163,14 @@ def assess(cand):
     if unsup:
         n = unsup[0]
         return dict(state="unsupported", reason=f"Uses {n}. " + INTEGRATION.get(n, f"No public {n} feed; needs a partner feed or employer permission"))
-    return dict(state="review" if note else "rejected",
-                reason=(note + "; " if note else "") + "No working public feed found (" + "; ".join(tried[:4]) + ")")
+    transient = any(re.search(r"HTTP (0|5\d\d)|rate limited|timed out", t) for t in tried)
+    detail = "No working public feed found (" + "; ".join(tried[:4]) + ")"
+    if cand.get("kind") == "agency":
+        return dict(state="review", reason=(note + "; " if note else "") + "No public feed on the agency's own site; "
+                    "its adverts are collected through Reed and Jooble instead. " + detail)
+    if note or transient:
+        return dict(state="review", reason=(note + "; " if note else "") + "Temporary error, retried next week. " + detail)
+    return dict(state="rejected", reason=detail)
 
 
 def upsert_org(db, c):
