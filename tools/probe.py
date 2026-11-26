@@ -53,6 +53,22 @@ def probe(domain):
     print("\n".join(out), flush=True)
 
 
+def show(url):
+    """Print the start of a URL, how many JobPosting blocks it has, and a few job-like links."""
+    st, ct, body, final = get(url, 2_000_000)
+    host = re.sub(r"^https?://([^/]+).*", r"\1", url)
+    rp = urllib.robotparser.RobotFileParser()
+    rst, _, robots, _ = get(f"https://{host}/robots.txt")
+    rp.parse(robots.splitlines() if rst == 200 else [])
+    locs = re.findall(r"<loc>([^<]+)</loc>", body)
+    jobish = [u for u in locs if re.search(r"/(jobs?|vacanc|role)", u, re.I)]
+    print(f"=== SHOW {url}\n status={st} type={ct[:40]} final={final} robots_ok={rp.can_fetch(UA, url)} bytes={len(body)} "
+          f"JobPosting={body.count('JobPosting')} items={len(re.findall(r'<item>|<entry>|<job>|<vacancy>', body))} locs={len(locs)} job_locs={len(jobish)}")
+    print(" sample job urls:", jobish[:4])
+    print(" head:", re.sub(r"\s+", " ", body[:1400]))
+    print(flush=True)
+
+
 if __name__ == "__main__":
     for d in sys.argv[1:]:
-        probe(d)
+        show(d) if d.startswith("http") else probe(d)
