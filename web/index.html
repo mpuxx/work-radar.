@@ -1,0 +1,646 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Work Radar · Plain Roles</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700;12..96,800&family=Atkinson+Hyperlegible:wght@400;700&family=IBM+Plex+Mono:wght@500&display=swap">
+<style>
+/* Layout: big blunt headline, a locked filter panel, then a finite list of full job cards that ends. */
+:root {
+  --bg: #f6f5ef; --surface: #ffffff; --ink: #111111; --muted: #55554f; --rule: #dcdbd2;
+  --lime: #c6f432; --lime-ink: #111111; --lilac: #cdbcff; --lilac-soft: #ece5ff;
+  --warn: #8a4b00; --warn-bg: #ffe9c7; --link: #111111;
+  --display: "Bricolage Grotesque", "Arial Black", system-ui, sans-serif;
+  --body: "Atkinson Hyperlegible", Verdana, system-ui, sans-serif;
+  --mono: "IBM Plex Mono", ui-monospace, Menlo, monospace;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --bg: #111111; --surface: #1b1b1a; --ink: #f3f2ec; --muted: #b1b0a7; --rule: #34342f;
+  --lime: #c6f432; --lime-ink: #111111; --lilac: #b9a5ff; --lilac-soft: #2a2440;
+  --warn: #ffc56b; --warn-bg: #3b2a10; --link: #f3f2ec; color-scheme: dark } }
+:root[data-theme="dark"] {
+  --bg: #111111; --surface: #1b1b1a; --ink: #f3f2ec; --muted: #b1b0a7; --rule: #34342f;
+  --lime: #c6f432; --lime-ink: #111111; --lilac: #b9a5ff; --lilac-soft: #2a2440;
+  --warn: #ffc56b; --warn-bg: #3b2a10; --link: #f3f2ec; color-scheme: dark }
+* { box-sizing: border-box }
+[hidden] { display: none !important }
+body { margin: 0; background: var(--bg); color: var(--ink); font: 18px/1.6 var(--body) }
+.wrap { max-width: 900px; margin: 0 auto; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)) }
+a { color: var(--link) }
+:focus-visible { outline: 3px solid var(--lilac); outline-offset: 2px }
+button { font: inherit; cursor: pointer; color: inherit }
+.mono { font-family: var(--mono); font-size: 13px; letter-spacing: .04em; text-transform: uppercase }
+.muted { color: var(--muted) }
+nav.top { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 5; background: #111111; color: #f6f5ef }
+body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 10; background: #111111 }
+nav.top .wrap { display: flex; align-items: center; gap: 6px; padding-block: 10px; flex-wrap: wrap }
+.brand { font: 800 22px/1 var(--display); letter-spacing: -.02em; margin-right: auto; color: #f6f5ef; text-decoration: none }
+.brand span { background: var(--lime); color: var(--lime-ink); padding: 0 6px; margin-left: 2px }
+nav.top a.tab { color: #f6f5ef; text-decoration: none; padding: 8px 12px; border-radius: 999px; font-weight: 700; font-size: 16px }
+nav.top a.tab[aria-current="page"] { background: var(--lime); color: var(--lime-ink) }
+.badge { font-family: var(--mono); font-size: 12px; margin-left: 4px }
+.hero { padding-block: 40px 24px; display: grid; gap: 8px }
+h1 { font: 800 clamp(44px, 9vw, 88px)/.92 var(--display); letter-spacing: -.035em; margin: 0; text-wrap: balance }
+h1 mark { background: var(--lime); color: var(--lime-ink); padding: 0 .08em }
+.hero p { margin: 0; font-size: 20px; max-width: 46ch }
+h2 { font: 800 30px/1.05 var(--display); letter-spacing: -.02em; margin: 0; text-wrap: balance }
+h3 { font: 700 22px/1.25 var(--body); margin: 0 }
+.panel { background: var(--surface); border: 2px solid var(--ink); border-radius: 18px; padding: 20px; display: grid; gap: 16px }
+.row { display: grid; grid-template-columns: 120px 1fr; gap: 10px; align-items: start }
+@media (max-width: 600px) { .row { grid-template-columns: 1fr; gap: 6px } }
+.row > .mono { padding-top: 12px }
+.chips { display: flex; flex-wrap: wrap; gap: 8px }
+.chip { border: 2px solid var(--ink); background: transparent; border-radius: 999px; padding: 8px 14px; font-weight: 700; font-size: 16px; min-height: 44px }
+.chip[aria-pressed="true"] { background: var(--ink); color: var(--bg) }
+.chip[aria-pressed="true"]::before { content: "✓ " }
+input[type="text"], input[type="date"], input[type="time"], select { font: inherit; color: var(--ink); background: var(--bg);
+  border: 2px solid var(--ink); border-radius: 12px; padding: 10px 12px; min-height: 48px; width: 100%; max-width: 420px }
+.summary { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; padding-top: 12px; border-top: 2px dashed var(--rule) }
+.summary .tag { background: var(--lilac-soft); border-radius: 8px; padding: 2px 10px; font-weight: 700; font-size: 16px }
+.lock { font-size: 15px; color: var(--muted) }
+.actions { display: flex; flex-wrap: wrap; gap: 10px }
+.btn { border: 2px solid var(--ink); background: var(--surface); color: var(--ink); border-radius: 12px; padding: 10px 16px; font-weight: 700; min-height: 48px; text-decoration: none; display: inline-flex; align-items: center; gap: 6px; font-size: 17px }
+.btn.primary { background: var(--lime); color: var(--lime-ink); border-color: #111111 }
+.btn.on { background: var(--ink); color: var(--bg) }
+.btn.ghost { border-color: transparent; background: transparent; text-decoration: underline; padding-inline: 6px }
+.inline-form { background: var(--lilac-soft); border-radius: 14px; padding: 16px; display: grid; gap: 12px }
+.inline-form label { display: grid; gap: 4px; font-weight: 700 }
+.radio { display: flex; gap: 8px; flex-wrap: wrap }
+.radio label { display: flex; gap: 6px; align-items: center; font-weight: 400; border: 2px solid var(--ink); border-radius: 999px; padding: 6px 14px; background: var(--surface) }
+.related { display: grid; gap: 8px }
+.related label { display: flex; gap: 10px; align-items: center; font-weight: 400 }
+.related input { width: 22px; height: 22px; accent-color: var(--ink) }
+section.results { display: grid; gap: 16px; padding-block: 32px }
+.reshead { display: flex; flex-wrap: wrap; align-items: baseline; gap: 12px }
+.count-big { font: 800 64px/1 var(--display); letter-spacing: -.03em }
+ol.cards { list-style: none; margin: 0; padding: 0; display: grid; gap: 16px }
+.card { background: var(--surface); border: 2px solid var(--ink); border-radius: 18px; padding: 18px; display: grid; gap: 12px; min-width: 0 }
+.card.partial { border-style: dashed }
+.card .top { display: flex; justify-content: space-between; gap: 4px 10px; flex-wrap: wrap; align-items: baseline }
+.card .who { font-size: 16px; color: var(--muted) }
+.card h3 a { text-decoration: none } .card h3 a:hover { text-decoration: underline }
+.facts { display: flex; flex-wrap: wrap; gap: 6px 8px; align-items: center }
+.fact { border-radius: 8px; padding: 2px 10px; font-weight: 700; font-size: 17px; background: var(--bg); border: 1px solid var(--rule) }
+.fact.key { background: var(--lime); color: var(--lime-ink); border-color: var(--lime); font-size: 20px }
+.fact.unknown { background: transparent; border: 1px dashed var(--muted); color: var(--muted); font-weight: 400 }
+.spec { display: grid; grid-template-columns: 150px 1fr; gap: 6px 14px; margin: 0; font-size: 17px }
+.spec dt { font-family: var(--mono); font-size: 12px; text-transform: uppercase; letter-spacing: .05em; color: var(--muted); padding-top: 4px }
+.spec dd { margin: 0; min-width: 0; overflow-wrap: anywhere }
+.spec .unk { color: var(--muted) }
+@media (max-width: 600px) { .spec { grid-template-columns: 1fr; gap: 0 } .spec dd { margin-bottom: 8px } }
+.meets { font-weight: 700; display: inline-flex; gap: 6px; align-items: center }
+.meets.ok::before { content: ""; width: 12px; height: 12px; border-radius: 50%; background: var(--lime); border: 2px solid #111111 }
+.meets.part { color: var(--warn) }
+.flag { background: var(--warn-bg); color: var(--warn); border-radius: 8px; padding: 2px 10px; font-size: 15px; font-weight: 700 }
+.desc { font-size: 17px; line-height: 1.65; white-space: pre-line; max-width: 70ch; overflow-wrap: anywhere }
+.desc.clip { max-height: 9.9em; overflow: hidden; -webkit-mask-image: linear-gradient(#000 60%, transparent); mask-image: linear-gradient(#000 60%, transparent) }
+details.ev summary, .linkish { cursor: pointer; font-weight: 700; font-size: 16px; background: none; border: 0; padding: 0; text-decoration: underline; text-align: left }
+details.ev dl { display: grid; grid-template-columns: 110px 1fr; gap: 6px 12px; margin: 10px 0 0; font-size: 15px }
+details.ev dt { font-family: var(--mono); font-size: 12px; text-transform: uppercase; letter-spacing: .05em; color: var(--muted); padding-top: 3px }
+details.ev dd { margin: 0; min-width: 0; overflow-wrap: anywhere }
+@media (max-width: 600px) { details.ev dl { grid-template-columns: 1fr } }
+.cardactions { display: flex; flex-wrap: wrap; gap: 8px }
+.similar { border-top: 2px dashed var(--rule); padding-top: 12px; display: grid; gap: 8px }
+.similar ul { margin: 0; padding-left: 20px; display: grid; gap: 6px }
+.empty { background: var(--surface); border: 2px solid var(--ink); border-radius: 18px; padding: 24px; display: grid; gap: 12px; list-style: none }
+details.unknowns > summary { cursor: pointer; list-style: none; display: grid; gap: 4px }
+details.unknowns > summary::-webkit-details-marker { display: none }
+details.unknowns > summary h2::after { content: "  +"; color: var(--muted) }
+details.unknowns[open] > summary h2::after { content: "  −" }
+details.unknowns ol { margin-top: 16px }
+.end { background: #111111; color: #f6f5ef; border-radius: 18px; padding: 28px; display: grid; gap: 6px }
+.end h2 { color: var(--lime) }
+.toast { position: fixed; left: 50%; transform: translateX(-50%); bottom: calc(20px + env(safe-area-inset-bottom, 0px)); background: #111111; color: #f6f5ef;
+  border: 2px solid var(--lime); border-radius: 14px; padding: 12px 18px; font-weight: 700; z-index: 20; max-width: calc(100% - 32px) }
+footer { padding-block: 24px 64px; display: grid; gap: 16px; font-size: 16px }
+footer summary { cursor: pointer }
+.tablebox { overflow-x: auto; border: 2px solid var(--ink); border-radius: 14px; background: var(--surface) }
+table { border-collapse: collapse; width: 100%; font-size: 15px; font-variant-numeric: tabular-nums }
+th, td { text-align: left; padding: 8px 12px; border-bottom: 1px solid var(--rule); white-space: nowrap }
+th { font-family: var(--mono); font-size: 12px; text-transform: uppercase; color: var(--muted); font-weight: 500 }
+.ws { display: grid; gap: 32px; padding-bottom: 32px }
+.ws section { display: grid; gap: 12px }
+.list { display: grid; gap: 12px; list-style: none; padding: 0; margin: 0 }
+.item { background: var(--surface); border: 2px solid var(--ink); border-radius: 16px; padding: 16px; display: grid; gap: 8px; min-width: 0 }
+.item .when { font: 800 24px/1.1 var(--display) }
+.item select { max-width: 240px }
+.new { background: var(--lime); color: var(--lime-ink); padding: 0 8px; border-radius: 6px; font-weight: 700 }
+.back { display: inline-flex; margin-top: 24px }
+@media (prefers-reduced-motion: no-preference) {
+  .toast { animation: pop .18s ease-out }
+  @keyframes pop { from { transform: translate(-50%, 8px); opacity: 0 } to { transform: translate(-50%, 0); opacity: 1 } }
+  .chip, .btn { transition: transform .08s } .chip:active, .btn:active { transform: scale(.97) }
+}
+</style>
+</head>
+<body>
+
+<nav class="top" aria-label="Main">
+  <div class="wrap">
+    <a class="brand" href="#find">plain<span>roles</span></a>
+    <a class="tab" href="#find" data-view="find">Find work</a>
+    <a class="tab" href="#workspace" data-view="workspace">My workspace<span class="badge" id="b-ws"></span></a>
+    <a class="tab" href="#admin" data-view="admin">Sources</a>
+  </div>
+</nav>
+
+<main class="wrap">
+  <div id="v-find">
+    <header class="hero">
+      <span class="mono muted">Work. Without the performance.</span>
+      <h1>Find work.<br><mark>Skip the noise.</mark></h1>
+      <p>Set your rules once. Every result follows them. Anything we can't confirm is shown separately, never mixed in.</p>
+    </header>
+
+    <form class="panel" id="search" aria-label="Your requirements" onsubmit="return false">
+      <div class="row"><label class="mono" for="q">Job title</label>
+        <div style="display:grid;gap:8px"><input type="text" id="q" value="Business analyst" autocomplete="off">
+          <div id="rel-picked" class="muted" style="font-size:15px"></div></div></div>
+      <div class="row"><span class="mono">Contract</span><div class="chips" data-key="eng"></div></div>
+      <div class="row"><span class="mono">Where</span><div class="chips" data-key="where"></div></div>
+      <div class="row"><span class="mono">Posted</span><div class="chips" data-key="posted"></div></div>
+      <div class="row"><span class="mono">Day rate</span><div class="chips" data-key="rate"></div></div>
+      <div class="row"><span class="mono">IR35</span><div class="chips" data-key="ir35"></div></div>
+      <div class="summary" aria-live="polite"><span id="summary" style="display:contents"></span>
+        <span class="lock">· Locked until you change them.</span></div>
+      <div class="actions">
+        <button type="button" class="btn primary" id="btn-alert">Save alert</button>
+        <button type="button" class="btn" id="btn-related" aria-expanded="false">Explore related roles</button>
+      </div>
+      <div id="alert-form" class="inline-form" hidden>
+        <label for="alert-name">Alert name<input type="text" id="alert-name"></label>
+        <div><b>How often?</b><div class="radio" role="radiogroup" aria-label="How often">
+          <label><input type="radio" name="freq" value="Immediately"> Immediately</label>
+          <label><input type="radio" name="freq" value="Daily, 7am" checked> Daily, 7am</label>
+          <label><input type="radio" name="freq" value="Weekly, Monday"> Weekly, Monday</label></div></div>
+        <p class="muted" style="margin:0;font-size:15px">Same rules. New roles only. Nothing you've already seen.</p>
+        <div class="actions"><button type="button" class="btn primary" id="alert-save">Save this alert</button>
+          <button type="button" class="btn ghost" id="alert-cancel">Cancel</button></div>
+      </div>
+      <div id="related-box" class="inline-form" hidden>
+        <b>Related titles. Tick the ones you'd take. We won't add any without you.</b>
+        <div class="related" id="related-list"></div>
+      </div>
+    </form>
+
+    <section class="panel status" id="status" aria-live="polite" aria-labelledby="h-status">
+      <h2 id="h-status" style="margin:0">Your search is running.</h2>
+      <p id="st-line" style="margin:0">Loading the latest check…</p>
+      <p id="st-fail" class="muted" style="margin:0" hidden></p>
+      <div class="actions">
+        <a class="btn" id="st-now" href="https://github.com/mpuxx/work-radar./actions/workflows/collect.yml" target="_blank" rel="noopener">Check now ↗</a>
+        <button type="button" class="btn" id="st-pause">Pause alerts</button>
+        <button type="button" class="btn ghost" id="st-edit">Edit search</button>
+      </div>
+      <p class="muted" style="margin:0;font-size:14px">Check now opens the run page: press “Run workflow”. Results appear here in about 5 minutes.</p>
+    </section>
+
+    <section class="results" aria-labelledby="h-res">
+      <div class="reshead"><span class="count-big" id="n-exact">0</span><h2 id="h-res">exact matches</h2></div>
+      <ol class="cards" id="exact"></ol>
+      <div id="empty" class="empty" hidden></div>
+      <details class="unknowns" id="unk-box">
+        <summary><h2 id="h-unk">Missing information</h2><span class="muted" id="unk-note"></span></summary>
+        <ol class="cards" id="unknown"></ol>
+      </details>
+      <div class="end"><h2>You're up to date.</h2><p style="margin:0">Go do something else. We check again <span id="st-next">in 15 minutes</span>.</p></div>
+    </section>
+  </div>
+
+  <div id="v-job" hidden>
+    <a class="btn ghost back" href="#find">← Back to results</a>
+    <div id="job-body" style="padding-block:16px 32px"></div>
+  </div>
+
+  <div id="v-workspace" hidden>
+    <header class="hero"><span class="mono muted">My workspace</span><h1>Your next move<br><mark>is your business.</mark></h1>
+      <p>Saved roles, alerts and reminders. Private. Saved in this browser for now.</p></header>
+    <div class="ws">
+      <section aria-labelledby="h-saved"><h2 id="h-saved">Saved roles</h2><ul class="list" id="saved-list"></ul></section>
+      <section aria-labelledby="h-alerts"><h2 id="h-alerts">Alerts</h2><p class="muted" style="margin:0">Same rules. New roles only. Shown here; email comes later.</p><ul class="list" id="alerts-list"></ul></section>
+      <section aria-labelledby="h-diary"><h2 id="h-diary">Diary</h2><ul class="list" id="diary-list"></ul></section>
+      <section aria-labelledby="h-end"><h2 id="h-end">When does your contract end?</h2>
+        <p class="muted" style="margin:0">We'll put a “start looking again” reminder in your diary.</p>
+        <div class="inline-form">
+          <label for="c-end">Contract end date<input type="date" id="c-end"></label>
+          <label for="c-weeks">Remind me<select id="c-weeks"><option value="4">4 weeks before</option><option value="8" selected>8 weeks before</option><option value="12">12 weeks before</option></select></label>
+          <div class="actions"><button type="button" class="btn primary" id="c-save">Set reminder</button></div>
+        </div>
+      </section>
+    </div>
+  </div>
+
+  <div id="v-admin" hidden>
+    <header class="hero"><span class="mono muted">Source health</span><h1>Where the jobs<br><mark>come from.</mark></h1>
+      <p id="ad-sum">Loading…</p></header>
+    <div class="tablebox"><table><thead><tr><th>Organisation</th><th>Type</th><th>Feed</th><th>Status</th><th>Health</th><th>Jobs</th><th>Last success</th><th>Note</th></tr></thead><tbody id="ad-rows"></tbody></table></div>
+    <h2>Recent runs</h2>
+    <div class="tablebox"><table><thead><tr><th>Started (UK)</th><th>Trigger</th><th>Sources</th><th>OK</th><th>Failed</th><th>New jobs</th></tr></thead><tbody id="ad-runs"></tbody></table></div>
+    <p class="muted">Full registry, including rejected and review candidates: <a href="https://github.com/mpuxx/work-radar./blob/state/SOURCE_REGISTRY.csv" target="_blank" rel="noopener">SOURCE_REGISTRY.csv</a></p>
+  </div>
+
+  <footer>
+    <div id="feedline" class="muted"></div>
+    <details><summary><b>Where these jobs come from</b></summary>
+      <p class="muted" style="font-size:15px">Official public job feeds and APIs only. No logins bypassed, no pay-to-apply sites. Labels come from the advert's own words. Open “Why these labels” on any card to see them.</p>
+      <div class="tablebox"><table><thead><tr><th>Feed</th><th>Type</th><th>Jobs</th><th>Status</th></tr></thead><tbody id="feeds"></tbody></table></div>
+    </details>
+    <details><summary><b>Public-sector bids</b> <span class="muted" id="tn"></span></summary><ul id="tenders"></ul></details>
+  </footer>
+</main>
+<div class="toast" id="toast" role="status" hidden></div>
+
+<script>
+(() => {
+const $ = s => document.querySelector(s), $$ = s => [...document.querySelectorAll(s)];
+const esc = t => String(t ?? "").replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+const clone = o => JSON.parse(JSON.stringify(o));
+const store = {
+  get(k, d) { try { return JSON.parse(localStorage.getItem("pr_" + k)) ?? d } catch { return d } },
+  set(k, v) { try { localStorage.setItem("pr_" + k, JSON.stringify(v)) } catch {} }
+};
+let D = null, J = [], BYID = {};
+const OPTS = {
+  eng: [["day", "Day-rate contract"], ["fixed", "Fixed-term"], ["temp", "Temporary"], ["perm", "Permanent"]],
+  where: [["remote", "Remote, UK"], ["hybrid", "Remote or hybrid"], ["any", "Anywhere in UK"]],
+  posted: [["1", "Last 24 hours"], ["3", "3 days"], ["7", "7 days"], ["any", "Any time"]],
+  rate: [["any", "Any"], ["400", "£400+"], ["500", "£500+"], ["600", "£600+"]],
+  ir35: [["any", "Any"], ["outside", "Outside only"]],
+};
+const DEFAULT = { q: "Business analyst", eng: ["day"], where: "remote", posted: "1", rate: "any", ir35: "any", related: [] };
+let F = Object.assign(clone(DEFAULT), store.get("filters", {}));
+const ENG = { "Day-rate contract": "day", "Fixed-term employment": "fixed", "Temporary": "temp", "Permanent": "perm" };
+const RELATED = {
+  "business analyst": ["Technical business analyst", "Business process analyst", "Business systems analyst", "Data business analyst", "Product owner", "Change analyst", "Functional analyst"],
+  "product owner": ["Product manager", "Business analyst", "Delivery manager"],
+  "programme manager": ["Project manager", "Delivery manager", "Transformation manager", "PMO"],
+  "transformation": ["Change manager", "Programme manager", "Operating model", "Process improvement"],
+  "ai": ["Machine learning", "Data scientist", "AI engineer", "Forward deployed"],
+};
+const STATUSES = ["Saved", "Applied", "Recruiter call", "Interview", "Offer", "Rejected", "Not for me"];
+let saved = store.get("saved", []), diary = store.get("diary", []), alerts = store.get("alerts", []), reports = store.get("reports", []);
+
+/* Rules: each gives pass, fail or unknown. Unknown never counts as a match. */
+const titleHit = (j, q) => { const t = " " + j.title.toLowerCase().replace(/[^a-z0-9]+/g, " ") + " ", w = q.toLowerCase().replace(/[^a-z0-9]+/g, " ").trim(); return w.length > 0 && t.includes(" " + w + " "); };
+function rules(j, f, skip = []) {
+  const r = [];
+  if (!skip.includes("q")) r.push(["Title", titleHit(j, f.q) || f.related.some(x => titleHit(j, x)) ? "pass" : "fail"]);
+  if (!skip.includes("eng")) {
+    const e = ENG[j.engagement];
+    r.push(["Contract type", e ? (f.eng.includes(e) ? "pass" : "fail")
+      : j.engagement === "Contract, type not stated" ? (f.eng.some(x => x !== "perm") ? "unknown" : "fail") : "unknown"]);
+  }
+  if (!skip.includes("where") && f.where !== "any") {
+    const w = j.workplace_type;
+    r.push(["Remote", w === "Remote" ? "pass" : w === "Not stated" ? "unknown" : (f.where === "hybrid" && w.startsWith("Hybrid")) ? "pass" : "fail"]);
+  }
+  if (!skip.includes("posted") && f.posted !== "any")
+    r.push(["Posting date", (j.posted_kind === "time" || j.posted_kind === "date") ? (j.age_days <= +f.posted ? "pass" : "fail") : "unknown"]);
+  if (!skip.includes("rate") && f.rate !== "any")
+    r.push(["Day rate", j.rate_unit === "day" ? ((j.rate_max ?? j.rate_min) >= +f.rate ? "pass" : "fail") : "unknown"]);
+  if (!skip.includes("ir35") && f.ir35 === "outside")
+    r.push(["IR35", j.ir35 === "Outside IR35" ? "pass" : j.ir35 === "Inside IR35" ? "fail" : "unknown"]);
+  return r;
+}
+const verdict = r => r.some(x => x[1] === "fail") ? "fail" : r.some(x => x[1] === "unknown") ? "unknown" : "pass";
+function split(f) {
+  const ex = [], un = [];
+  for (const j of J) { const r = rules(j, f), v = verdict(r);
+    if (v === "pass") ex.push(j); else if (v === "unknown") un.push([j, r.filter(x => x[1] === "unknown").map(x => x[0])]); }
+  return [ex, un];
+}
+
+/* Labels */
+const money = n => "£" + Math.round(n).toLocaleString("en-GB");
+function rateText(j) {
+  if (!j.rate_unit) return null;
+  const two = j.rate_max && j.rate_max !== j.rate_min;
+  if (j.rate_unit === "year") return `£${Math.round(j.rate_min / 1000)}k${two ? "–£" + Math.round(j.rate_max / 1000) + "k" : ""} a year`;
+  return `${money(j.rate_min)}${two ? "–" + money(j.rate_max) : ""} a ${j.rate_unit}`;
+}
+function whereText(j) {
+  const town = esc(j.location.split(/[;,(]/)[0].trim() || "UK"), w = j.workplace_type;
+  if (w === "Remote") return `Remote UK · <span class="unk">No office attendance stated</span>`;
+  if (w.startsWith("Hybrid, ")) return `${town} · Hybrid · <b>${esc(w.slice(8))}</b>`;
+  if (w === "Hybrid") return `${town} · Hybrid · <span class="unk">Office days not stated</span>`;
+  if (w === "On-site") return `${town} · On-site`;
+  return `${town} · <span class="unk">Office attendance not stated</span>`;
+}
+function postedText(j) {
+  if (j.posted_kind === "unknown" || j.posted_kind === "updated") return "Found today · posting date unknown";
+  const a = j.age_days, when = a === 0 ? "today" : a === 1 ? "yesterday" : `${a} days ago`;
+  return `Posted ${when}${j.posted_kind === "date" ? " (date only)" : ""}`;
+}
+const unk = t => `<span class="unk">${t}</span>`;
+function linkText(j) {
+  const t = j.link_checked ? new Date(j.link_checked).toLocaleTimeString("en-GB", { hour: "2-digit", minute: "2-digit", timeZone: "Europe/London" }) : "";
+  return j.link === "ok" ? `Apply page checked at ${t} today · working` : unk("Apply page not checked (the site blocks checks)");
+}
+function specRows(j) {
+  const rate = rateText(j);
+  return `<dl class="spec">
+    <dt>Day rate / pay</dt><dd>${rate ? `<b>${esc(rate)}</b>` : unk("Rate not disclosed")}</dd>
+    <dt>IR35</dt><dd>${j.ir35 === "Not stated" ? unk("Not stated") : esc(j.ir35)}</dd>
+    <dt>Contract type</dt><dd>${ENG[j.engagement] ? esc(j.engagement) : unk(esc(j.engagement === "Not stated" ? "Not stated" : j.engagement))}</dd>
+    <dt>Duration</dt><dd>${j.duration === "Not stated" ? unk("Not stated") : esc(j.duration)}</dd>
+    <dt>Start</dt><dd>${j.start === "Not stated" ? unk("Not stated") : esc(j.start)}</dd>
+    <dt>Hours</dt><dd>${j.hours === "Not stated" ? unk("Not stated") : esc(j.hours)}</dd>
+    <dt>Location</dt><dd>${whereText(j)}</dd>
+    <dt>Posted</dt><dd>${esc(postedText(j))}</dd>
+    <dt>Source</dt><dd>${esc(j.source)}${j.also_on && j.also_on.length ? ` · also on ${esc(j.also_on.join(", "))}` : ""}</dd>
+    <dt>Apply link</dt><dd>${linkText(j)}</dd>
+  </dl>`;
+}
+const isSaved = id => saved.some(s => s.id === id);
+function actionButtons(j) {
+  return `<div class="cardactions">
+      <a class="btn primary" href="${esc(j.url)}" target="_blank" rel="noopener">Apply at source ↗</a>
+      <button type="button" class="btn${isSaved(j.id) ? " on" : ""}" data-act="save" aria-pressed="${isSaved(j.id)}">${isSaved(j.id) ? "Saved ✓" : "Save"}</button>
+      <button type="button" class="btn" data-act="similar" aria-expanded="false">Find similar</button>
+      <button type="button" class="btn" data-act="diary">Add to diary</button>
+      <button type="button" class="btn ghost" data-act="report">Report incorrect details</button></div>
+    <div class="slot"></div>`;
+}
+function descBlock(j, full) {
+  if (!j.description) return `<p class="muted" style="margin:0">Full advert text isn't in today's feed. Open the original to read it.</p>`;
+  return `<div><div class="mono muted" style="margin-bottom:4px">The advert</div><div class="desc${full ? "" : " clip"}">${esc(j.description)}</div>
+    ${full ? "" : `<button type="button" class="linkish" data-act="more">Read the full advert</button>`}</div>`;
+}
+function card(j, unknowns) {
+  const n = rules(j, F).length;
+  const meets = unknowns && unknowns.length ? `<span class="meets part">Can't confirm: ${esc(unknowns.join(", ").toLowerCase())}</span>` : `<span class="meets ok">Meets all ${n} requirements</span>`;
+  const ev = Object.entries(j.evidence || {}).map(([k, v]) => `<dt>${esc(k)}</dt><dd>“${esc(v)}”</dd>`).join("");
+  return `<li class="card${unknowns && unknowns.length ? " partial" : ""}" data-id="${j.id}">
+    <div class="top"><span class="who">${esc(j.company || "Company not named")}</span><span class="mono muted">${esc(postedText(j))}</span></div>
+    <h3><a href="#job-${j.id}">${esc(j.title)}</a></h3>
+    <div class="facts">${meets}${j.flags.length ? `<span class="flag">Check before applying: ${esc(j.flags.join(", "))}</span>` : ""}</div>
+    ${specRows(j)}
+    ${descBlock(j, false)}
+    ${ev ? `<details class="ev"><summary>Why these labels</summary><dl>${ev}</dl></details>` : ""}
+    ${actionButtons(j)}
+  </li>`;
+}
+
+function chips() {
+  for (const box of $$(".chips[data-key]")) {
+    const k = box.dataset.key;
+    box.innerHTML = OPTS[k].map(([v, l]) => `<button type="button" class="chip" data-v="${v}" aria-pressed="${Array.isArray(F[k]) ? F[k].includes(v) : F[k] === v}">${l}</button>`).join("");
+  }
+}
+function summaryTags(f) {
+  const lab = (k, v) => OPTS[k].find(x => x[0] === v)?.[1];
+  return [f.q + (f.related.length ? ` + ${f.related.length} related` : ""), "UK",
+    f.eng.map(v => lab("eng", v)).join(" or ") || "No contract type picked", lab("where", f.where), lab("posted", f.posted),
+    f.rate !== "any" ? lab("rate", f.rate) + " a day" : null, f.ir35 === "outside" ? "Outside IR35" : null].filter(Boolean);
+}
+function renderFind() {
+  store.set("filters", F);
+  $("#summary").innerHTML = summaryTags(F).map(t => `<span class="tag">${esc(t)}</span>`).join("");
+  $("#rel-picked").textContent = F.related.length ? "Also including: " + F.related.join(", ") : "";
+  const [ex, un] = split(F);
+  $("#n-exact").textContent = ex.length;
+  $("#h-res").textContent = ex.length === 1 ? "exact match" : "exact matches";
+  $("#exact").innerHTML = ex.map(j => card(j)).join("");
+  const em = $("#empty");
+  em.hidden = ex.length > 0;
+  if (!ex.length) {
+    const tries = [["posted", "3", "Last 3 days"], ["posted", "7", "Last 7 days"], ["posted", "any", "Any posting date"], ["where", "hybrid", "Allow hybrid"],
+      ["where", "any", "Anywhere in UK"], ["rate", "any", "Any day rate"], ["ir35", "any", "Any IR35"]]
+      .filter(([k, v]) => F[k] !== v).map(([k, v, l]) => { const g = clone(F); g[k] = v; return [k, v, l, split(g)[0].length]; })
+      .filter(x => x[3] > 0);
+    const seen = new Set(), best = tries.filter(x => !seen.has(x[0]) && seen.add(x[0])).slice(0, 4);
+    em.innerHTML = `<h2>No exact matches today.</h2><p style="margin:0">We checked <b>${J.length}</b> live roles from today's feed. None meets all your rules.</p><p style="margin:0">Contract means contract. We won't sneak in roles that break your rules.</p>` +
+      (best.length ? `<p style="margin:0"><b>Want to change one rule yourself?</b></p><div class="actions">${best.map(([k, v, l, n]) =>
+        `<button type="button" class="btn" data-relax="${k}" data-v="${v}">${esc(l)} → ${n} match${n === 1 ? "" : "es"}</button>`).join("")}</div>` : "");
+  }
+  $("#unk-box").open = ex.length === 0 && un.length > 0;
+  $("#h-unk").textContent = `Missing information (${un.length})`;
+  $("#unk-note").textContent = un.length ? "These might fit, but the advert doesn't say. Not counted as matches." : "Nothing here.";
+  $("#unknown").innerHTML = un.slice(0, 40).map(([j, u]) => card(j, u)).join("") +
+    (un.length > 40 ? `<li class="muted">Showing 40 of ${un.length}. Tighten your rules to see the rest.</li>` : "");
+}
+function renderRelated() {
+  const key = Object.keys(RELATED).find(k => F.q.toLowerCase().includes(k));
+  const list = key ? RELATED[key] : [], g = clone(F); g.related = [];
+  $("#related-list").innerHTML = list.length ? list.map(t => {
+    const n = J.filter(j => titleHit(j, t) && !titleHit(j, F.q) && verdict(rules(j, g, ["q"])) === "pass").length;
+    return `<label><input type="checkbox" value="${esc(t)}" ${F.related.includes(t) ? "checked" : ""}> ${esc(t)} <span class="muted">(${n} exact today)</span></label>`;
+  }).join("") : `<span class="muted">No related titles for “${esc(F.q)}” yet. Try Business analyst, Product owner, Programme manager or AI.</span>`;
+}
+/* Similar: same contract, remote, rate and IR35 rules. Ignores title and posting date. */
+function similar(j) {
+  const base = new Set(j.skills), words = new Set(j.title.toLowerCase().split(/\W+/).filter(w => w.length > 3));
+  return J.filter(x => x.id !== j.id && verdict(rules(x, F, ["q", "posted"])) === "pass").map(x => {
+    const shared = x.skills.filter(s => base.has(s)), tw = x.title.toLowerCase().split(/\W+/).filter(w => words.has(w)).length;
+    return [x, shared, shared.length * 2 + tw * 3 + (x.family === j.family ? 2 : 0)];
+  }).filter(x => x[2] >= 4).sort((a, b) => b[2] - a[2]).slice(0, 6);
+}
+
+/* Job details screen */
+function renderJob(id) {
+  const j = BYID[id], s = saved.find(x => x.id === id);
+  if (!j && !s) { $("#job-body").innerHTML = `<div class="empty"><h2>This role isn't in today's feed.</h2><p style="margin:0">It may have closed.</p></div>`; return; }
+  if (!j) { $("#job-body").innerHTML = `<div class="empty"><h2>${esc(s.title)}</h2><p style="margin:0">This role isn't in today's feed any more. It may have closed. <a href="${esc(s.url)}" target="_blank" rel="noopener">Check the original ↗</a></p></div>`; return; }
+  const r = rules(j, F), v = verdict(r);
+  const ev = Object.entries(j.evidence || {}).map(([k, x]) => `<dt>${esc(k)}</dt><dd>“${esc(x)}”</dd>`).join("");
+  $("#job-body").innerHTML = `<article class="card" data-id="${j.id}" style="gap:16px">
+    <div class="top"><span class="who">${esc(j.company || "Company not named")}</span><span class="mono muted">${esc(postedText(j))}</span></div>
+    <h1 style="font-size:clamp(32px,6vw,52px)">${esc(j.title)}</h1>
+    <div class="facts"><span class="meets ${v === "pass" ? "ok" : "part"}">${v === "pass" ? `Meets all ${r.length} of your requirements` : v === "unknown" ? "Can't confirm: " + esc(r.filter(x => x[1] === "unknown").map(x => x[0]).join(", ").toLowerCase()) : "Breaks: " + esc(r.filter(x => x[1] === "fail").map(x => x[0]).join(", ").toLowerCase())}</span>
+      ${j.flags.length ? `<span class="flag">Check before applying: ${esc(j.flags.join(", "))}</span>` : ""}</div>
+    ${specRows(j)}
+    ${actionButtons(j)}
+    ${descBlock(j, true)}
+    ${ev ? `<div><h2 style="font-size:24px;margin-bottom:8px">Why these labels</h2><p class="muted" style="margin:0 0 8px;font-size:15px">The advert's own words for each label.</p><dl class="spec">${ev}</dl></div>` : ""}
+  </article>`;
+}
+
+/* Workspace */
+function toast(msg) { const t = $("#toast"); t.textContent = msg; t.hidden = false; clearTimeout(toast.t); toast.t = setTimeout(() => t.hidden = true, 2600); }
+function badges() { const n = saved.length + alerts.length + diary.length; $("#b-ws").textContent = n || ""; }
+function persist() { store.set("saved", saved); store.set("diary", diary); store.set("alerts", alerts); store.set("reports", reports); badges(); }
+function diaryForm(j) {
+  const d = new Date(Date.now() + 2 * 864e5).toISOString().slice(0, 10);
+  return `<div class="inline-form" role="group" aria-label="Add to diary">
+    <label>What is it?<select id="d-type-${j.id}"><option>Application deadline</option><option>Recruiter call</option><option>Interview</option><option selected>Follow-up</option></select></label>
+    <label>Date<input type="date" id="d-date-${j.id}" value="${d}"></label>
+    <label>Time (optional)<input type="time" id="d-time-${j.id}"></label>
+    <label>Note (optional)<input type="text" id="d-note-${j.id}" placeholder="e.g. Chase the recruiter"></label>
+    <div class="actions"><button type="button" class="btn primary" data-act="diary-save">Save to diary</button><button type="button" class="btn ghost" data-act="close">Cancel</button></div></div>`;
+}
+function reportForm(j) {
+  return `<div class="inline-form" role="group" aria-label="Report incorrect details">
+    <label>What's wrong?<select id="r-field-${j.id}"><option>Day rate</option><option>IR35</option><option>Contract type</option><option>Location or office days</option><option>Duration</option><option>Start date</option><option>Posting date</option><option>Job has closed</option><option>Apply link doesn't work</option><option>Something else</option></select></label>
+    <label>What should it say? (optional)<input type="text" id="r-note-${j.id}" placeholder="e.g. It's inside IR35"></label>
+    <div class="actions"><button type="button" class="btn primary" data-act="report-save">Send report</button><button type="button" class="btn ghost" data-act="close">Cancel</button></div></div>`;
+}
+function snap(j) { return { id: j.id, title: j.title, company: j.company, url: j.url, rate: rateText(j), ir35: j.ir35, where: j.workplace_type, source: j.source }; }
+function renderWorkspace() {
+  $("#saved-list").innerHTML = saved.length ? saved.map(s => {
+    const live = BYID[s.id];
+    return `<li class="item"><span class="mono muted">Saved ${new Date(s.at).toLocaleDateString("en-GB", { day: "numeric", month: "short" })}${live ? "" : " · no longer in today's feed"}</span>
+      <h3><a href="#job-${s.id}">${esc(s.title)}</a></h3>
+      <span>${esc(s.company || "")}${s.rate ? " · " + esc(s.rate) : " · Rate not disclosed"}${s.ir35 && s.ir35 !== "Not stated" ? " · " + esc(s.ir35) : ""}</span>
+      <label style="display:grid;gap:4px;font-weight:700">Status<select data-status="${s.id}">${STATUSES.map(x => `<option${x === s.status ? " selected" : ""}>${x}</option>`).join("")}</select></label>
+      <div class="actions"><a class="btn" href="${esc(s.url)}" target="_blank" rel="noopener">Open original ↗</a><button type="button" class="btn ghost" data-unsave="${s.id}">Remove</button></div></li>`;
+  }).join("") : `<li class="empty"><h2>Nothing saved yet.</h2><p style="margin:0">Press “Save” on any role.</p></li>`;
+  $("#alerts-list").innerHTML = alerts.length ? alerts.map((a, i) => {
+    const fresh = split(a.filters)[0].filter(j => !a.seen.includes(j.id));
+    return `<li class="item"><span class="mono muted">${esc(a.freq)} · saved ${new Date(a.created).toLocaleDateString("en-GB", { day: "numeric", month: "short" })}</span>
+      <h3>${esc(a.name)}</h3>
+      <span>${fresh.length ? `<span class="new">${fresh.length} new</span> since you last looked.` : "Nothing new. You're up to date."}</span>
+      <div class="actions"><button type="button" class="btn primary" data-open-alert="${i}">Open results</button>
+        ${fresh.length ? `<button type="button" class="btn" data-seen-alert="${i}">Mark as seen</button>` : ""}
+        <button type="button" class="btn ghost" data-del-alert="${i}">Delete</button></div></li>`;
+  }).join("") : `<li class="empty"><h2>No alerts yet.</h2><p style="margin:0">Set your rules on Find work, then press “Save alert”.</p></li>`;
+  const list = [...diary].sort((a, b) => (a.date + (a.time || "")).localeCompare(b.date + (b.time || "")));
+  $("#diary-list").innerHTML = list.length ? list.map(e => {
+    const d = new Date(e.date + "T12:00:00");
+    return `<li class="item"><span class="mono muted">${esc(e.type)}</span>
+      <span class="when">${d.toLocaleDateString("en-GB", { weekday: "short", day: "numeric", month: "short", year: "numeric" })}${e.time ? " · " + esc(e.time) : ""}</span>
+      ${e.title ? `<span>${e.url ? `<a href="${esc(e.url)}" target="_blank" rel="noopener"><b>${esc(e.title)}</b></a>` : `<b>${esc(e.title)}</b>`}${e.company ? " · " + esc(e.company) : ""}${e.rate ? " · " + esc(e.rate) : ""}</span>` : ""}
+      ${e.note ? `<span>${esc(e.note)}</span>` : ""}
+      <div class="actions"><button type="button" class="btn ghost" data-del-diary="${e.key}">Remove</button></div></li>`;
+  }).join("") : `<li class="empty"><h2>Nothing in your diary.</h2><p style="margin:0">Press “Add to diary” on a role, or set your contract end date below.</p></li>`;
+  badges();
+}
+
+function route() {
+  const h = location.hash.slice(1);
+  const v = h.startsWith("job-") ? "job" : h === "workspace" ? "workspace" : h === "admin" ? "admin" : "find";
+  for (const x of ["find", "job", "workspace", "admin"]) $("#v-" + x).hidden = x !== v;
+  $$("nav a.tab").forEach(a => a.dataset.view === v ? a.setAttribute("aria-current", "page") : a.removeAttribute("aria-current"));
+  if (v === "job") { renderJob(h.slice(4)); scrollTo(0, 0); }
+  if (v === "workspace") renderWorkspace();
+  if (v === "find") renderFind();
+}
+
+document.addEventListener("click", e => {
+  const c = e.target.closest(".chip");
+  if (c) { const k = c.parentElement.dataset.key, v = c.dataset.v;
+    if (Array.isArray(F[k])) F[k] = F[k].includes(v) ? F[k].filter(x => x !== v) : [...F[k], v]; else F[k] = v;
+    chips(); renderFind(); return; }
+  const rl = e.target.closest("[data-relax]");
+  if (rl) { F[rl.dataset.relax] = rl.dataset.v; chips(); renderFind(); toast("Rule changed. Your call."); return; }
+  const li = e.target.closest(".card"), actEl = e.target.closest("[data-act]");
+  if (li && actEl) {
+    const act = actEl.dataset.act, j = BYID[li.dataset.id], slot = li.querySelector(".slot");
+    if (act === "more") { const d = li.querySelector(".desc"); d.classList.remove("clip"); actEl.remove(); }
+    if (act === "save") {
+      if (isSaved(j.id)) { saved = saved.filter(s => s.id !== j.id); toast("Removed from saved roles."); }
+      else { saved.push(Object.assign(snap(j), { status: "Saved", at: Date.now() })); toast("Saved to your workspace."); }
+      persist(); const on = isSaved(j.id); actEl.classList.toggle("on", on); actEl.setAttribute("aria-pressed", on); actEl.textContent = on ? "Saved ✓" : "Save";
+    }
+    if (act === "similar") {
+      const open = actEl.getAttribute("aria-expanded") === "true";
+      actEl.setAttribute("aria-expanded", String(!open));
+      if (open) { slot.innerHTML = ""; return; }
+      const s = similar(j);
+      slot.innerHTML = `<div class="similar"><b>Similar roles that still follow your contract, remote, rate and IR35 rules</b>${s.length ? `<ul>${s.map(([x, sh]) =>
+        `<li><a href="#job-${x.id}">${esc(x.title)}</a> · ${esc(x.company)}${rateText(x) ? " · " + esc(rateText(x)) : ""}${sh.length ? ` <span class="muted">· shares ${esc(sh.slice(0, 3).join(", "))}</span>` : ""}</li>`).join("")}</ul>` : `<span class="muted">Nothing similar passes your rules today.</span>`}</div>`;
+    }
+    if (act === "diary") slot.innerHTML = diaryForm(j);
+    if (act === "report") slot.innerHTML = reportForm(j);
+    if (act === "close") slot.innerHTML = "";
+    if (act === "diary-save") {
+      const g = id => document.getElementById(id + "-" + j.id).value;
+      if (!g("d-date")) { toast("Pick a date first."); return; }
+      diary.push(Object.assign({ key: Date.now().toString(36), type: g("d-type"), date: g("d-date"), time: g("d-time"), note: g("d-note") }, snap(j)));
+      persist(); slot.innerHTML = `<p style="margin:0"><b>Saved to your diary.</b> <a href="#workspace">Open workspace</a></p>`; toast("Saved to your diary.");
+    }
+    if (act === "report-save") {
+      const g = id => document.getElementById(id + "-" + j.id).value;
+      reports.push({ id: j.id, title: j.title, url: j.url, field: g("r-field"), note: g("r-note"), at: Date.now() });
+      persist(); slot.innerHTML = `<p style="margin:0"><b>Thanks. Report logged.</b> <span class="muted">In this prototype it's kept in your browser. In the pilot it goes to a review queue.</span></p>`;
+      toast("Report logged.");
+    }
+    return;
+  }
+  const t = e.target.closest("button"); if (!t) return;
+  if (t.id === "btn-alert") { const f = $("#alert-form"); f.hidden = !f.hidden; $("#alert-name").value = summaryTags(F).join(" · "); }
+  if (t.id === "alert-cancel") $("#alert-form").hidden = true;
+  if (t.id === "alert-save") {
+    const freq = document.querySelector('input[name="freq"]:checked').value;
+    alerts.push({ name: $("#alert-name").value || summaryTags(F).join(" · "), freq, filters: clone(F), created: Date.now(), seen: split(F)[0].map(j => j.id) });
+    persist(); $("#alert-form").hidden = true; toast(`Alert saved. ${freq}. New roles only.`);
+  }
+  if (t.id === "btn-related") { const b = $("#related-box"); b.hidden = !b.hidden; t.setAttribute("aria-expanded", String(!b.hidden)); if (!b.hidden) renderRelated(); }
+  if (t.id === "c-save") {
+    const end = $("#c-end").value, wk = +$("#c-weeks").value;
+    if (!end) { toast("Pick your contract end date first."); return; }
+    const d = new Date(end + "T12:00:00"); d.setDate(d.getDate() - wk * 7);
+    diary = diary.filter(x => x.type !== "Start looking again");
+    diary.push({ key: "restart", type: "Start looking again", date: d.toISOString().slice(0, 10), title: `Your contract ends ${new Date(end + "T12:00:00").toLocaleDateString("en-GB", { day: "numeric", month: "long", year: "numeric" })}`, note: "Check your rate, availability and alerts." });
+    store.set("contract_end", { end, wk }); persist(); renderWorkspace(); toast("Reminder set.");
+  }
+  if (t.dataset.openAlert) { F = clone(alerts[+t.dataset.openAlert].filters); $("#q").value = F.q; chips(); location.hash = "find"; renderFind(); }
+  if (t.dataset.seenAlert) { const a = alerts[+t.dataset.seenAlert]; a.seen = split(a.filters)[0].map(j => j.id); persist(); renderWorkspace(); }
+  if (t.dataset.delAlert) { alerts.splice(+t.dataset.delAlert, 1); persist(); renderWorkspace(); toast("Alert deleted."); }
+  if (t.dataset.delDiary) { diary = diary.filter(x => x.key !== t.dataset.delDiary); persist(); renderWorkspace(); }
+  if (t.dataset.unsave) { saved = saved.filter(x => x.id !== t.dataset.unsave); persist(); renderWorkspace(); }
+});
+document.addEventListener("change", e => {
+  if (e.target.closest("#related-list")) { F.related = $$("#related-list input:checked").map(i => i.value); renderFind(); }
+  const st = e.target.closest("[data-status]");
+  if (st) { const s = saved.find(x => x.id === st.dataset.status); s.status = st.value; persist(); toast(`Marked as ${st.value.toLowerCase()}.`); }
+});
+$("#q").addEventListener("input", e => { F.q = e.target.value.trim(); F.related = []; renderFind(); if (!$("#related-box").hidden) renderRelated(); });
+addEventListener("hashchange", route);
+
+const ukTime = t => t ? new Date(t).toLocaleString("en-GB", { weekday: "short", day: "numeric", month: "short", hour: "2-digit", minute: "2-digit", timeZone: "Europe/London" }) : "never";
+const getJSON = p => fetch(p, { cache: "no-store" }).then(r => { if (!r.ok) throw new Error(p + " " + r.status); return r.json(); });
+function adapt(x, src) {
+  const pk = x.published_at ? (x.published_precision === "date" ? "date" : "time") : (x.source_updated_at ? "updated" : "unknown");
+  const age = x.published_at ? Math.max(0, Math.floor((Date.now() - new Date(x.published_at)) / 864e5)) : null;
+  const ev = {}; for (const [k, v] of Object.entries(x.provenance || {})) ev[k[0].toUpperCase() + k.slice(1).replace("_", " ")] = (v.method === "inferred" ? "Inferred: " : "") + (v.quote || "");
+  const s = src[x.source_id] || {};
+  return { id: x.job_id, source: s.org_kind === "job_board" ? s.org_name : (s.org_name || x.source_id) + " careers", company: x.employer_name || x.agency_name,
+    agency: x.agency_name, title: x.title, location: x.location || "", posted: x.published_at, updated: x.source_updated_at, url: x.apply_url || x.job_url,
+    family: x.family, engagement: x.engagement, hours: x.hours, rate_min: x.rate_min, rate_max: x.rate_max,
+    rate_unit: x.currency === "GBP" ? x.pay_period : null, ir35: x.ir35, duration: x.duration, start: x.start,
+    workplace_type: x.attendance || "Not stated", age_days: age, posted_kind: pk, first_detected: x.first_detected_at,
+    flags: (x.issues || []).filter(i => /conflict|not stated|outside|visit/i.test(i)).slice(0, 3).concat(x.stale ? ["Source failed at the last check; may be out of date"] : []),
+    also_on: [], evidence: ev, skills: x.skills || [], link: x.apply_check_status, link_checked: null, description: x.description || "",
+    listing: x.listing_status, dup: x.dup_group, tender: s.org_kind === "public_sector" };
+}
+(async () => {
+ try {
+  const [jobs, status, sources] = await Promise.all([getJSON("data/jobs.json"), getJSON("data/status.json"), getJSON("data/sources.json")]);
+  const src = {}; sources.forEach(s => src[s.source_id] = s);
+  const all = jobs.filter(x => x.listing_status === "listed").map(x => adapt(x, src));
+  const seen = {}; const tenders = all.filter(j => j.tender);
+  J = [];
+  for (const j of all.filter(j => !j.tender)) { if (j.dup && seen[j.dup]) { seen[j.dup].also_on.push(j.source); continue; } if (j.dup) seen[j.dup] = j; J.push(j); }
+  J.forEach(j => BYID[j.id] = j);
+  D = { stats: status, sources, tenders, jobs: J };
+  const ce = store.get("contract_end", null); if (ce) { $("#c-end").value = ce.end; $("#c-weeks").value = String(ce.wk); }
+  $("#q").value = F.q; chips(); badges(); route();
+  const lr = status.last_run || {}, fails = status.partial_failures || [];
+  $("#st-line").innerHTML = `Last checked <b>${ukTime(lr.finished_at)}</b> UK time: ${status.active_sources} sources, ${status.listed_jobs.toLocaleString("en-GB")} relevant roles listed, ${lr.new_jobs ?? 0} new in that check.`;
+  if (fails.length) { $("#st-fail").hidden = false; $("#st-fail").textContent = `${fails.length} source${fails.length > 1 ? "s" : ""} couldn't be checked last time (${fails.slice(0, 4).map(f => f.name).join(", ")}${fails.length > 4 ? "…" : ""}). Their jobs are kept and marked as possibly out of date.`; }
+  if (status.next_check_at) $("#st-next").textContent = "at " + new Date(status.next_check_at).toLocaleTimeString("en-GB", { hour: "2-digit", minute: "2-digit", timeZone: "Europe/London" });
+  const paused = () => store.get("alerts_paused", false);
+  const setP = () => $("#st-pause").textContent = paused() ? "Resume alerts" : "Pause alerts";
+  setP(); $("#st-pause").onclick = () => { store.set("alerts_paused", !paused()); setP(); toast(paused() ? "Alerts paused. Your search still runs." : "Alerts back on."); };
+  $("#st-edit").onclick = () => { $("#q").focus(); $("#search").scrollIntoView({ behavior: "smooth" }); };
+  $("#feedline").innerHTML = `Last check ${ukTime(lr.finished_at)} UK time · ${status.active_sources} active sources · ${status.listed_jobs} relevant roles listed. <a href="#admin">Source health</a>`;
+  const live = sources.filter(s => s.status === "active");
+  $("#feeds").innerHTML = live.slice().sort((a, b) => (b.last_job_count || 0) - (a.last_job_count || 0)).map(r => `<tr><td>${esc(r.org_name)}</td><td>${esc(r.connector)}</td><td>${r.last_job_count ?? "–"}</td><td>${esc(r.health)}</td></tr>`).join("");
+  $("#tn").textContent = `(${tenders.length} open)`;
+  $("#tenders").innerHTML = tenders.map(t => `<li><a href="${esc(t.url)}" target="_blank" rel="noopener">${esc(t.title)}</a> · ${esc(t.company || "")}</li>`).join("") || "<li>None today.</li>";
+  const h = {}; sources.forEach(s => h[s.status] = (h[s.status] || 0) + 1);
+  $("#ad-sum").textContent = `${h.active || 0} active · ${h.review || 0} in review · ${h.unsupported || 0} unsupported. Health of active sources: ${Object.entries(status.health || {}).map(([k, v]) => v + " " + k).join(", ")}.`;
+  $("#ad-rows").innerHTML = sources.map(s => `<tr><td>${esc(s.org_name)}</td><td>${esc(s.org_kind)}</td><td>${esc(s.connector)}:${esc(s.board_id || "")}</td><td>${esc(s.status)}</td><td>${esc(s.health)}</td><td>${s.last_job_count ?? "–"}</td><td>${ukTime(s.last_success_at)}</td><td>${esc((s.last_error || s.status_reason || "").slice(0, 120))}</td></tr>`).join("");
+  $("#ad-runs").innerHTML = (status.recent_runs || []).map(r => `<tr><td>${ukTime(r.started_at)}</td><td>${esc(r.trigger || "")}</td><td>${r.sources_due ?? ""}</td><td>${r.sources_ok ?? ""}</td><td>${r.sources_failed ?? ""}</td><td>${r.new_jobs ?? ""}</td></tr>`).join("");
+ } catch (err) {
+  console.log(err);
+  $("#st-line").textContent = "Couldn't load the latest check. Refresh in a minute.";
+  $("#exact").innerHTML = `<li class="empty"><h2>Couldn't load jobs.</h2><p style="margin:0">Refresh the page. If it keeps happening, the last run may have failed: see Sources.</p></li>`;
+ }
+})();
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,1990 @@
+[
+ {
+  "name": "Monzo",
+  "kind": "employer",
+  "domain": "monzo.com",
+  "sectors": [
+   "fintech"
+  ],
+  "hints": [
+   "greenhouse:monzo"
+  ],
+  "origin": "validated in Plain Roles prototype feed run, 2026-11-25",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "GoCardless",
+  "kind": "employer",
+  "domain": "gocardless.com",
+  "sectors": [
+   "fintech"
+  ],
+  "hints": [
+   "greenhouse:gocardless"
+  ],
+  "origin": "validated in Plain Roles prototype feed run, 2026-11-25",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Tide",
+  "kind": "employer",
+  "domain": "tide.co",
+  "sectors": [
+   "fintech"
+  ],
+  "hints": [
+   "greenhouse:tide"
+  ],
+  "origin": "validated in Plain Roles prototype feed run, 2026-11-25",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Form3",
+  "kind": "employer",
+  "domain": "form3.tech",
+  "sectors": [
+   "fintech"
+  ],
+  "hints": [
+   "greenhouse:form3"
+  ],
+  "origin": "validated in Plain Roles prototype feed run, 2026-11-25",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Deliveroo",
+  "kind": "employer",
+  "domain": "deliveroo.co.uk",
+  "sectors": [
+   "consumer tech"
+  ],
+  "hints": [
+   "greenhouse:deliveroo"
+  ],
+  "origin": "validated in Plain Roles prototype feed run, 2026-11-25",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Graphcore",
+  "kind": "employer",
+  "domain": "graphcore.ai",
+  "sectors": [
+   "AI"
+  ],
+  "hints": [
+   "greenhouse:graphcore"
+  ],
+  "origin": "validated in Plain Roles prototype feed run, 2026-11-25",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Anthropic",
+  "kind": "employer",
+  "domain": "anthropic.com",
+  "sectors": [
+   "AI"
+  ],
+  "hints": [
+   "greenhouse:anthropic"
+  ],
+  "origin": "validated in Plain Roles prototype feed run, 2026-11-25",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Palantir",
+  "kind": "employer",
+  "domain": "palantir.com",
+  "sectors": [
+   "AI"
+  ],
+  "hints": [
+   "lever:palantir"
+  ],
+  "origin": "validated in Plain Roles prototype feed run, 2026-11-25",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Spotify",
+  "kind": "employer",
+  "domain": "spotify.com",
+  "sectors": [
+   "media"
+  ],
+  "hints": [
+   "lever:spotify"
+  ],
+  "origin": "validated in Plain Roles prototype feed run, 2026-11-25",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Faculty",
+  "kind": "employer",
+  "domain": "faculty.ai",
+  "sectors": [
+   "AI"
+  ],
+  "hints": [
+   "ashby:faculty"
+  ],
+  "origin": "validated in Plain Roles prototype feed run, 2026-11-25",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Synthesia",
+  "kind": "employer",
+  "domain": "synthesia.io",
+  "sectors": [
+   "AI"
+  ],
+  "hints": [
+   "ashby:synthesia"
+  ],
+  "origin": "validated in Plain Roles prototype feed run, 2026-11-25",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "ElevenLabs",
+  "kind": "employer",
+  "domain": "elevenlabs.io",
+  "sectors": [
+   "AI"
+  ],
+  "hints": [
+   "ashby:elevenlabs"
+  ],
+  "origin": "validated in Plain Roles prototype feed run, 2026-11-25",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Multiverse",
+  "kind": "employer",
+  "domain": "multiverse.io",
+  "sectors": [
+   "edtech"
+  ],
+  "hints": [
+   "ashby:multiverse"
+  ],
+  "origin": "validated in Plain Roles prototype feed run, 2026-11-25",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Wayve",
+  "kind": "employer",
+  "domain": "wayve.ai",
+  "sectors": [
+   "AI"
+  ],
+  "hints": [
+   "ashby:wayve"
+  ],
+  "origin": "validated in Plain Roles prototype feed run, 2026-11-25",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Paddle",
+  "kind": "employer",
+  "domain": "paddle.com",
+  "sectors": [
+   "fintech"
+  ],
+  "hints": [
+   "ashby:paddle"
+  ],
+  "origin": "validated in Plain Roles prototype feed run, 2026-11-25",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Granola",
+  "kind": "employer",
+  "domain": "granola.ai",
+  "sectors": [
+   "AI"
+  ],
+  "hints": [
+   "ashby:granola"
+  ],
+  "origin": "validated in Plain Roles prototype feed run, 2026-11-25",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Cohere",
+  "kind": "employer",
+  "domain": "cohere.com",
+  "sectors": [
+   "AI"
+  ],
+  "hints": [
+   "ashby:cohere"
+  ],
+  "origin": "validated in Plain Roles prototype feed run, 2026-11-25",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Quantexa",
+  "kind": "employer",
+  "domain": "quantexa.com",
+  "sectors": [
+   "AI"
+  ],
+  "hints": [
+   "ashby:quantexa"
+  ],
+  "origin": "validated in Plain Roles prototype feed run, 2026-11-25",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Causaly",
+  "kind": "employer",
+  "domain": "causaly.com",
+  "sectors": [
+   "AI"
+  ],
+  "hints": [
+   "ashby:causaly"
+  ],
+  "origin": "validated in Plain Roles prototype feed run, 2026-11-25",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Motorway",
+  "kind": "employer",
+  "domain": "motorway.co.uk",
+  "sectors": [
+   "consumer tech"
+  ],
+  "hints": [
+   "ashby:motorway"
+  ],
+  "origin": "validated in Plain Roles prototype feed run, 2026-11-25",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "OpenAI",
+  "kind": "employer",
+  "domain": "openai.com",
+  "sectors": [
+   "AI"
+  ],
+  "hints": [
+   "ashby:openai"
+  ],
+  "origin": "validated in Plain Roles prototype feed run, 2026-11-25",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Perplexity",
+  "kind": "employer",
+  "domain": "perplexity.ai",
+  "sectors": [
+   "AI"
+  ],
+  "hints": [
+   "ashby:perplexity"
+  ],
+  "origin": "validated in Plain Roles prototype feed run, 2026-11-25",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "ServiceNow",
+  "kind": "employer",
+  "domain": "servicenow.com",
+  "sectors": [
+   "enterprise software"
+  ],
+  "hints": [
+   "smartrecruiters:ServiceNow"
+  ],
+  "origin": "validated in Plain Roles prototype feed run, 2026-11-25",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Experian",
+  "kind": "employer",
+  "domain": "experian.co.uk",
+  "sectors": [
+   "data"
+  ],
+  "hints": [
+   "smartrecruiters:Experian"
+  ],
+  "origin": "validated in Plain Roles prototype feed run, 2026-11-25",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Version 1",
+  "kind": "employer",
+  "domain": "version1.com",
+  "sectors": [
+   "consultancy"
+  ],
+  "hints": [
+   "smartrecruiters:Version1"
+  ],
+  "origin": "validated in Plain Roles prototype feed run, 2026-11-25",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Endava",
+  "kind": "employer",
+  "domain": "endava.com",
+  "sectors": [
+   "consultancy"
+  ],
+  "hints": [
+   "smartrecruiters:Endava"
+  ],
+  "origin": "validated in Plain Roles prototype feed run, 2026-11-25",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Canva",
+  "kind": "employer",
+  "domain": "canva.com",
+  "sectors": [
+   "software"
+  ],
+  "hints": [
+   "smartrecruiters:Canva"
+  ],
+  "origin": "validated in Plain Roles prototype feed run, 2026-11-25",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Checkout.com",
+  "kind": "employer",
+  "domain": "checkout.com",
+  "sectors": [
+   "fintech"
+  ],
+  "hints": [
+   "greenhouse:checkoutcom"
+  ],
+  "origin": "desk research 2026-11-26: UK employer hiring BA / delivery / transformation / AI / CMS roles; board to be confirmed by live API",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Wise",
+  "kind": "employer",
+  "domain": "wise.com",
+  "sectors": [
+   "fintech"
+  ],
+  "hints": [
+   "greenhouse:wise"
+  ],
+  "origin": "desk research 2026-11-26: UK employer hiring BA / delivery / transformation / AI / CMS roles; board to be confirmed by live API",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Starling Bank",
+  "kind": "employer",
+  "domain": "starlingbank.com",
+  "sectors": [
+   "fintech"
+  ],
+  "hints": [
+   "workable:starling-bank"
+  ],
+  "origin": "desk research 2026-11-26: UK employer hiring BA / delivery / transformation / AI / CMS roles; board to be confirmed by live API",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Zopa",
+  "kind": "employer",
+  "domain": "zopa.com",
+  "sectors": [
+   "fintech"
+  ],
+  "hints": [],
+  "origin": "desk research 2026-11-26: UK employer hiring BA / delivery / transformation / AI / CMS roles; board to be confirmed by live API",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "OakNorth",
+  "kind": "employer",
+  "domain": "oaknorth.com",
+  "sectors": [
+   "fintech"
+  ],
+  "hints": [],
+  "origin": "desk research 2026-11-26: UK employer hiring BA / delivery / transformation / AI / CMS roles; board to be confirmed by live API",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "ClearScore",
+  "kind": "employer",
+  "domain": "clearscore.com",
+  "sectors": [
+   "fintech"
+  ],
+  "hints": [],
+  "origin": "desk research 2026-11-26: UK employer hiring BA / delivery / transformation / AI / CMS roles; board to be confirmed by live API",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Cleo",
+  "kind": "employer",
+  "domain": "meetcleo.com",
+  "sectors": [
+   "fintech"
+  ],
+  "hints": [
+   "ashby:cleo"
+  ],
+  "origin": "desk research 2026-11-26: UK employer hiring BA / delivery / transformation / AI / CMS roles; board to be confirmed by live API",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Thought Machine",
+  "kind": "employer",
+  "domain": "thoughtmachine.net",
+  "sectors": [
+   "fintech"
+  ],
+  "hints": [
+   "greenhouse:thoughtmachine"
+  ],
+  "origin": "desk research 2026-11-26: UK employer hiring BA / delivery / transformation / AI / CMS roles; board to be confirmed by live API",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Curve",
+  "kind": "employer",
+  "domain": "curve.com",
+  "sectors": [
+   "fintech"
+  ],
+  "hints": [],
+  "origin": "desk research 2026-11-26: UK employer hiring BA / delivery / transformation / AI / CMS roles; board to be confirmed by live API",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Lendable",
+  "kind": "employer",
+  "domain": "lendable.co.uk",
+  "sectors": [
+   "fintech"
+  ],
+  "hints": [
+   "ashby:lendable"
+  ],
+  "origin": "desk research 2026-11-26: UK employer hiring BA / delivery / transformation / AI / CMS roles; board to be confirmed by live API",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Marshmallow",
+  "kind": "employer",
+  "domain": "marshmallow.com",
+  "sectors": [
+   "insurtech"
+  ],
+  "hints": [],
+  "origin": "desk research 2026-11-26: UK employer hiring BA / delivery / transformation / AI / CMS roles; board to be confirmed by live API",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Zego",
+  "kind": "employer",
+  "domain": "zego.com",
+  "sectors": [
+   "insurtech"
+  ],
+  "hints": [],
+  "origin": "desk research 2026-11-26: UK employer hiring BA / delivery / transformation / AI / CMS roles; board to be confirmed by live API",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Onfido",
+  "kind": "employer",
+  "domain": "onfido.com",
+  "sectors": [
+   "fintech"
+  ],
+  "hints": [],
+  "origin": "desk research 2026-11-26: UK employer hiring BA / delivery / transformation / AI / CMS roles; board to be confirmed by live API",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Elliptic",
+  "kind": "employer",
+  "domain": "elliptic.co",
+  "sectors": [
+   "fintech"
+  ],
+  "hints": [],
+  "origin": "desk research 2026-11-26: UK employer hiring BA / delivery / transformation / AI / CMS roles; board to be confirmed by live API",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Revolut",
+  "kind": "employer",
+  "domain": "revolut.com",
+  "sectors": [
+   "fintech"
+  ],
+  "hints": [],
+  "origin": "desk research 2026-11-26: UK employer hiring BA / delivery / transformation / AI / CMS roles; board to be confirmed by live API",
+  "careers_url": "https://www.revolut.com/careers/",
+  "target_sector": true
+ },
+ {
+  "name": "Octopus Energy",
+  "kind": "employer",
+  "domain": "octopus.energy",
+  "sectors": [
+   "energy"
+  ],
+  "hints": [],
+  "origin": "desk research 2026-11-26: UK employer hiring BA / delivery / transformation / AI / CMS roles; board to be confirmed by live API",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Kraken Technologies",
+  "kind": "employer",
+  "domain": "kraken.tech",
+  "sectors": [
+   "energy"
+  ],
+  "hints": [],
+  "origin": "desk research 2026-11-26: UK employer hiring BA / delivery / transformation / AI / CMS roles; board to be confirmed by live API",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "OVO",
+  "kind": "employer",
+  "domain": "ovo.com",
+  "sectors": [
+   "energy"
+  ],
+  "hints": [],
+  "origin": "desk research 2026-11-26: UK employer hiring BA / delivery / transformation / AI / CMS roles; board to be confirmed by live API",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Ocado Technology",
+  "kind": "employer",
+  "domain": "ocadogroup.com",
+  "sectors": [
+   "retail tech"
+  ],
+  "hints": [],
+  "origin": "desk research 2026-11-26: UK employer hiring BA / delivery / transformation / AI / CMS roles; board to be confirmed by live API",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Skyscanner",
+  "kind": "employer",
+  "domain": "skyscanner.net",
+  "sectors": [
+   "travel"
+  ],
+  "hints": [
+   "greenhouse:skyscanner"
+  ],
+  "origin": "desk research 2026-11-26: UK employer hiring BA / delivery / transformation / AI / CMS roles; board to be confirmed by live API",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Trainline",
+  "kind": "employer",
+  "domain": "thetrainline.com",
+  "sectors": [
+   "travel"
+  ],
+  "hints": [],
+  "origin": "desk research 2026-11-26: UK employer hiring BA / delivery / transformation / AI / CMS roles; board to be confirmed by live API",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Moonpig",
+  "kind": "employer",
+  "domain": "moonpig.com",
+  "sectors": [
+   "retail"
+  ],
+  "hints": [],
+  "origin": "desk research 2026-11-26: UK employer hiring BA / delivery / transformation / AI / CMS roles; board to be confirmed by live API",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Depop",
+  "kind": "employer",
+  "domain": "depop.com",
+  "sectors": [
+   "retail"
+  ],
+  "hints": [],
+  "origin": "desk research 2026-11-26: UK employer hiring BA / delivery / transformation / AI / CMS roles; board to be confirmed by live API",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Cera",
+  "kind": "employer",
+  "domain": "ceracare.co.uk",
+  "sectors": [
+   "health tech"
+  ],
+  "hints": [],
+  "origin": "desk research 2026-11-26: UK employer hiring BA / delivery / transformation / AI / CMS roles; board to be confirmed by live API",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Snyk",
+  "kind": "employer",
+  "domain": "snyk.io",
+  "sectors": [
+   "software"
+  ],
+  "hints": [],
+  "origin": "desk research 2026-11-26: UK employer hiring BA / delivery / transformation / AI / CMS roles; board to be confirmed by live API",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Darktrace",
+  "kind": "employer",
+  "domain": "darktrace.com",
+  "sectors": [
+   "AI"
+  ],
+  "hints": [],
+  "origin": "desk research 2026-11-26: UK employer hiring BA / delivery / transformation / AI / CMS roles; board to be confirmed by live API",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "PolyAI",
+  "kind": "employer",
+  "domain": "poly.ai",
+  "sectors": [
+   "AI"
+  ],
+  "hints": [
+   "ashby:polyai"
+  ],
+  "origin": "desk research 2026-11-26: UK employer hiring BA / delivery / transformation / AI / CMS roles; board to be confirmed by live API",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Stability AI",
+  "kind": "employer",
+  "domain": "stability.ai",
+  "sectors": [
+   "AI"
+  ],
+  "hints": [],
+  "origin": "desk research 2026-11-26: UK employer hiring BA / delivery / transformation / AI / CMS roles; board to be confirmed by live API",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Google DeepMind",
+  "kind": "employer",
+  "domain": "deepmind.google",
+  "sectors": [
+   "AI"
+  ],
+  "hints": [
+   "greenhouse:deepmind"
+  ],
+  "origin": "desk research 2026-11-26: UK employer hiring BA / delivery / transformation / AI / CMS roles; board to be confirmed by live API",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Contentful",
+  "kind": "employer",
+  "domain": "contentful.com",
+  "sectors": [
+   "CMS"
+  ],
+  "hints": [
+   "greenhouse:contentful"
+  ],
+  "origin": "desk research 2026-11-26: UK employer hiring BA / delivery / transformation / AI / CMS roles; board to be confirmed by live API",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Sanity",
+  "kind": "employer",
+  "domain": "sanity.io",
+  "sectors": [
+   "CMS"
+  ],
+  "hints": [],
+  "origin": "desk research 2026-11-26: UK employer hiring BA / delivery / transformation / AI / CMS roles; board to be confirmed by live API",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Storyblok",
+  "kind": "employer",
+  "domain": "storyblok.com",
+  "sectors": [
+   "CMS"
+  ],
+  "hints": [],
+  "origin": "desk research 2026-11-26: UK employer hiring BA / delivery / transformation / AI / CMS roles; board to be confirmed by live API",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Sitecore",
+  "kind": "employer",
+  "domain": "sitecore.com",
+  "sectors": [
+   "CMS"
+  ],
+  "hints": [],
+  "origin": "desk research 2026-11-26: UK employer hiring BA / delivery / transformation / AI / CMS roles; board to be confirmed by live API",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Equal Experts",
+  "kind": "employer",
+  "domain": "equalexperts.com",
+  "sectors": [
+   "consultancy"
+  ],
+  "hints": [],
+  "origin": "desk research 2026-11-26: UK employer hiring BA / delivery / transformation / AI / CMS roles; board to be confirmed by live API",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Thoughtworks",
+  "kind": "employer",
+  "domain": "thoughtworks.com",
+  "sectors": [
+   "consultancy"
+  ],
+  "hints": [
+   "greenhouse:thoughtworks"
+  ],
+  "origin": "desk research 2026-11-26: UK employer hiring BA / delivery / transformation / AI / CMS roles; board to be confirmed by live API",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Made Tech",
+  "kind": "employer",
+  "domain": "madetech.com",
+  "sectors": [
+   "public sector digital"
+  ],
+  "hints": [],
+  "origin": "desk research 2026-11-26: UK employer hiring BA / delivery / transformation / AI / CMS roles; board to be confirmed by live API",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "TPXimpact",
+  "kind": "employer",
+  "domain": "tpximpact.com",
+  "sectors": [
+   "public sector digital"
+  ],
+  "hints": [],
+  "origin": "desk research 2026-11-26: UK employer hiring BA / delivery / transformation / AI / CMS roles; board to be confirmed by live API",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Valtech",
+  "kind": "employer",
+  "domain": "valtech.com",
+  "sectors": [
+   "consultancy"
+  ],
+  "hints": [
+   "smartrecruiters:Valtech"
+  ],
+  "origin": "desk research 2026-11-26: UK employer hiring BA / delivery / transformation / AI / CMS roles; board to be confirmed by live API",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Zühlke",
+  "kind": "employer",
+  "domain": "zuehlke.com",
+  "sectors": [
+   "consultancy"
+  ],
+  "hints": [],
+  "origin": "desk research 2026-11-26: UK employer hiring BA / delivery / transformation / AI / CMS roles; board to be confirmed by live API",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Publicis Sapient",
+  "kind": "employer",
+  "domain": "publicissapient.com",
+  "sectors": [
+   "consultancy"
+  ],
+  "hints": [
+   "smartrecruiters:PublicisGroupe"
+  ],
+  "origin": "desk research 2026-11-26: UK employer hiring BA / delivery / transformation / AI / CMS roles; board to be confirmed by live API",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Capco",
+  "kind": "employer",
+  "domain": "capco.com",
+  "sectors": [
+   "consultancy"
+  ],
+  "hints": [],
+  "origin": "desk research 2026-11-26: UK employer hiring BA / delivery / transformation / AI / CMS roles; board to be confirmed by live API",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Netcompany",
+  "kind": "employer",
+  "domain": "netcompany.com",
+  "sectors": [
+   "consultancy"
+  ],
+  "hints": [],
+  "origin": "desk research 2026-11-26: UK employer hiring BA / delivery / transformation / AI / CMS roles; board to be confirmed by live API",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Adaptavist",
+  "kind": "employer",
+  "domain": "adaptavist.com",
+  "sectors": [
+   "consultancy"
+  ],
+  "hints": [],
+  "origin": "desk research 2026-11-26: UK employer hiring BA / delivery / transformation / AI / CMS roles; board to be confirmed by live API",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "AND Digital",
+  "kind": "employer",
+  "domain": "and.digital",
+  "sectors": [
+   "consultancy"
+  ],
+  "hints": [],
+  "origin": "desk research 2026-11-26: UK employer hiring BA / delivery / transformation / AI / CMS roles; board to be confirmed by live API",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Kubrick Group",
+  "kind": "employer",
+  "domain": "kubrickgroup.com",
+  "sectors": [
+   "consultancy"
+  ],
+  "hints": [],
+  "origin": "desk research 2026-11-26: UK employer hiring BA / delivery / transformation / AI / CMS roles; board to be confirmed by live API",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Visa",
+  "kind": "employer",
+  "domain": "visa.co.uk",
+  "sectors": [
+   "payments"
+  ],
+  "hints": [
+   "smartrecruiters:Visa"
+  ],
+  "origin": "desk research 2026-11-26: UK employer hiring BA / delivery / transformation / AI / CMS roles; board to be confirmed by live API",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Bosch",
+  "kind": "employer",
+  "domain": "bosch.co.uk",
+  "sectors": [
+   "engineering"
+  ],
+  "hints": [
+   "smartrecruiters:BoschGroup"
+  ],
+  "origin": "desk research 2026-11-26: UK employer hiring BA / delivery / transformation / AI / CMS roles; board to be confirmed by live API",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "HelloFresh",
+  "kind": "employer",
+  "domain": "hellofresh.co.uk",
+  "sectors": [
+   "consumer"
+  ],
+  "hints": [
+   "greenhouse:hellofresh"
+  ],
+  "origin": "desk research 2026-11-26: UK employer hiring BA / delivery / transformation / AI / CMS roles; board to be confirmed by live API",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Gousto",
+  "kind": "employer",
+  "domain": "gousto.co.uk",
+  "sectors": [
+   "consumer"
+  ],
+  "hints": [],
+  "origin": "desk research 2026-11-26: UK employer hiring BA / delivery / transformation / AI / CMS roles; board to be confirmed by live API",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Bloom & Wild",
+  "kind": "employer",
+  "domain": "bloomandwild.com",
+  "sectors": [
+   "consumer"
+  ],
+  "hints": [],
+  "origin": "desk research 2026-11-26: UK employer hiring BA / delivery / transformation / AI / CMS roles; board to be confirmed by live API",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Just Eat Takeaway",
+  "kind": "employer",
+  "domain": "justeattakeaway.com",
+  "sectors": [
+   "consumer tech"
+  ],
+  "hints": [],
+  "origin": "desk research 2026-11-26: UK employer hiring BA / delivery / transformation / AI / CMS roles; board to be confirmed by live API",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Farfetch",
+  "kind": "employer",
+  "domain": "farfetch.com",
+  "sectors": [
+   "retail"
+  ],
+  "hints": [],
+  "origin": "desk research 2026-11-26: UK employer hiring BA / delivery / transformation / AI / CMS roles; board to be confirmed by live API",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "ASOS",
+  "kind": "employer",
+  "domain": "asos.com",
+  "sectors": [
+   "retail"
+  ],
+  "hints": [],
+  "origin": "desk research 2026-11-26: UK employer hiring BA / delivery / transformation / AI / CMS roles; board to be confirmed by live API",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Mintel",
+  "kind": "employer",
+  "domain": "mintel.com",
+  "sectors": [
+   "data"
+  ],
+  "hints": [],
+  "origin": "desk research 2026-11-26: UK employer hiring BA / delivery / transformation / AI / CMS roles; board to be confirmed by live API",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Improbable",
+  "kind": "employer",
+  "domain": "improbable.io",
+  "sectors": [
+   "software"
+  ],
+  "hints": [],
+  "origin": "desk research 2026-11-26: UK employer hiring BA / delivery / transformation / AI / CMS roles; board to be confirmed by live API",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Cognism",
+  "kind": "employer",
+  "domain": "cognism.com",
+  "sectors": [
+   "software"
+  ],
+  "hints": [],
+  "origin": "desk research 2026-11-26: UK employer hiring BA / delivery / transformation / AI / CMS roles; board to be confirmed by live API",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Beamery",
+  "kind": "employer",
+  "domain": "beamery.com",
+  "sectors": [
+   "software"
+  ],
+  "hints": [],
+  "origin": "desk research 2026-11-26: UK employer hiring BA / delivery / transformation / AI / CMS roles; board to be confirmed by live API",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Tractable",
+  "kind": "employer",
+  "domain": "tractable.ai",
+  "sectors": [
+   "AI"
+  ],
+  "hints": [],
+  "origin": "desk research 2026-11-26: UK employer hiring BA / delivery / transformation / AI / CMS roles; board to be confirmed by live API",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Signal AI",
+  "kind": "employer",
+  "domain": "signal-ai.com",
+  "sectors": [
+   "AI"
+  ],
+  "hints": [],
+  "origin": "desk research 2026-11-26: UK employer hiring BA / delivery / transformation / AI / CMS roles; board to be confirmed by live API",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Peak",
+  "kind": "employer",
+  "domain": "peak.ai",
+  "sectors": [
+   "AI"
+  ],
+  "hints": [],
+  "origin": "desk research 2026-11-26: UK employer hiring BA / delivery / transformation / AI / CMS roles; board to be confirmed by live API",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Builder.ai",
+  "kind": "employer",
+  "domain": "builder.ai",
+  "sectors": [
+   "AI"
+  ],
+  "hints": [],
+  "origin": "desk research 2026-11-26: UK employer hiring BA / delivery / transformation / AI / CMS roles; board to be confirmed by live API",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Ravelin",
+  "kind": "employer",
+  "domain": "ravelin.com",
+  "sectors": [
+   "fintech"
+  ],
+  "hints": [],
+  "origin": "desk research 2026-11-26: UK employer hiring BA / delivery / transformation / AI / CMS roles; board to be confirmed by live API",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Primer",
+  "kind": "employer",
+  "domain": "primer.io",
+  "sectors": [
+   "fintech"
+  ],
+  "hints": [],
+  "origin": "desk research 2026-11-26: UK employer hiring BA / delivery / transformation / AI / CMS roles; board to be confirmed by live API",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Yapily",
+  "kind": "employer",
+  "domain": "yapily.com",
+  "sectors": [
+   "fintech"
+  ],
+  "hints": [],
+  "origin": "desk research 2026-11-26: UK employer hiring BA / delivery / transformation / AI / CMS roles; board to be confirmed by live API",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "TrueLayer",
+  "kind": "employer",
+  "domain": "truelayer.com",
+  "sectors": [
+   "fintech"
+  ],
+  "hints": [],
+  "origin": "desk research 2026-11-26: UK employer hiring BA / delivery / transformation / AI / CMS roles; board to be confirmed by live API",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Plum",
+  "kind": "employer",
+  "domain": "withplum.com",
+  "sectors": [
+   "fintech"
+  ],
+  "hints": [],
+  "origin": "desk research 2026-11-26: UK employer hiring BA / delivery / transformation / AI / CMS roles; board to be confirmed by live API",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Freetrade",
+  "kind": "employer",
+  "domain": "freetrade.io",
+  "sectors": [
+   "fintech"
+  ],
+  "hints": [],
+  "origin": "desk research 2026-11-26: UK employer hiring BA / delivery / transformation / AI / CMS roles; board to be confirmed by live API",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Monument",
+  "kind": "employer",
+  "domain": "monument.co",
+  "sectors": [
+   "fintech"
+  ],
+  "hints": [],
+  "origin": "desk research 2026-11-26: UK employer hiring BA / delivery / transformation / AI / CMS roles; board to be confirmed by live API",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Allica Bank",
+  "kind": "employer",
+  "domain": "allica.bank",
+  "sectors": [
+   "fintech"
+  ],
+  "hints": [],
+  "origin": "desk research 2026-11-26: UK employer hiring BA / delivery / transformation / AI / CMS roles; board to be confirmed by live API",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Kroo",
+  "kind": "employer",
+  "domain": "kroo.com",
+  "sectors": [
+   "fintech"
+  ],
+  "hints": [],
+  "origin": "desk research 2026-11-26: UK employer hiring BA / delivery / transformation / AI / CMS roles; board to be confirmed by live API",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Bud",
+  "kind": "employer",
+  "domain": "thisisbud.com",
+  "sectors": [
+   "fintech"
+  ],
+  "hints": [],
+  "origin": "desk research 2026-11-26: UK employer hiring BA / delivery / transformation / AI / CMS roles; board to be confirmed by live API",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Huel",
+  "kind": "employer",
+  "domain": "huel.com",
+  "sectors": [
+   "consumer"
+  ],
+  "hints": [],
+  "origin": "desk research 2026-11-26: UK employer hiring BA / delivery / transformation / AI / CMS roles; board to be confirmed by live API",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Babbel",
+  "kind": "employer",
+  "domain": "babbel.com",
+  "sectors": [
+   "edtech"
+  ],
+  "hints": [],
+  "origin": "desk research 2026-11-26: UK employer hiring BA / delivery / transformation / AI / CMS roles; board to be confirmed by live API",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Pleo",
+  "kind": "employer",
+  "domain": "pleo.io",
+  "sectors": [
+   "fintech"
+  ],
+  "hints": [],
+  "origin": "desk research 2026-11-26: UK employer hiring BA / delivery / transformation / AI / CMS roles; board to be confirmed by live API",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Personio",
+  "kind": "employer",
+  "domain": "personio.com",
+  "sectors": [
+   "software"
+  ],
+  "hints": [],
+  "origin": "desk research 2026-11-26: UK employer hiring BA / delivery / transformation / AI / CMS roles; board to be confirmed by live API",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Miro",
+  "kind": "employer",
+  "domain": "miro.com",
+  "sectors": [
+   "software"
+  ],
+  "hints": [],
+  "origin": "desk research 2026-11-26: UK employer hiring BA / delivery / transformation / AI / CMS roles; board to be confirmed by live API",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Typeform",
+  "kind": "employer",
+  "domain": "typeform.com",
+  "sectors": [
+   "software"
+  ],
+  "hints": [],
+  "origin": "desk research 2026-11-26: UK employer hiring BA / delivery / transformation / AI / CMS roles; board to be confirmed by live API",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Sennder",
+  "kind": "employer",
+  "domain": "sennder.com",
+  "sectors": [
+   "logistics"
+  ],
+  "hints": [],
+  "origin": "desk research 2026-11-26: UK employer hiring BA / delivery / transformation / AI / CMS roles; board to be confirmed by live API",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Hopper",
+  "kind": "employer",
+  "domain": "hopper.com",
+  "sectors": [
+   "travel"
+  ],
+  "hints": [],
+  "origin": "desk research 2026-11-26: UK employer hiring BA / delivery / transformation / AI / CMS roles; board to be confirmed by live API",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Babylon Health",
+  "kind": "employer",
+  "domain": "babylonhealth.com",
+  "sectors": [
+   "health"
+  ],
+  "hints": [],
+  "origin": "desk research 2026-11-26: UK employer hiring BA / delivery / transformation / AI / CMS roles; board to be confirmed by live API",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Financial Times",
+  "kind": "employer",
+  "domain": "ft.com",
+  "sectors": [
+   "media"
+  ],
+  "hints": [],
+  "origin": "desk research 2026-11-26: UK employer hiring BA / delivery / transformation / AI / CMS roles; board to be confirmed by live API",
+  "careers_url": "https://aboutus.ft.com/join-us",
+  "target_sector": true
+ },
+ {
+  "name": "The Guardian",
+  "kind": "employer",
+  "domain": "theguardian.com",
+  "sectors": [
+   "media"
+  ],
+  "hints": [],
+  "origin": "desk research 2026-11-26: UK employer hiring BA / delivery / transformation / AI / CMS roles; board to be confirmed by live API",
+  "careers_url": "https://workforus.theguardian.com/",
+  "target_sector": true
+ },
+ {
+  "name": "Immediate Media",
+  "kind": "employer",
+  "domain": "immediate.co.uk",
+  "sectors": [
+   "media"
+  ],
+  "hints": [],
+  "origin": "desk research 2026-11-26: UK employer hiring BA / delivery / transformation / AI / CMS roles; board to be confirmed by live API",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Future plc",
+  "kind": "employer",
+  "domain": "futureplc.com",
+  "sectors": [
+   "media"
+  ],
+  "hints": [],
+  "origin": "desk research 2026-11-26: UK employer hiring BA / delivery / transformation / AI / CMS roles; board to be confirmed by live API",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Bauer Media",
+  "kind": "employer",
+  "domain": "bauermedia.co.uk",
+  "sectors": [
+   "media"
+  ],
+  "hints": [],
+  "origin": "desk research 2026-11-26: UK employer hiring BA / delivery / transformation / AI / CMS roles; board to be confirmed by live API",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "DAZN",
+  "kind": "employer",
+  "domain": "dazn.com",
+  "sectors": [
+   "media"
+  ],
+  "hints": [],
+  "origin": "desk research 2026-11-26: UK employer hiring BA / delivery / transformation / AI / CMS roles; board to be confirmed by live API",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Global",
+  "kind": "employer",
+  "domain": "global.com",
+  "sectors": [
+   "media"
+  ],
+  "hints": [],
+  "origin": "desk research 2026-11-26: UK employer hiring BA / delivery / transformation / AI / CMS roles; board to be confirmed by live API",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Channel 4",
+  "kind": "employer",
+  "domain": "channel4.com",
+  "sectors": [
+   "media"
+  ],
+  "hints": [],
+  "origin": "desk research 2026-11-26: UK employer hiring BA / delivery / transformation / AI / CMS roles; board to be confirmed by live API",
+  "careers_url": "https://careers.channel4.com/",
+  "target_sector": true
+ },
+ {
+  "name": "BBC",
+  "kind": "employer",
+  "domain": "bbc.co.uk",
+  "sectors": [
+   "media"
+  ],
+  "hints": [],
+  "origin": "desk research 2026-11-26: UK employer hiring BA / delivery / transformation / AI / CMS roles; board to be confirmed by live API",
+  "careers_url": "https://careers.bbc.co.uk/",
+  "target_sector": true
+ },
+ {
+  "name": "ITV",
+  "kind": "employer",
+  "domain": "itvjobs.com",
+  "sectors": [
+   "media"
+  ],
+  "hints": [],
+  "origin": "desk research 2026-11-26: UK employer hiring BA / delivery / transformation / AI / CMS roles; board to be confirmed by live API",
+  "careers_url": "https://www.itvjobs.com/",
+  "target_sector": true
+ },
+ {
+  "name": "Sky",
+  "kind": "employer",
+  "domain": "sky.com",
+  "sectors": [
+   "media"
+  ],
+  "hints": [],
+  "origin": "desk research 2026-11-26: UK employer hiring BA / delivery / transformation / AI / CMS roles; board to be confirmed by live API",
+  "careers_url": "https://careers.sky.com/",
+  "target_sector": true
+ },
+ {
+  "name": "Reach plc",
+  "kind": "employer",
+  "domain": "reachplc.com",
+  "sectors": [
+   "media"
+  ],
+  "hints": [],
+  "origin": "desk research 2026-11-26: UK employer hiring BA / delivery / transformation / AI / CMS roles; board to be confirmed by live API",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Contracts Finder (UK public tenders)",
+  "kind": "public_sector",
+  "domain": "contractsfinder.service.gov.uk",
+  "sectors": [
+   "public sector"
+  ],
+  "hints": [
+   "contractsfinder:ocds"
+  ],
+  "origin": "UK government open data API (OCDS), 2026-11-25",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Reed",
+  "kind": "job_board",
+  "domain": "reed.co.uk",
+  "sectors": [
+   "job board"
+  ],
+  "hints": [
+   "reed:uk"
+  ],
+  "origin": "Reed Jobseeker API, key supplied by owner 2026-11-25",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Jooble",
+  "kind": "job_board",
+  "domain": "jooble.org",
+  "sectors": [
+   "job board"
+  ],
+  "hints": [
+   "jooble:uk"
+  ],
+  "origin": "Jooble REST API, key supplied by owner 2026-11-25",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Harvey Nash",
+  "kind": "agency",
+  "domain": "harveynash.co.uk",
+  "sectors": [
+   "IT / change recruitment"
+  ],
+  "hints": [],
+  "origin": "desk research 2026-11-26: UK IT/change contract recruitment agency; own careers site to be scanned on the runner",
+  "careers_url": "https://www.harveynash.co.uk/jobs",
+  "target_sector": true
+ },
+ {
+  "name": "Robert Walters",
+  "kind": "agency",
+  "domain": "robertwalters.co.uk",
+  "sectors": [
+   "IT / change recruitment"
+  ],
+  "hints": [],
+  "origin": "desk research 2026-11-26: UK IT/change contract recruitment agency; own careers site to be scanned on the runner",
+  "careers_url": "https://www.robertwalters.co.uk/jobs.html",
+  "target_sector": true
+ },
+ {
+  "name": "Michael Page",
+  "kind": "agency",
+  "domain": "michaelpage.co.uk",
+  "sectors": [
+   "IT / change recruitment"
+  ],
+  "hints": [],
+  "origin": "desk research 2026-11-26: UK IT/change contract recruitment agency; own careers site to be scanned on the runner",
+  "careers_url": "https://www.michaelpage.co.uk/jobs/it",
+  "target_sector": true
+ },
+ {
+  "name": "Hays",
+  "kind": "agency",
+  "domain": "hays.co.uk",
+  "sectors": [
+   "IT / change recruitment"
+  ],
+  "hints": [],
+  "origin": "desk research 2026-11-26: UK IT/change contract recruitment agency; own careers site to be scanned on the runner",
+  "careers_url": "https://www.hays.co.uk/jobs",
+  "target_sector": true
+ },
+ {
+  "name": "Randstad Digital",
+  "kind": "agency",
+  "domain": "randstad.co.uk",
+  "sectors": [
+   "IT / change recruitment"
+  ],
+  "hints": [],
+  "origin": "desk research 2026-11-26: UK IT/change contract recruitment agency; own careers site to be scanned on the runner",
+  "careers_url": "https://www.randstad.co.uk/jobs/",
+  "target_sector": true
+ },
+ {
+  "name": "Lorien",
+  "kind": "agency",
+  "domain": "lorienglobal.com",
+  "sectors": [
+   "IT / change recruitment"
+  ],
+  "hints": [],
+  "origin": "desk research 2026-11-26: UK IT/change contract recruitment agency; own careers site to be scanned on the runner",
+  "careers_url": "https://www.lorienglobal.com/jobs",
+  "target_sector": true
+ },
+ {
+  "name": "Experis",
+  "kind": "agency",
+  "domain": "experis.co.uk",
+  "sectors": [
+   "IT / change recruitment"
+  ],
+  "hints": [],
+  "origin": "desk research 2026-11-26: UK IT/change contract recruitment agency; own careers site to be scanned on the runner",
+  "careers_url": "https://www.experis.co.uk/jobs",
+  "target_sector": true
+ },
+ {
+  "name": "Computer Futures",
+  "kind": "agency",
+  "domain": "computerfutures.com",
+  "sectors": [
+   "IT / change recruitment"
+  ],
+  "hints": [],
+  "origin": "desk research 2026-11-26: UK IT/change contract recruitment agency; own careers site to be scanned on the runner",
+  "careers_url": "https://www.computerfutures.com/en-gb/job-search/",
+  "target_sector": true
+ },
+ {
+  "name": "Sanderson",
+  "kind": "agency",
+  "domain": "sanderson.com",
+  "sectors": [
+   "IT / change recruitment"
+  ],
+  "hints": [],
+  "origin": "desk research 2026-11-26: UK IT/change contract recruitment agency; own careers site to be scanned on the runner",
+  "careers_url": "https://www.sanderson.com/jobs",
+  "target_sector": true
+ },
+ {
+  "name": "Spectrum IT",
+  "kind": "agency",
+  "domain": "spectrum-it.co.uk",
+  "sectors": [
+   "IT / change recruitment"
+  ],
+  "hints": [],
+  "origin": "desk research 2026-11-26: UK IT/change contract recruitment agency; own careers site to be scanned on the runner",
+  "careers_url": "https://www.spectrum-it.co.uk/jobs",
+  "target_sector": true
+ },
+ {
+  "name": "Akkodis",
+  "kind": "agency",
+  "domain": "akkodis.com",
+  "sectors": [
+   "IT / change recruitment"
+  ],
+  "hints": [],
+  "origin": "desk research 2026-11-26: UK IT/change contract recruitment agency; own careers site to be scanned on the runner",
+  "careers_url": "https://www.akkodis.com/en-gb/jobs",
+  "target_sector": true
+ },
+ {
+  "name": "La Fosse",
+  "kind": "agency",
+  "domain": "lafosse.com",
+  "sectors": [
+   "IT / change recruitment"
+  ],
+  "hints": [],
+  "origin": "desk research 2026-11-26: UK IT/change contract recruitment agency; own careers site to be scanned on the runner",
+  "careers_url": "https://www.lafosse.com/jobs",
+  "target_sector": true
+ },
+ {
+  "name": "Opus Recruitment Solutions",
+  "kind": "agency",
+  "domain": "opusrs.com",
+  "sectors": [
+   "IT / change recruitment"
+  ],
+  "hints": [],
+  "origin": "desk research 2026-11-26: UK IT/change contract recruitment agency; own careers site to be scanned on the runner",
+  "careers_url": "https://www.opusrs.com/jobs",
+  "target_sector": true
+ },
+ {
+  "name": "Montash",
+  "kind": "agency",
+  "domain": "montash.com",
+  "sectors": [
+   "IT / change recruitment"
+  ],
+  "hints": [],
+  "origin": "desk research 2026-11-26: UK IT/change contract recruitment agency; own careers site to be scanned on the runner",
+  "careers_url": "https://www.montash.com/jobs",
+  "target_sector": true
+ },
+ {
+  "name": "Damia Group",
+  "kind": "agency",
+  "domain": "damiagroup.com",
+  "sectors": [
+   "IT / change recruitment"
+  ],
+  "hints": [],
+  "origin": "desk research 2026-11-26: UK IT/change contract recruitment agency; own careers site to be scanned on the runner",
+  "careers_url": "https://www.damiagroup.com/jobs",
+  "target_sector": true
+ },
+ {
+  "name": "Gravitas Recruitment",
+  "kind": "agency",
+  "domain": "gravitasgroup.com",
+  "sectors": [
+   "IT / change recruitment"
+  ],
+  "hints": [],
+  "origin": "desk research 2026-11-26: UK IT/change contract recruitment agency; own careers site to be scanned on the runner",
+  "careers_url": "https://www.gravitasgroup.com/jobs",
+  "target_sector": true
+ },
+ {
+  "name": "InterQuest",
+  "kind": "agency",
+  "domain": "interquestgroup.com",
+  "sectors": [
+   "IT / change recruitment"
+  ],
+  "hints": [],
+  "origin": "desk research 2026-11-26: UK IT/change contract recruitment agency; own careers site to be scanned on the runner",
+  "careers_url": "https://www.interquestgroup.com/jobs",
+  "target_sector": true
+ },
+ {
+  "name": "Square One Resources",
+  "kind": "agency",
+  "domain": "squareoneresources.com",
+  "sectors": [
+   "IT / change recruitment"
+  ],
+  "hints": [],
+  "origin": "desk research 2026-11-26: UK IT/change contract recruitment agency; own careers site to be scanned on the runner",
+  "careers_url": "https://www.squareoneresources.com/jobs",
+  "target_sector": true
+ },
+ {
+  "name": "McGregor Boyall",
+  "kind": "agency",
+  "domain": "mcgregor-boyall.com",
+  "sectors": [
+   "IT / change recruitment"
+  ],
+  "hints": [],
+  "origin": "desk research 2026-11-26: UK IT/change contract recruitment agency; own careers site to be scanned on the runner",
+  "careers_url": "https://www.mcgregor-boyall.com/jobs",
+  "target_sector": true
+ },
+ {
+  "name": "Investigo",
+  "kind": "agency",
+  "domain": "investigo.co.uk",
+  "sectors": [
+   "IT / change recruitment"
+  ],
+  "hints": [],
+  "origin": "desk research 2026-11-26: UK IT/change contract recruitment agency; own careers site to be scanned on the runner",
+  "careers_url": "https://www.investigo.co.uk/jobs",
+  "target_sector": true
+ },
+ {
+  "name": "Morgan McKinley",
+  "kind": "agency",
+  "domain": "morganmckinley.com",
+  "sectors": [
+   "IT / change recruitment"
+  ],
+  "hints": [],
+  "origin": "desk research 2026-11-26: UK IT/change contract recruitment agency; own careers site to be scanned on the runner",
+  "careers_url": "https://www.morganmckinley.com/uk/jobs",
+  "target_sector": true
+ },
+ {
+  "name": "Venquis",
+  "kind": "agency",
+  "domain": "venquis.com",
+  "sectors": [
+   "IT / change recruitment"
+  ],
+  "hints": [],
+  "origin": "desk research 2026-11-26: UK IT/change contract recruitment agency; own careers site to be scanned on the runner",
+  "careers_url": "https://www.venquis.com/jobs",
+  "target_sector": true
+ },
+ {
+  "name": "Searchability",
+  "kind": "agency",
+  "domain": "searchability.co.uk",
+  "sectors": [
+   "IT / change recruitment"
+  ],
+  "hints": [],
+  "origin": "desk research 2026-11-26: UK IT/change contract recruitment agency; own careers site to be scanned on the runner",
+  "careers_url": "https://www.searchability.co.uk/jobs",
+  "target_sector": true
+ },
+ {
+  "name": "Understanding Recruitment",
+  "kind": "agency",
+  "domain": "understandingrecruitment.co.uk",
+  "sectors": [
+   "IT / change recruitment"
+  ],
+  "hints": [],
+  "origin": "desk research 2026-11-26: UK IT/change contract recruitment agency; own careers site to be scanned on the runner",
+  "careers_url": "https://www.understandingrecruitment.co.uk/jobs",
+  "target_sector": true
+ },
+ {
+  "name": "Burns Sheehan",
+  "kind": "agency",
+  "domain": "burnssheehan.co.uk",
+  "sectors": [
+   "IT / change recruitment"
+  ],
+  "hints": [],
+  "origin": "desk research 2026-11-26: UK IT/change contract recruitment agency; own careers site to be scanned on the runner",
+  "careers_url": "https://www.burnssheehan.co.uk/jobs",
+  "target_sector": true
+ },
+ {
+  "name": "Explore Group",
+  "kind": "agency",
+  "domain": "theexploregroup.com",
+  "sectors": [
+   "IT / change recruitment"
+  ],
+  "hints": [],
+  "origin": "desk research 2026-11-26: UK IT/change contract recruitment agency; own careers site to be scanned on the runner",
+  "careers_url": "https://www.theexploregroup.com/jobs",
+  "target_sector": true
+ },
+ {
+  "name": "Oliver Bernard",
+  "kind": "agency",
+  "domain": "oliverbernard.co.uk",
+  "sectors": [
+   "IT / change recruitment"
+  ],
+  "hints": [],
+  "origin": "desk research 2026-11-26: UK IT/change contract recruitment agency; own careers site to be scanned on the runner",
+  "careers_url": "https://www.oliverbernard.co.uk/jobs",
+  "target_sector": true
+ },
+ {
+  "name": "Templeton & Partners",
+  "kind": "agency",
+  "domain": "templeton-recruitment.com",
+  "sectors": [
+   "IT / change recruitment"
+  ],
+  "hints": [],
+  "origin": "desk research 2026-11-26: UK IT/change contract recruitment agency; own careers site to be scanned on the runner",
+  "careers_url": "https://www.templeton-recruitment.com/jobs",
+  "target_sector": true
+ },
+ {
+  "name": "Advanced Resource Managers",
+  "kind": "agency",
+  "domain": "arm.co.uk",
+  "sectors": [
+   "IT / change recruitment"
+  ],
+  "hints": [],
+  "origin": "desk research 2026-11-26: UK IT/change contract recruitment agency; own careers site to be scanned on the runner",
+  "careers_url": "https://www.arm.co.uk/jobs",
+  "target_sector": true
+ },
+ {
+  "name": "Concept Resourcing",
+  "kind": "agency",
+  "domain": "conceptresourcing.co.uk",
+  "sectors": [
+   "IT / change recruitment"
+  ],
+  "hints": [],
+  "origin": "desk research 2026-11-26: UK IT/change contract recruitment agency; own careers site to be scanned on the runner",
+  "careers_url": "https://www.conceptresourcing.co.uk/jobs",
+  "target_sector": true
+ },
+ {
+  "name": "Hamilton Barnes",
+  "kind": "agency",
+  "domain": "hamiltonbarnes.com",
+  "sectors": [
+   "IT / change recruitment"
+  ],
+  "hints": [],
+  "origin": "desk research 2026-11-26: UK IT/change contract recruitment agency; own careers site to be scanned on the runner",
+  "careers_url": "https://hamiltonbarnes.com/jobs",
+  "target_sector": true
+ },
+ {
+  "name": "Nigel Frank International",
+  "kind": "agency",
+  "domain": "nigelfrank.com",
+  "sectors": [
+   "IT / change recruitment"
+  ],
+  "hints": [],
+  "origin": "desk research 2026-11-26: UK IT/change contract recruitment agency; own careers site to be scanned on the runner",
+  "careers_url": "https://www.nigelfrank.com/jobs",
+  "target_sector": true
+ },
+ {
+  "name": "Cathcart Technology",
+  "kind": "agency",
+  "domain": "cathcarttechnology.co.uk",
+  "sectors": [
+   "IT / change recruitment"
+  ],
+  "hints": [],
+  "origin": "desk research 2026-11-26: UK IT/change contract recruitment agency; own careers site to be scanned on the runner",
+  "careers_url": "https://www.cathcarttechnology.co.uk/jobs",
+  "target_sector": true
+ },
+ {
+  "name": "Talent International",
+  "kind": "agency",
+  "domain": "talentinternational.co.uk",
+  "sectors": [
+   "IT / change recruitment"
+  ],
+  "hints": [],
+  "origin": "desk research 2026-11-26: UK IT/change contract recruitment agency; own careers site to be scanned on the runner",
+  "careers_url": "https://www.talentinternational.co.uk/jobs",
+  "target_sector": true
+ },
+ {
+  "name": "Ten2Two",
+  "kind": "agency",
+  "domain": "ten2two.org",
+  "sectors": [
+   "IT / change recruitment"
+  ],
+  "hints": [],
+  "origin": "desk research 2026-11-26: UK IT/change contract recruitment agency; own careers site to be scanned on the runner",
+  "careers_url": "https://www.ten2two.org/jobs/",
+  "target_sector": true
+ },
+ {
+  "name": "Freelance Radar",
+  "kind": "job_board",
+  "domain": "freelanceradar.co.uk",
+  "sectors": [
+   "aggregator"
+  ],
+  "hints": [],
+  "origin": "named in owner's brief as excluded",
+  "careers_url": null,
+  "target_sector": false
+ }
+]

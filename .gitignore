@@ -1,0 +1,8 @@
+__pycache__/
+*.pyc
+data/
+state/
+*.sqlite3*
+*.key
+.env
+web/data/

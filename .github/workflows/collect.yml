@@ -1,0 +1,59 @@
+name: collect
+# Every 15 minutes (GitHub may start scheduled runs a few minutes late at busy times).
+on:
+  schedule:
+    - cron: "*/15 * * * *"
+  workflow_dispatch:
+    inputs:
+      source:
+        description: "Check now: a source_id (e.g. greenhouse:monzo) or 'all'"
+        required: false
+        default: ""
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+# Never two collections at once; a new one waits for the old one.
+concurrency:
+  group: workradar-state
+  cancel-in-progress: false
+jobs:
+  collect:
+    runs-on: ubuntu-latest
+    timeout-minutes: 14
+    env:
+      REED_API_KEY: ${{ secrets.REED_API_KEY }}
+      JOOBLE_API_KEY: ${{ secrets.JOOBLE_API_KEY }}
+      WORKRADAR_DB: state/workradar.sqlite3
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - name: Restore state (state branch holds only the latest database)
+        run: |
+          mkdir -p state
+          if git fetch --depth 1 origin state 2>/dev/null; then git --work-tree=state checkout origin/state -- . || true; fi
+          ls -la state
+      - name: First run seeds the registry and the test account
+        run: |
+          if [ ! -f state/workradar.sqlite3 ]; then python -m workradar seed && python -m workradar discover; fi
+      - name: Collect
+        run: |
+          if [ -n "${{ github.event.inputs.source }}" ]; then python -m workradar check-now "${{ github.event.inputs.source }}"; else python -m workradar collect; fi
+      - name: Save state
+        if: always()
+        run: |
+          cd state
+          cp ../SOURCE_REGISTRY.csv . 2>/dev/null || true
+          git init -q -b state && git add -A
+          git -c user.name="work-radar bot" -c user.email="actions@users.noreply.github.com" commit -qm "state $(date -u +%FT%TZ)"
+          git push -qf "https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}.git" state:state
+      - uses: actions/upload-pages-artifact@v3
+        with: { path: web }
+  deploy:
+    needs: collect
+    runs-on: ubuntu-latest
+    environment: { name: github-pages, url: "${{ steps.d.outputs.page_url }}" }
+    steps:
+      - id: d
+        uses: actions/deploy-pages@v4
