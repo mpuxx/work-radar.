@@ -48,7 +48,7 @@ def main(argv):
             collector.request_check_now(db, target)
             only = None if target == "all" else [target]
         r = collector.run(db, trigger="manual" if cmd == "check-now" else "schedule", only=only,
-                          detail_cache_path=str(ROOT / "data" / "reed_details.json"))
+                          detail_cache_path=str(D.db_path().parent / "reed_details.json"))
         links = collector.check_links(db)
         made = notify.create(db)
         sent = notify.deliver(db)

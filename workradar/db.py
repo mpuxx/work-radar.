@@ -31,8 +31,12 @@ def sha(*parts):
     return hashlib.sha1("\x1f".join(str(p) for p in parts).encode()).hexdigest()[:16]
 
 
+def db_path():
+    return Path(os.environ.get("WORKRADAR_DB") or DEFAULT_DB)
+
+
 def connect(path=None):
-    path = Path(path or os.environ.get("WORKRADAR_DB") or DEFAULT_DB)
+    path = Path(path) if path else db_path()
     path.parent.mkdir(parents=True, exist_ok=True)
     db = sqlite3.connect(path, timeout=30, isolation_level=None)  # autocommit; use `with tx(db)` for transactions
     db.row_factory = sqlite3.Row
