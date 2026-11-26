@@ -13,6 +13,7 @@ permissions:
   contents: write
   pages: write
   id-token: write
+  actions: write
 # Never two collections at once; a new one waits for the old one.
 concurrency:
   group: workradar-state
@@ -60,3 +61,26 @@ jobs:
     steps:
       - id: d
         uses: actions/deploy-pages@v4
+  # Backup clock. GitHub's own schedule can start late or not at all on new repositories.
+  # If no scheduled run has happened in the last 30 minutes, this starts the next check 15 minutes after this one began.
+  chain:
+    needs: collect
+    if: always()
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    env:
+      GH_TOKEN: ${{ github.token }}
+      REPO: ${{ github.repository }}
+    steps:
+      - name: Wait until 15 minutes after this run started
+        run: |
+          start=$(gh api "repos/$REPO/actions/runs/${{ github.run_id }}" --jq .run_started_at | xargs -I{} date -d {} +%s)
+          wait=$(( start + 900 - $(date +%s) ))
+          echo "waiting ${wait}s"; if [ "$wait" -gt 0 ]; then sleep "$wait"; fi
+      - name: Start the next check unless GitHub's schedule is working
+        run: |
+          since=$(date -u -d '-30 min' +%Y-%m-%dT%H:%M:%SZ)
+          n=$(gh api "repos/$REPO/actions/workflows/collect.yml/runs?event=schedule&created=>$since" --jq .total_count)
+          queued=$(gh api "repos/$REPO/actions/workflows/collect.yml/runs?status=queued" --jq .total_count)
+          echo "scheduled runs in last 30 min: $n; queued: $queued"
+          if [ "$n" = "0" ] && [ "$queued" = "0" ]; then gh workflow run collect.yml -R "$REPO" --ref main; fi
