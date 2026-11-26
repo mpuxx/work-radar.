@@ -81,6 +81,11 @@ jobs:
         run: |
           since=$(date -u -d '-30 min' +%Y-%m-%dT%H:%M:%SZ)
           n=$(gh api "repos/$REPO/actions/workflows/collect.yml/runs?event=schedule&created=>$since" --jq .total_count)
-          queued=$(gh api "repos/$REPO/actions/workflows/collect.yml/runs?status=queued" --jq .total_count)
-          echo "scheduled runs in last 30 min: $n; queued: $queued"
-          if [ "$n" = "0" ] && [ "$queued" = "0" ]; then gh workflow run collect.yml -R "$REPO" --ref main; fi
+          queued=0
+          for st in queued pending waiting; do
+            q=$(gh api "repos/$REPO/actions/runs?status=$st" --jq .total_count); queued=$((queued + q))
+          done
+          disc=$(gh api "repos/$REPO/actions/workflows/discover.yml/runs?status=in_progress" --jq .total_count)
+          echo "scheduled runs in last 30 min: $n; waiting runs: $queued; discovery running: $disc"
+          # Discovery starts the next collection itself when it finishes, so don't queue one behind it (it would cancel it).
+          if [ "$n" = "0" ] && [ "$queued" = "0" ] && [ "$disc" = "0" ]; then gh workflow run collect.yml -R "$REPO" --ref main; fi

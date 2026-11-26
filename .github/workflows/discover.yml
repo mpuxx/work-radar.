@@ -6,6 +6,7 @@ on:
   workflow_dispatch:
 permissions:
   contents: write
+  actions: write
 concurrency:
   group: workradar-state
   cancel-in-progress: false
@@ -36,3 +37,7 @@ jobs:
           git init -q -b state && git add -A
           git -c user.name="work-radar bot" -c user.email="actions@users.noreply.github.com" commit -qm "state $(date -u +%FT%TZ)"
           git push -qf "https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}.git" state:state
+      - name: Start a collection with the new sources
+        if: always()
+        env: { GH_TOKEN: "${{ github.token }}" }
+        run: gh workflow run collect.yml -R "${{ github.repository }}" --ref main
