@@ -494,16 +494,69 @@ def D_sha(x):
     return hashlib.sha1(x.encode()).hexdigest()[:16]
 
 
+def themuse(src, get=http.get_json):
+    out = []
+    for loc in ("London, United Kingdom", "Manchester, United Kingdom", "Edinburgh, United Kingdom", "Flexible / Remote"):
+        for page in (0, 1, 2):
+            d = get("https://www.themuse.com/api/public/jobs?" + urlencode({"location": loc, "page": page}))
+            _need(isinstance(d.get("results"), list), "themuse: no results list")
+            for j in d["results"]:
+                pub, prec = _iso(j.get("publication_date"))
+                out.append(_job(source_job_id=str(j["id"]), title=(j.get("name") or "").strip(), description=strip_html(j.get("contents")),
+                                location="; ".join(l.get("name", "") for l in j.get("locations") or []),
+                                workplace="Remote" if loc.startswith("Flexible") else "", published_at=pub, published_precision=prec,
+                                job_url=(j.get("refs") or {}).get("landing_page"), employer_name=(j.get("company") or {}).get("name")))
+            if page + 1 >= d.get("page_count", 0):
+                break
+    return out
+
+
+def workingnomads(src, get=http.get_json):
+    d = get("https://www.workingnomads.com/api/exposed_jobs/")
+    _need(isinstance(d, list), "workingnomads: not a list")
+    out = []
+    for j in d:
+        pub, prec = _iso(j.get("pub_date"))
+        out.append(_job(source_job_id=j.get("url"), title=(j.get("title") or "").strip(), description=strip_html(j.get("description")),
+                        location="Remote, " + (j.get("location") or "location not stated"), workplace="Remote",
+                        published_at=pub, published_precision=prec, job_url=j.get("url"), employer_name=j.get("company_name")))
+    return out
+
+
+def findatender(src, get=http.get_json):
+    """UK Find a Tender (above-threshold public contracts). Bids, not jobs, like Contracts Finder."""
+    d = get("https://www.find-tender.service.gov.uk/api/1.0/ocdsReleasePackages?stages=tender&limit=100", timeout=90)
+    _need(isinstance(d.get("releases"), list), "findatender: no releases list")
+    out = []
+    now = dt.datetime.now(dt.timezone.utc).isoformat()
+    for r in d["releases"]:
+        t = r.get("tender") or {}
+        end = (t.get("tenderPeriod") or {}).get("endDate")
+        if not t.get("title") or not r.get("id") or (end and (_iso(end)[0] or "9") < now):
+            continue
+        pub, prec = _iso(r.get("date"))
+        val = (t.get("value") or {}).get("amount")
+        notice = r["id"].split("-")[0] + "-" + r["id"].split("-")[1] if r["id"].count("-") >= 2 else r["id"]
+        out.append(_job(source_job_id=r["id"], title=t["title"].strip(), location="UK",
+                        description="Public-sector tender (a bid for a supplier, not a job). "
+                                    + (f"Value: £{val:,.0f}. " if isinstance(val, (int, float)) else "")
+                                    + (f"Closes {end[:10]}. " if end else "") + strip_html(t.get("description"))[:3000],
+                        employment_type="Tender", published_at=pub, published_precision=prec,
+                        job_url=f"https://www.find-tender.service.gov.uk/Notice/{notice}", employer_name=(r.get("buyer") or {}).get("name")))
+    return out
+
+
 CONNECTORS = {"contractsfinder": contractsfinder, "greenhouse": greenhouse, "lever": lever, "ashby": ashby, "smartrecruiters": smartrecruiters, "workable": workable,
               "recruitee": recruitee, "personio": personio, "pinpoint": pinpoint,
               "remotive": remotive, "himalayas": himalayas, "remoteok": remoteok, "jobicy": jobicy, "arbeitnow": arbeitnow,
-              "adzuna": adzuna, "careerjet": careerjet, "jsonld": jsonld, "rss": rss, "reed": reed, "jooble": jooble}
+              "adzuna": adzuna, "careerjet": careerjet, "themuse": themuse, "workingnomads": workingnomads, "findatender": findatender, "jsonld": jsonld, "rss": rss, "reed": reed, "jooble": jooble}
 
 API_HOST = {"greenhouse": "boards-api.greenhouse.io", "lever": "api.lever.co", "ashby": "api.ashbyhq.com",
             "smartrecruiters": "api.smartrecruiters.com", "workable": "apply.workable.com", "reed": "www.reed.co.uk", "jooble": "jooble.org",
             "contractsfinder": "www.contractsfinder.service.gov.uk", "remotive": "remotive.com", "himalayas": "himalayas.app",
             "remoteok": "remoteok.com", "jobicy": "jobicy.com", "arbeitnow": "www.arbeitnow.com", "adzuna": "api.adzuna.com",
-            "careerjet": "public.api.careerjet.net"}
+            "careerjet": "public.api.careerjet.net", "themuse": "www.themuse.com", "workingnomads": "www.workingnomads.com",
+            "findatender": "www.find-tender.service.gov.uk"}
 
 # Documented limits and conditions, recorded in the registry.
 ACCESS = {
@@ -525,9 +578,12 @@ ACCESS = {
     "jobicy": "Jobicy public API, no key, UK filter; link back required",
     "arbeitnow": "Arbeitnow public job board API, no key",
     "adzuna": "Adzuna API, free key (developer.adzuna.com), contract filter",
-    "careerjet": "Careerjet Partner API, free affiliate id",
+    "careerjet": "Careerjet Partner API, affiliate id",
+    "themuse": "The Muse public jobs API, no key (500 requests/hour without one)",
+    "workingnomads": "Working Nomads public jobs API, no key; link back to the advert",
+    "findatender": "UK Find a Tender OCDS API, open data, no key",
     "contractsfinder": "UK Government Contracts Finder OCDS API, open data, no key (Open Government Licence)",
 }
 INTERVAL = {"workable": 60, "reed": 120, "jooble": 360, "jsonld": 60, "rss": 30, "contractsfinder": 60, "remotive": 60, "himalayas": 60,
-            "remoteok": 60, "jobicy": 60, "arbeitnow": 120, "adzuna": 120, "careerjet": 120, "pinpoint": 30}
+            "remoteok": 60, "jobicy": 60, "arbeitnow": 120, "adzuna": 120, "careerjet": 120, "pinpoint": 30, "themuse": 120, "workingnomads": 60, "findatender": 120}
 DAILY_CAP = {"jooble": 60, "reed": 900, "adzuna": 240, "careerjet": 300, "remoteok": 48}

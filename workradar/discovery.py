@@ -11,6 +11,7 @@ A guessed slug is never proof: a board counts only if its live API returns the e
 AND the organisation's identity checks out. Logins, CAPTCHAs and robots.txt disallows are respected.
 """
 import concurrent.futures as cf
+import functools
 import datetime as dt
 import json
 import os
@@ -46,17 +47,24 @@ def slugify(name):
     return re.sub(r"[^a-z0-9]+", "-", name.lower()).strip("-")
 
 
-def robots_ok(url):
-    p = urlparse(url)
+@functools.lru_cache(maxsize=2048)
+def _robots(origin):
+    """Returns a parser, True (no robots file: allowed) or False (unreachable/forbidden: not allowed)."""
     rp = urllib.robotparser.RobotFileParser()
     try:
-        txt, _ = http.get_text(f"{p.scheme}://{p.netloc}/robots.txt", timeout=10, retries=0)
+        txt, _ = http.get_text(f"{origin}/robots.txt", timeout=10, retries=0)
         rp.parse(txt.splitlines())
-        return rp.can_fetch(http.UA, url)
+        return rp
     except http.HttpError as e:
-        return e.status in (404, 410)  # no robots file = allowed; blocked/forbidden = treat as not allowed
+        return e.status in (404, 410)
     except Exception:
         return False
+
+
+def robots_ok(url):
+    p = urlparse(url)
+    r = _robots(f"{p.scheme}://{p.netloc}")
+    return r.can_fetch(http.UA, url) if not isinstance(r, bool) else r
 
 
 def scan_careers(url):
@@ -76,7 +84,33 @@ def scan_careers(url):
     unsup = [n for n, rx in UNSUPPORTED if re.search(rx, html_text, re.I)]
     if '"JobPosting"' in html_text or "'JobPosting'" in html_text:
         hints.append(("jsonld", url))
+    for m in re.finditer(r'<link[^>]+type=["\']application/(?:rss|atom)\+xml["\'][^>]*href=["\']([^"\']+)', html_text, re.I):
+        feed = urljoin(url, m.group(1))
+        if re.search(r"job|vacanc|career", feed, re.I):
+            hints.append(("rss", feed))
     return hints, unsup, None
+
+
+FEED_PATHS = ["/jobs/rss", "/jobs.rss", "/jobs/feed", "/feed/jobs", "/rss/jobs", "/job-feed", "/jobs/rss.xml", "/vacancies/rss", "/jobs?format=rss"]
+
+
+def probe_feeds(domain):
+    """Agencies: look for a published jobs RSS feed at the usual paths (robots permitting)."""
+    if not domain:
+        return []
+    found = []
+    for path in FEED_PATHS:
+        url = f"https://www.{domain.removeprefix('www.')}{path}"
+        if not robots_ok(url):
+            return found
+        try:
+            text, h = http.get_text(url, accept="application/rss+xml, application/xml", timeout=12, retries=0)
+        except Exception:
+            continue
+        if re.search(r"<rss|<feed", text[:500], re.I) and "<item" in text:
+            found.append(("rss", url))
+            break
+    return found
 
 
 def probe(conn, board, region="global"):
@@ -126,9 +160,14 @@ def assess(cand):
         return dict(state="rejected", reason="Excluded: applicant-paid / pay-to-apply destination")
     hints = [tuple(h.split(":", 1)) for h in cand.get("hints", [])]
     unsup, note = [], None
+    if cand.get("retired"):
+        h = hints[0] if hints else (None, None)
+        return dict(connector=h[0], board_id=h[1], state="rejected", reason=cand["retired"])
     if cand.get("careers_url") and not hints:
         found, unsup, note = scan_careers(cand["careers_url"])
         hints += found
+    if cand.get("kind") == "agency" and not hints:
+        hints += probe_feeds(cand.get("domain"))
     for conn, board in hints:
         if conn in ("reed", "jooble", "adzuna", "careerjet"):  # keyed APIs: don't spend quota on discovery; the collector validates each run
             have = "key configured as a secret" if connectors._key(conn) else f"{conn.upper()}_API_KEY secret not set yet: each run reports it until it is"
@@ -161,6 +200,8 @@ def assess(cand):
         base = dict(connector=conn, board_id=board, region=region, relevance=rel, identity=why)
         if not ok:
             return dict(base, state="review", reason=f"Feed works but identity unconfirmed ({why})")
+        if cand.get("kind") == "agency" and conn == "rss" and rel["relevant_titles"] >= 1:
+            return dict(base, state="activated", reason=f"UK agency feed: {rel['relevant_titles']} relevant roles now; identity: {why}")
         if rel["relevant_uk"] >= 1:
             return dict(base, state="activated", reason=f"{rel['relevant_uk']} relevant UK roles now; identity: {why}")
         if rel["uk_jobs"] >= 5 and cand.get("target_sector"):

@@ -7989,7 +7989,8 @@
   ],
   "origin": "documented public job-board API, 2026-11-26 (owner asked for maximum feed coverage)",
   "careers_url": null,
-  "target_sector": true
+  "target_sector": true,
+  "retired": "Dropped 2026-11-26: owner could not sign up (Adzuna) / not free for us (Careerjet)"
  },
  {
   "name": "Careerjet",
@@ -8003,7 +8004,8 @@
   ],
   "origin": "documented public job-board API, 2026-11-26 (owner asked for maximum feed coverage)",
   "careers_url": null,
-  "target_sector": true
+  "target_sector": true,
+  "retired": "Dropped 2026-11-26: owner could not sign up (Adzuna) / not free for us (Careerjet)"
  },
  {
   "name": "We Work Remotely: management & finance",
@@ -8044,6 +8046,756 @@
    "rss:https://weworkremotely.com/categories/all-other-remote-jobs.rss"
   ],
   "origin": "documented public job-board API, 2026-11-26 (owner asked for maximum feed coverage)",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "The Muse",
+  "kind": "job_board",
+  "domain": null,
+  "sectors": [
+   "job board"
+  ],
+  "hints": [
+   "themuse:uk"
+  ],
+  "origin": "documented public API, no key, 2026-11-26 (free alternative after Adzuna/Careerjet were dropped)",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Working Nomads",
+  "kind": "job_board",
+  "domain": null,
+  "sectors": [
+   "job board"
+  ],
+  "hints": [
+   "workingnomads:all"
+  ],
+  "origin": "documented public API, no key, 2026-11-26 (free alternative after Adzuna/Careerjet were dropped)",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Find a Tender (UK public tenders)",
+  "kind": "public_sector",
+  "domain": null,
+  "sectors": [
+   "job board"
+  ],
+  "hints": [
+   "findatender:ocds"
+  ],
+  "origin": "documented public API, no key, 2026-11-26 (free alternative after Adzuna/Careerjet were dropped)",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Robert Half",
+  "kind": "agency",
+  "domain": "roberthalf.com",
+  "sectors": [
+   "IT / change recruitment"
+  ],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 3): UK IT / change / contract recruitment agency; public jobs RSS probed on the runner",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Reed Technology",
+  "kind": "agency",
+  "domain": "reed.com",
+  "sectors": [
+   "IT / change recruitment"
+  ],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 3): UK IT / change / contract recruitment agency; public jobs RSS probed on the runner",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Randstad",
+  "kind": "agency",
+  "domain": "randstad.co.uk",
+  "sectors": [
+   "IT / change recruitment"
+  ],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 3): UK IT / change / contract recruitment agency; public jobs RSS probed on the runner",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Adecco",
+  "kind": "agency",
+  "domain": "adecco.co.uk",
+  "sectors": [
+   "IT / change recruitment"
+  ],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 3): UK IT / change / contract recruitment agency; public jobs RSS probed on the runner",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Manpower",
+  "kind": "agency",
+  "domain": "manpower.co.uk",
+  "sectors": [
+   "IT / change recruitment"
+  ],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 3): UK IT / change / contract recruitment agency; public jobs RSS probed on the runner",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Progressive Recruitment",
+  "kind": "agency",
+  "domain": "progressiverecruitment.com",
+  "sectors": [
+   "IT / change recruitment"
+  ],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 3): UK IT / change / contract recruitment agency; public jobs RSS probed on the runner",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Real Staffing",
+  "kind": "agency",
+  "domain": "realstaffing.com",
+  "sectors": [
+   "IT / change recruitment"
+  ],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 3): UK IT / change / contract recruitment agency; public jobs RSS probed on the runner",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Huxley",
+  "kind": "agency",
+  "domain": "huxley.com",
+  "sectors": [
+   "IT / change recruitment"
+  ],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 3): UK IT / change / contract recruitment agency; public jobs RSS probed on the runner",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Modis",
+  "kind": "agency",
+  "domain": "modis.com",
+  "sectors": [
+   "IT / change recruitment"
+  ],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 3): UK IT / change / contract recruitment agency; public jobs RSS probed on the runner",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Salt Recruitment",
+  "kind": "agency",
+  "domain": "welovesalt.com",
+  "sectors": [
+   "IT / change recruitment"
+  ],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 3): UK IT / change / contract recruitment agency; public jobs RSS probed on the runner",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Ascent",
+  "kind": "agency",
+  "domain": "ascentpeople.com",
+  "sectors": [
+   "IT / change recruitment"
+  ],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 3): UK IT / change / contract recruitment agency; public jobs RSS probed on the runner",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Stott and May",
+  "kind": "agency",
+  "domain": "stottandmay.com",
+  "sectors": [
+   "IT / change recruitment"
+  ],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 3): UK IT / change / contract recruitment agency; public jobs RSS probed on the runner",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Mason Frank",
+  "kind": "agency",
+  "domain": "masonfrank.com",
+  "sectors": [
+   "IT / change recruitment"
+  ],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 3): UK IT / change / contract recruitment agency; public jobs RSS probed on the runner",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Jefferson Frank",
+  "kind": "agency",
+  "domain": "jeffersonfrank.com",
+  "sectors": [
+   "IT / change recruitment"
+  ],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 3): UK IT / change / contract recruitment agency; public jobs RSS probed on the runner",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Washington Frank",
+  "kind": "agency",
+  "domain": "washingtonfrank.com",
+  "sectors": [
+   "IT / change recruitment"
+  ],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 3): UK IT / change / contract recruitment agency; public jobs RSS probed on the runner",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Anderson Frank",
+  "kind": "agency",
+  "domain": "andersonfrank.com",
+  "sectors": [
+   "IT / change recruitment"
+  ],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 3): UK IT / change / contract recruitment agency; public jobs RSS probed on the runner",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Tenth Revolution Group",
+  "kind": "agency",
+  "domain": "tenthrevolution.com",
+  "sectors": [
+   "IT / change recruitment"
+  ],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 3): UK IT / change / contract recruitment agency; public jobs RSS probed on the runner",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Bramwith Consulting",
+  "kind": "agency",
+  "domain": "bramwithconsulting.com",
+  "sectors": [
+   "IT / change recruitment"
+  ],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 3): UK IT / change / contract recruitment agency; public jobs RSS probed on the runner",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Venatu",
+  "kind": "agency",
+  "domain": "venatu.co.uk",
+  "sectors": [
+   "IT / change recruitment"
+  ],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 3): UK IT / change / contract recruitment agency; public jobs RSS probed on the runner",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Henderson Scott",
+  "kind": "agency",
+  "domain": "hendersonscott.com",
+  "sectors": [
+   "IT / change recruitment"
+  ],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 3): UK IT / change / contract recruitment agency; public jobs RSS probed on the runner",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Xpertise Recruitment",
+  "kind": "agency",
+  "domain": "xpertise-recruitment.com",
+  "sectors": [
+   "IT / change recruitment"
+  ],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 3): UK IT / change / contract recruitment agency; public jobs RSS probed on the runner",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Futureheads",
+  "kind": "agency",
+  "domain": "futureheads.co.uk",
+  "sectors": [
+   "IT / change recruitment"
+  ],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 3): UK IT / change / contract recruitment agency; public jobs RSS probed on the runner",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Digital Gurus",
+  "kind": "agency",
+  "domain": "digitalgurus.co.uk",
+  "sectors": [
+   "IT / change recruitment"
+  ],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 3): UK IT / change / contract recruitment agency; public jobs RSS probed on the runner",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Pareto Law",
+  "kind": "agency",
+  "domain": "paretolaw.com",
+  "sectors": [
+   "IT / change recruitment"
+  ],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 3): UK IT / change / contract recruitment agency; public jobs RSS probed on the runner",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Rullion",
+  "kind": "agency",
+  "domain": "rullion.co.uk",
+  "sectors": [
+   "IT / change recruitment"
+  ],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 3): UK IT / change / contract recruitment agency; public jobs RSS probed on the runner",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Matchtech",
+  "kind": "agency",
+  "domain": "matchtech.com",
+  "sectors": [
+   "IT / change recruitment"
+  ],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 3): UK IT / change / contract recruitment agency; public jobs RSS probed on the runner",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Networkers",
+  "kind": "agency",
+  "domain": "networkers.com",
+  "sectors": [
+   "IT / change recruitment"
+  ],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 3): UK IT / change / contract recruitment agency; public jobs RSS probed on the runner",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Stafforce",
+  "kind": "agency",
+  "domain": "stafforce.co.uk",
+  "sectors": [
+   "IT / change recruitment"
+  ],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 3): UK IT / change / contract recruitment agency; public jobs RSS probed on the runner",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Hydrogen",
+  "kind": "agency",
+  "domain": "hydrogengroup.com",
+  "sectors": [
+   "IT / change recruitment"
+  ],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 3): UK IT / change / contract recruitment agency; public jobs RSS probed on the runner",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Eden Smith",
+  "kind": "agency",
+  "domain": "edensmith.co.uk",
+  "sectors": [
+   "IT / change recruitment"
+  ],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 3): UK IT / change / contract recruitment agency; public jobs RSS probed on the runner",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Certain Advantage",
+  "kind": "agency",
+  "domain": "certainadvantage.co.uk",
+  "sectors": [
+   "IT / change recruitment"
+  ],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 3): UK IT / change / contract recruitment agency; public jobs RSS probed on the runner",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Daniel James Resourcing",
+  "kind": "agency",
+  "domain": "djresourcing.co.uk",
+  "sectors": [
+   "IT / change recruitment"
+  ],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 3): UK IT / change / contract recruitment agency; public jobs RSS probed on the runner",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Green Park",
+  "kind": "agency",
+  "domain": "green-park.co.uk",
+  "sectors": [
+   "IT / change recruitment"
+  ],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 3): UK IT / change / contract recruitment agency; public jobs RSS probed on the runner",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Allegis Group",
+  "kind": "agency",
+  "domain": "allegisgroup.com",
+  "sectors": [
+   "IT / change recruitment"
+  ],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 3): UK IT / change / contract recruitment agency; public jobs RSS probed on the runner",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "TEKsystems",
+  "kind": "agency",
+  "domain": "teksystems.com",
+  "sectors": [
+   "IT / change recruitment"
+  ],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 3): UK IT / change / contract recruitment agency; public jobs RSS probed on the runner",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Aston Carter",
+  "kind": "agency",
+  "domain": "astoncarter.co.uk",
+  "sectors": [
+   "IT / change recruitment"
+  ],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 3): UK IT / change / contract recruitment agency; public jobs RSS probed on the runner",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Hudson",
+  "kind": "agency",
+  "domain": "hudsonrpo.com",
+  "sectors": [
+   "IT / change recruitment"
+  ],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 3): UK IT / change / contract recruitment agency; public jobs RSS probed on the runner",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "SThree",
+  "kind": "agency",
+  "domain": "sthree.com",
+  "sectors": [
+   "IT / change recruitment"
+  ],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 3): UK IT / change / contract recruitment agency; public jobs RSS probed on the runner",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Nicholson Glover",
+  "kind": "agency",
+  "domain": "nicholsonglover.com",
+  "sectors": [
+   "IT / change recruitment"
+  ],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 3): UK IT / change / contract recruitment agency; public jobs RSS probed on the runner",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Resourcing Solutions",
+  "kind": "agency",
+  "domain": "resourcing-solutions.com",
+  "sectors": [
+   "IT / change recruitment"
+  ],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 3): UK IT / change / contract recruitment agency; public jobs RSS probed on the runner",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Carrington West",
+  "kind": "agency",
+  "domain": "carringtonwest.com",
+  "sectors": [
+   "IT / change recruitment"
+  ],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 3): UK IT / change / contract recruitment agency; public jobs RSS probed on the runner",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Eames Consulting",
+  "kind": "agency",
+  "domain": "eamesconsulting.com",
+  "sectors": [
+   "IT / change recruitment"
+  ],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 3): UK IT / change / contract recruitment agency; public jobs RSS probed on the runner",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Jumar Solutions",
+  "kind": "agency",
+  "domain": "jumar-solutions.com",
+  "sectors": [
+   "IT / change recruitment"
+  ],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 3): UK IT / change / contract recruitment agency; public jobs RSS probed on the runner",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Head Resourcing",
+  "kind": "agency",
+  "domain": "headresourcing.com",
+  "sectors": [
+   "IT / change recruitment"
+  ],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 3): UK IT / change / contract recruitment agency; public jobs RSS probed on the runner",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Global Enterprise Partners",
+  "kind": "agency",
+  "domain": "global-enterprise-partners.com",
+  "sectors": [
+   "IT / change recruitment"
+  ],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 3): UK IT / change / contract recruitment agency; public jobs RSS probed on the runner",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Unity Advisory",
+  "kind": "agency",
+  "domain": "unityadvisory.co.uk",
+  "sectors": [
+   "IT / change recruitment"
+  ],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 3): UK IT / change / contract recruitment agency; public jobs RSS probed on the runner",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Bloom Procurement",
+  "kind": "agency",
+  "domain": "bloom.services",
+  "sectors": [
+   "IT / change recruitment"
+  ],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 3): UK IT / change / contract recruitment agency; public jobs RSS probed on the runner",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Crimson",
+  "kind": "agency",
+  "domain": "crimson.co.uk",
+  "sectors": [
+   "IT / change recruitment"
+  ],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 3): UK IT / change / contract recruitment agency; public jobs RSS probed on the runner",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Methods Resourcing",
+  "kind": "agency",
+  "domain": "methods.co.uk",
+  "sectors": [
+   "IT / change recruitment"
+  ],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 3): UK IT / change / contract recruitment agency; public jobs RSS probed on the runner",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Vivid Resourcing",
+  "kind": "agency",
+  "domain": "vividresourcing.com",
+  "sectors": [
+   "IT / change recruitment"
+  ],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 3): UK IT / change / contract recruitment agency; public jobs RSS probed on the runner",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Annapurna Recruitment",
+  "kind": "agency",
+  "domain": "annapurnarecruitment.co.uk",
+  "sectors": [
+   "IT / change recruitment"
+  ],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 3): UK IT / change / contract recruitment agency; public jobs RSS probed on the runner",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Charles Hunter Associates",
+  "kind": "agency",
+  "domain": "charleshunter.co.uk",
+  "sectors": [
+   "IT / change recruitment"
+  ],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 3): UK IT / change / contract recruitment agency; public jobs RSS probed on the runner",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Inspire People",
+  "kind": "agency",
+  "domain": "inspirepeople.co.uk",
+  "sectors": [
+   "IT / change recruitment"
+  ],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 3): UK IT / change / contract recruitment agency; public jobs RSS probed on the runner",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Digital People",
+  "kind": "agency",
+  "domain": "digitalpeople.co.uk",
+  "sectors": [
+   "IT / change recruitment"
+  ],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 3): UK IT / change / contract recruitment agency; public jobs RSS probed on the runner",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Exact Mobility",
+  "kind": "agency",
+  "domain": "exactmobility.com",
+  "sectors": [
+   "IT / change recruitment"
+  ],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 3): UK IT / change / contract recruitment agency; public jobs RSS probed on the runner",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Change Recruitment Group",
+  "kind": "agency",
+  "domain": "changerecruitmentgroup.com",
+  "sectors": [
+   "IT / change recruitment"
+  ],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 3): UK IT / change / contract recruitment agency; public jobs RSS probed on the runner",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Lawrence Harvey",
+  "kind": "agency",
+  "domain": "lawrenceharvey.com",
+  "sectors": [
+   "IT / change recruitment"
+  ],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 3): UK IT / change / contract recruitment agency; public jobs RSS probed on the runner",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Trust in SODA",
+  "kind": "agency",
+  "domain": "trustinsoda.com",
+  "sectors": [
+   "IT / change recruitment"
+  ],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 3): UK IT / change / contract recruitment agency; public jobs RSS probed on the runner",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Interaction Recruitment",
+  "kind": "agency",
+  "domain": "interactionrecruitment.co.uk",
+  "sectors": [
+   "IT / change recruitment"
+  ],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 3): UK IT / change / contract recruitment agency; public jobs RSS probed on the runner",
   "careers_url": null,
   "target_sector": true
  }
