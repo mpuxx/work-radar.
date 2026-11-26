@@ -81,8 +81,22 @@ def registry_csv(db, path=ROOT / "SOURCE_REGISTRY.csv"):
 
 def write_all(db):
     WEB.mkdir(parents=True, exist_ok=True)
-    for name, data in (("jobs", jobs(db)), ("sources", sources(db)), ("status", status(db)), ("notifications", notifications(db))):
-        (WEB / f"{name}.json").write_text(json.dumps(data, ensure_ascii=False, default=str))
+    all_jobs = jobs(db)
+    # Light list for the results page; the long text loads only when a job is opened (details/<2 hex>.json).
+    heavy = ("description", "provenance", "changes")
+    light = [{k: v for k, v in j.items() if k not in heavy} for j in all_jobs]
+    det_dir = WEB / "details"
+    det_dir.mkdir(parents=True, exist_ok=True)
+    buckets = {}
+    for j in all_jobs:
+        buckets.setdefault(j["job_id"][:2], {})[j["job_id"]] = {k: j.get(k) for k in heavy}
+    for old in det_dir.glob("*.json"):
+        if old.stem not in buckets:
+            old.unlink()
+    for b, d in buckets.items():
+        (det_dir / f"{b}.json").write_text(json.dumps(d, ensure_ascii=False, default=str))
+    for name, data in (("jobs", light), ("sources", sources(db)), ("status", status(db)), ("notifications", notifications(db))):
+        (WEB / f"{name}.json").write_text(json.dumps(data, ensure_ascii=False, default=str, separators=(",", ":")))
     from .taxonomy import FAMILIES
     (WEB / "taxonomy.json").write_text(json.dumps([{"family": f, "terms": t} for f, t in FAMILIES], ensure_ascii=False))
     n = registry_csv(db)
