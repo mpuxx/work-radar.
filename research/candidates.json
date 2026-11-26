@@ -1986,5 +1986,6065 @@
   "origin": "named in owner's brief as excluded",
   "careers_url": null,
   "target_sector": false
+ },
+ {
+  "name": "Bloomberg",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Moneybox",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Starling",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Atom bank",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Chip",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Monese",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Lightyear",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Nutmeg",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Wealthify",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Smart Pension",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "PensionBee",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Tandem",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Funding Circle",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "iwoca",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Capital on Tap",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Ebury",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Banked",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Modulr",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "ClearBank",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Railsr",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Vitesse",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Paysafe",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Divido",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Zilch",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Uncapped",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Tymit",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Koto",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Flux",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Cushon",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Hargreaves Lansdown",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "AJ Bell",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Interactive Investor",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Nucleus",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Seccl",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Bink",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Paysend",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Currencycloud",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Soldo",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Payhawk",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Spendesk",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Pennylane",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Tink",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Plaid",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Stripe",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Adyen",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Marqeta",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Rapyd",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Airwallex",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Ramp",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Brex",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Mollie",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "SumUp",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Dojo",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Teya",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Yonder",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Kriya",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Coconut",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Fintern",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Oxbury",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Kroo Bank",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Algbra",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Pockit",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Laybuy",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Prima",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Hiscox",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Beazley",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Superscript",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Cytora",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Concirrus",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Flock",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Laka",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Urban Jungle",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Collective Benefits",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Bought By Many",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "ManyPets",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Cuvva",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Ripe",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "YuLife",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Vitality",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Admiral",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Aviva",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Zurich",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Bupa",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Simply Business",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Ki Insurance",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Artificial Labs",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Hyperexponential",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Optalitix",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Paladin",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Allianz",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Lloyds Banking Group",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "NatWest",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Barclays",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Santander UK",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "HSBC",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Nationwide",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Virgin Money",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Metro Bank",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Coventry Building Society",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Skipton",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "LSEG",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Schroders",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "M&G",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Legal & General",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "abrdn",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Aberdeen",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Baillie Gifford",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Jupiter",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Man Group",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Ninety One",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Rathbones",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "St James's Place",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Quilter",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Phoenix Group",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Lloyd's of London",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Arch",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Markel",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Chaucer",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Canopius",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Brit Insurance",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Ascot",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Tradeweb",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "IG Group",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "CMC Markets",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Plus500",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "eToro",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Revolut Business",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Trading 212",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Wombat",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Shares",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Robinhood",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Kraken",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Copper",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Zodia",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Ripple",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Coinbase",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Gemini",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Ledger",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Fireblocks",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Chainalysis",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "ComplyAdvantage",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Fenergo",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Encompass",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Napier",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Feedzai",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Featurespace",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Sardine",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Ondato",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Yoti",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Veriff",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Sumsub",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Signicat",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Thirdfort",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Credas",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Duco",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Tradeteq",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Equifax",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "TransUnion",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Credit Kudos",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Snoop",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Emma",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Monzo Business",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Mettle",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Tide Business",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Countingup",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "ANNA Money",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "FreeAgent",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Xero",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Sage",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "IRIS Software",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Access Group",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Advanced",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Civica",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Capita",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Sopra Steria",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "CGI",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Atos",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Fujitsu",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "NTT Data",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Infosys",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Wipro",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "TCS",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "HCLTech",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Cognizant",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Accenture",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Deloitte",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "PwC",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "EY",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "KPMG",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "BDO",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Grant Thornton",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Mazars",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "RSM",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Baringa",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Elixirr",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Credera",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Slalom",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "North Highland",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Kubrick",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Hitachi Solutions",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Avanade",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Kainos",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "BJSS",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Answer Digital",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Bluefruit",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Scott Logic",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Softwire",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "CDDO",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Difrent",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Dxw",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Hippo Digital",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Nexer",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Zaizi",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Methods",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Leidos",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Roke",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "BAE Systems Digital Intelligence",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "QinetiQ",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Thales",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Airbus",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Rolls-Royce",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "GKN",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Babcock",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Serco",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Mott MacDonald",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Arup",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Jacobs",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "AtkinsRéalis",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "WSP",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Aecom",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Turner & Townsend",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Gleeds",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Arcadis",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Stantec",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Octopus Group",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Bulb",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "EDF",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "E.ON",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "ScottishPower",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "SSE",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Centrica",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "British Gas",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "National Grid",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Ovo Energy",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "So Energy",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Good Energy",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Ecotricity",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Pod Point",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Zapmap",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "ChargePoint",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Ohme",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Bboxx",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Lightsource bp",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Zenobe",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Habitat Energy",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Limejump",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Arenko",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Electron",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Origami Energy",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Piclo",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Kaluza",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Octopus Electric Vehicles",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Tesco",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Sainsbury's",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Asda",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Morrisons",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Waitrose",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "John Lewis",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Marks & Spencer",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Next",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Boots",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Superdrug",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Holland & Barrett",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Currys",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Argos",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "AO.com",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "THG",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Boohoo",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Pretty Little Thing",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Gymshark",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Lounge Underwear",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Represent",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Missguided",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Selfridges",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Harrods",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Burberry",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Mulberry",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Matches",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Net-a-Porter",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Vestiaire Collective",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Vinted",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Trouva",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Not On The High Street",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Etsy",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "eBay",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Amazon",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Ocado",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Getir",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Gorillas",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Zapp",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Deliveroo Hop",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Just Eat",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Uber",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Bolt",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Free Now",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Addison Lee",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Citymapper",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Zipcar",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Onto",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Cazoo",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Cinch",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Carwow",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Auto Trader",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Rightmove",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Zoopla",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "OnTheMarket",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Purplebricks",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Habito",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Mojo Mortgages",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Trussle",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Molo",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Hammock",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Goodlord",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Arthur Online",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Plentific",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Fixflo",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Lettable",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "OpenRent",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Vouch",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Homeppl",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Bricks",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Coadjute",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Landmark",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Hometrack",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Sprift",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Unmortgage",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Wayhome",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Sidekick Health",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Cera Care",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Birdie",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Lantum",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Patchwork Health",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Accurx",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Babylon",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Livi",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Push Doctor",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Medicspot",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Thriva",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Numan",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Manual",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Hims",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Juniper",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Peppy",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Hertility",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Elvie",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Bloom",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Huma",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Kheiron",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Skin Analytics",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Ada Health",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Healx",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "BenevolentAI",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Exscientia",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Isomorphic Labs",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Recursion",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Oxford Nanopore",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Owkin",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Sensyne",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Lifebit",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Flo Health",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Kry",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Doctolib",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Oviva",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Second Nature",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Holmusk",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Feebris",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Doccla",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Luscii",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Ufonia",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Infinitus",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "DeepMind",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Google",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Microsoft",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Meta",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Apple",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "IBM",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Oracle",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Salesforce",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "SAP",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Adobe",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Atlassian",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Autodesk",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Workday",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Snowflake",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Databricks",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Confluent",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "MongoDB",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Elastic",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "GitLab",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "HashiCorp",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Datadog",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "PagerDuty",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Twilio",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Zendesk",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "HubSpot",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Intercom",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Pipedrive",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Monday.com",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Asana",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Notion",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Figma",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Airtable",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Zapier",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "UiPath",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Blue Prism",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Celonis",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Signavio",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Appian",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Pega",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "OutSystems",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Mendix",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Unily",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Contentsquare",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Hotjar",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "FullStory",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Pendo",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Amplitude",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Mixpanel",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Optimizely",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Bloomreach",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Contentstack",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Kentico",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Umbraco",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Acquia",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Squiz",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Magnolia",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Hygraph",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Prismic",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Strapi",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Builder.io",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Netlify",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Vercel",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Cloudflare",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Fastly",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Akamai",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Arm",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Imagination Technologies",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Raspberry Pi",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Sony Interactive",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Rockstar",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Codemasters",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Sumo Digital",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Frontier Developments",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Jagex",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "King",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Playtika",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Space Ape",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Hutch",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Kwalee",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Unity",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Roblox",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Epic Games",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Ubisoft",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "EA",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Sky Betting",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Flutter",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Entain",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "bet365",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Betfair",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Paddy Power",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "William Hill",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Kindred",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Gamesys",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Playtech",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Evolution",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "BBC Studios",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "ITV Studios",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Virgin Media O2",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "BT",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "EE",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Vodafone",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Three",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "TalkTalk",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Hyperoptic",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "CityFibre",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Openreach",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Community Fibre",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Gigaclear",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Zen Internet",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Daisy",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Colt",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Neos Networks",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Truespeed",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Netflix",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Disney",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Warner Bros Discovery",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Paramount",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Universal Music",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Sony Music",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Warner Music",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Spotify UK",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Audible",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Bauer",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Global Media",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Penguin Random House",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "HarperCollins",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Hachette",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Pearson",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "RELX",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Informa",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Ascential",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Euromoney",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Wiley",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Springer Nature",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Elsevier",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Taylor & Francis",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Oxford University Press",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Cambridge University Press",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "The Economist",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "The Telegraph",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "News UK",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Daily Mail",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "DMG Media",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "The Independent",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Condé Nast",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Hearst UK",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Dazed",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Vice",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "LADbible",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "JOE Media",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Time Out",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Monocle",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Tortoise Media",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Kantar",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "YouGov",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Ipsos",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Dunnhumby",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Nielsen",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "GfK",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Euromonitor",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "WGSN",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Statista",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Similarweb",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Brandwatch",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Pulsar",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Talkwalker",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Meltwater",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Cision",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Onclusive",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Hootsuite",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Sprout Social",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Later",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Linktree",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Patreon",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Substack",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Medium",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Duolingo",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Memrise",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Busuu",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "FutureLearn",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Coursera",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Udemy",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Makers",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "General Assembly",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Le Wagon",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Northcoders",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "CodeFirst Girls",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Hyper Island",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Springpod",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Unifrog",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Pearson Online",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Oak National Academy",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Third Space Learning",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Sparx",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Century Tech",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Seneca",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Atom Learning",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "MyTutor",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Tutorful",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "GoStudent",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Kahoot",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Quizlet",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Firefly Learning",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Arbor",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Bromcom",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "ParentPay",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Satchel",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Teachermatic",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Skills Builder",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Tes",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Twinkl",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "EdTech UK",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [],
+  "hints": [],
+  "origin": "desk research 2026-11-26 (wave 2): UK-hiring employer in a target sector; platform found by live API probe with identity check",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Remotive",
+  "kind": "job_board",
+  "domain": null,
+  "sectors": [
+   "job board"
+  ],
+  "hints": [
+   "remotive:all"
+  ],
+  "origin": "documented public job-board API, 2026-11-26 (owner asked for maximum feed coverage)",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Himalayas",
+  "kind": "job_board",
+  "domain": null,
+  "sectors": [
+   "job board"
+  ],
+  "hints": [
+   "himalayas:all"
+  ],
+  "origin": "documented public job-board API, 2026-11-26 (owner asked for maximum feed coverage)",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Remote OK",
+  "kind": "job_board",
+  "domain": null,
+  "sectors": [
+   "job board"
+  ],
+  "hints": [
+   "remoteok:all"
+  ],
+  "origin": "documented public job-board API, 2026-11-26 (owner asked for maximum feed coverage)",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Jobicy",
+  "kind": "job_board",
+  "domain": null,
+  "sectors": [
+   "job board"
+  ],
+  "hints": [
+   "jobicy:uk"
+  ],
+  "origin": "documented public job-board API, 2026-11-26 (owner asked for maximum feed coverage)",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Arbeitnow",
+  "kind": "job_board",
+  "domain": null,
+  "sectors": [
+   "job board"
+  ],
+  "hints": [
+   "arbeitnow:all"
+  ],
+  "origin": "documented public job-board API, 2026-11-26 (owner asked for maximum feed coverage)",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Adzuna",
+  "kind": "job_board",
+  "domain": null,
+  "sectors": [
+   "job board"
+  ],
+  "hints": [
+   "adzuna:gb"
+  ],
+  "origin": "documented public job-board API, 2026-11-26 (owner asked for maximum feed coverage)",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Careerjet",
+  "kind": "job_board",
+  "domain": null,
+  "sectors": [
+   "job board"
+  ],
+  "hints": [
+   "careerjet:gb"
+  ],
+  "origin": "documented public job-board API, 2026-11-26 (owner asked for maximum feed coverage)",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "We Work Remotely: management & finance",
+  "kind": "job_board",
+  "domain": null,
+  "sectors": [
+   "job board"
+  ],
+  "hints": [
+   "rss:https://weworkremotely.com/categories/remote-management-and-finance-jobs.rss"
+  ],
+  "origin": "documented public job-board API, 2026-11-26 (owner asked for maximum feed coverage)",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "We Work Remotely: product",
+  "kind": "job_board",
+  "domain": null,
+  "sectors": [
+   "job board"
+  ],
+  "hints": [
+   "rss:https://weworkremotely.com/categories/remote-product-jobs.rss"
+  ],
+  "origin": "documented public job-board API, 2026-11-26 (owner asked for maximum feed coverage)",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "We Work Remotely: all other",
+  "kind": "job_board",
+  "domain": null,
+  "sectors": [
+   "job board"
+  ],
+  "hints": [
+   "rss:https://weworkremotely.com/categories/all-other-remote-jobs.rss"
+  ],
+  "origin": "documented public job-board API, 2026-11-26 (owner asked for maximum feed coverage)",
+  "careers_url": null,
+  "target_sector": true
  }
 ]

@@ -349,12 +349,161 @@ def contractsfinder(src, get=http.get_json):
     return out
 
 
+def pinpoint(src, get=http.get_json):
+    d = get(f"https://{src['board_id']}.pinpointhq.com/postings.json")
+    _need(isinstance(d.get("data"), list), "pinpoint: no data list")
+    out = []
+    for j in d["data"]:
+        loc = j.get("location") or {}
+        pub, prec = _iso(j.get("published_at") or j.get("created_at"))
+        out.append(_job(source_job_id=str(j["id"]), title=(j.get("title") or "").strip(),
+                        description=strip_html((j.get("description") or "") + "\n" + (j.get("key_responsibilities") or "")),
+                        location=", ".join(x for x in [loc.get("city"), loc.get("province"), loc.get("name")] if x),
+                        employment_type=j.get("employment_type_text") or j.get("employment_type") or "",
+                        workplace=j.get("workplace_type_text") or j.get("workplace_type") or "",
+                        pay_text=(j.get("compensation") or "") if "£" in str(j.get("compensation") or "") else "",
+                        published_at=pub, published_precision=prec, job_url=j.get("url"), employer_name=src.get("org_name")))
+    return out
+
+
+# ---------------- open job-board APIs (no key; attribution: we always link to the original advert) ----------------
+REMOTE_TERMS = ["business analyst", "project manager", "product owner", "delivery manager", "transformation", "service design", "operations"]
+
+
+def remotive(src, get=http.get_json):
+    out, seen = [], set()
+    for q in REMOTE_TERMS[:4]:
+        d = get("https://remotive.com/api/remote-jobs?" + urlencode({"search": q, "limit": 100}))
+        _need(isinstance(d.get("jobs"), list), "remotive: no jobs list")
+        for j in d["jobs"]:
+            if j["id"] in seen:
+                continue
+            seen.add(j["id"])
+            pub, prec = _iso(j.get("publication_date"))
+            out.append(_job(source_job_id=str(j["id"]), title=j.get("title", "").strip(), description=strip_html(j.get("description")),
+                            location="Remote, " + (j.get("candidate_required_location") or "location not stated"),
+                            employment_type=j.get("job_type", ""), workplace="Remote", pay_text=j.get("salary") or "",
+                            published_at=pub, published_precision=prec, job_url=j.get("url"), employer_name=j.get("company_name")))
+    return out
+
+
+def himalayas(src, get=http.get_json):
+    out = []
+    for offset in (0, 100, 200):
+        d = get(f"https://himalayas.app/jobs/api?limit=100&offset={offset}")
+        _need(isinstance(d.get("jobs"), list), "himalayas: no jobs list")
+        for j in d["jobs"]:
+            locs = j.get("locationRestrictions") or []
+            pub, prec = _iso((j.get("pubDate") or 0) * 1000 if isinstance(j.get("pubDate"), (int, float)) else j.get("pubDate"))
+            out.append(_job(source_job_id=str(j.get("guid") or j.get("applicationLink")), title=(j.get("title") or "").strip(),
+                            description=strip_html(j.get("description") or j.get("excerpt")),
+                            location="Remote, " + (", ".join(locs) if locs else "worldwide"), employment_type=j.get("employmentType") or "",
+                            workplace="Remote", published_at=pub, published_precision=prec,
+                            job_url=j.get("applicationLink") or j.get("guid"), employer_name=j.get("companyName")))
+    return out
+
+
+def remoteok(src, get=http.get_json):
+    d = get("https://remoteok.com/api")
+    _need(isinstance(d, list), "remoteok: not a list")
+    out = []
+    for j in d[1:]:  # first item is the API's legal notice
+        if not isinstance(j, dict) or not j.get("id"):
+            continue
+        pub, prec = _iso(j.get("date"))
+        out.append(_job(source_job_id=str(j["id"]), title=(j.get("position") or "").strip(), description=strip_html(j.get("description")),
+                        location="Remote, " + (j.get("location") or "location not stated"), workplace="Remote",
+                        published_at=pub, published_precision=prec, job_url=j.get("url"), apply_url=j.get("apply_url"),
+                        employer_name=j.get("company")))
+    return out
+
+
+def jobicy(src, get=http.get_json):
+    d = get("https://jobicy.com/api/v2/remote-jobs?count=100&geo=uk")
+    _need(isinstance(d.get("jobs"), list), "jobicy: no jobs list")
+    out = []
+    for j in d["jobs"]:
+        pub, prec = _iso(j.get("pubDate"))
+        typ = j.get("jobType")
+        out.append(_job(source_job_id=str(j["id"]), title=strip_html(j.get("jobTitle")), description=strip_html(j.get("jobDescription")),
+                        location="Remote, " + (j.get("jobGeo") or "UK"), employment_type=", ".join(typ) if isinstance(typ, list) else (typ or ""),
+                        workplace="Remote", published_at=pub, published_precision=prec, job_url=j.get("url"), employer_name=j.get("companyName")))
+    return out
+
+
+def arbeitnow(src, get=http.get_json):
+    out = []
+    for page in (1, 2, 3):
+        d = get(f"https://www.arbeitnow.com/api/job-board-api?page={page}")
+        _need(isinstance(d.get("data"), list), "arbeitnow: no data list")
+        for j in d["data"]:
+            pub, prec = _iso((j.get("created_at") or 0) * 1000 if isinstance(j.get("created_at"), (int, float)) else j.get("created_at"))
+            out.append(_job(source_job_id=j.get("slug"), title=(j.get("title") or "").strip(), description=strip_html(j.get("description")),
+                            location=j.get("location") or "", employment_type=", ".join(j.get("job_types") or []),
+                            workplace="Remote" if j.get("remote") else "", published_at=pub, published_precision=prec,
+                            job_url=j.get("url"), employer_name=j.get("company_name")))
+    return out
+
+
+# ---------------- aggregator APIs with free keys ----------------
+def adzuna(src, get=http.get_json):
+    app_id, key = os.environ.get("ADZUNA_APP_ID"), _key("adzuna")
+    _need(app_id and key, "adzuna: ADZUNA_APP_ID / ADZUNA_API_KEY not set")
+    out, seen = [], set()
+    for q in SEARCHES[: src.get("_budget", 12)]:
+        d = get("https://api.adzuna.com/v1/api/jobs/gb/search/1?" + urlencode(
+            {"app_id": app_id, "app_key": key, "what_phrase": q, "contract_type": "contract", "results_per_page": 50, "max_days_old": 7}))
+        _need(isinstance(d.get("results"), list), "adzuna: no results list")
+        for j in d["results"]:
+            if j["id"] in seen:
+                continue
+            seen.add(j["id"])
+            lo, hi = j.get("salary_min"), j.get("salary_max")
+            pay = f"£{lo:.0f} - £{hi:.0f} per year" if lo and hi and j.get("salary_is_predicted") in ("0", 0) else ""
+            pub, prec = _iso(j.get("created"))
+            out.append(_job(source_job_id=str(j["id"]), title=strip_html(j.get("title")), description=strip_html(j.get("description")),
+                            location=(j.get("location") or {}).get("display_name", "") + ", UK",
+                            employment_type=j.get("contract_type") or "", hours=j.get("contract_time") or "", pay_text=pay,
+                            published_at=pub, published_precision=prec, job_url=j.get("redirect_url"),
+                            agency_name=(j.get("company") or {}).get("display_name")))
+    return out
+
+
+def careerjet(src, get=http.get_json):
+    aff = _key("careerjet")
+    _need(aff, "careerjet: CAREERJET_API_KEY (affiliate id) not set")
+    out, seen = [], set()
+    for q in SEARCHES[: src.get("_budget", 12)]:
+        d = get("https://public.api.careerjet.net/search?" + urlencode(
+            {"keywords": q, "location": "United Kingdom", "locale_code": "en_GB", "contracttype": "c", "pagesize": 50, "affid": aff,
+             "user_ip": "1.1.1.1", "user_agent": http.UA, "url": "https://mpuxx.github.io/work-radar./"}))
+        _need(d.get("type") in ("JOBS", "LOCATIONS") , "careerjet: unexpected response")
+        for j in d.get("jobs") or []:
+            if j["url"] in seen:
+                continue
+            seen.add(j["url"])
+            pub, _ = _iso(j.get("date"))
+            out.append(_job(source_job_id=D_sha(j["url"]), title=strip_html(j.get("title")), description=strip_html(j.get("description")),
+                            location=(j.get("locations") or "") + ", UK", pay_text=j.get("salary") or "", updated_at=pub,
+                            job_url=j["url"], agency_name=j.get("company") or None))
+    return out
+
+
+def D_sha(x):
+    import hashlib
+    return hashlib.sha1(x.encode()).hexdigest()[:16]
+
+
 CONNECTORS = {"contractsfinder": contractsfinder, "greenhouse": greenhouse, "lever": lever, "ashby": ashby, "smartrecruiters": smartrecruiters, "workable": workable,
-              "recruitee": recruitee, "personio": personio, "jsonld": jsonld, "rss": rss, "reed": reed, "jooble": jooble}
+              "recruitee": recruitee, "personio": personio, "pinpoint": pinpoint,
+              "remotive": remotive, "himalayas": himalayas, "remoteok": remoteok, "jobicy": jobicy, "arbeitnow": arbeitnow,
+              "adzuna": adzuna, "careerjet": careerjet, "jsonld": jsonld, "rss": rss, "reed": reed, "jooble": jooble}
 
 API_HOST = {"greenhouse": "boards-api.greenhouse.io", "lever": "api.lever.co", "ashby": "api.ashbyhq.com",
             "smartrecruiters": "api.smartrecruiters.com", "workable": "apply.workable.com", "reed": "www.reed.co.uk", "jooble": "jooble.org",
-            "contractsfinder": "www.contractsfinder.service.gov.uk"}
+            "contractsfinder": "www.contractsfinder.service.gov.uk", "remotive": "remotive.com", "himalayas": "himalayas.app",
+            "remoteok": "remoteok.com", "jobicy": "jobicy.com", "arbeitnow": "www.arbeitnow.com", "adzuna": "api.adzuna.com",
+            "careerjet": "public.api.careerjet.net"}
 
 # Documented limits and conditions, recorded in the registry.
 ACCESS = {
@@ -369,7 +518,16 @@ ACCESS = {
     "rss": "Published RSS job feed",
     "reed": "Reed Jobseeker API, free key, basic auth (reed.co.uk/developers)",
     "jooble": "Jooble REST API, free key, 100 requests/day",
+    "pinpoint": "Public Pinpoint postings JSON, no key",
+    "remotive": "Remotive public API, no key; terms ask for a link back to the advert (we always link to it)",
+    "himalayas": "Himalayas public jobs API, no key; link back required",
+    "remoteok": "Remote OK public API, no key; terms require a link back and attribution",
+    "jobicy": "Jobicy public API, no key, UK filter; link back required",
+    "arbeitnow": "Arbeitnow public job board API, no key",
+    "adzuna": "Adzuna API, free key (developer.adzuna.com), contract filter",
+    "careerjet": "Careerjet Partner API, free affiliate id",
     "contractsfinder": "UK Government Contracts Finder OCDS API, open data, no key (Open Government Licence)",
 }
-INTERVAL = {"workable": 60, "reed": 120, "jooble": 360, "jsonld": 60, "rss": 30, "contractsfinder": 60}
-DAILY_CAP = {"jooble": 60, "reed": 900}
+INTERVAL = {"workable": 60, "reed": 120, "jooble": 360, "jsonld": 60, "rss": 30, "contractsfinder": 60, "remotive": 60, "himalayas": 60,
+            "remoteok": 60, "jobicy": 60, "arbeitnow": 120, "adzuna": 120, "careerjet": 120, "pinpoint": 30}
+DAILY_CAP = {"jooble": 60, "reed": 900, "adzuna": 240, "careerjet": 300, "remoteok": 48}

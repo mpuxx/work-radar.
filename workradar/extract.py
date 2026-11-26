@@ -234,6 +234,9 @@ class Labeller:
             return "UK and elsewhere"
         if NON_UK_RX.search(loc):
             return "Outside UK"
+        if re.search(r"remote", loc, re.I) and re.search(r"worldwide|anywhere|global|emea|europe", loc, re.I):
+            self.put("country_eligibility", "UK", "inferred", f"Location: {loc[:80]} (includes the UK)")
+            return "UK"
         if re.search(r"remote", loc, re.I):
             m, q = find(r"(based|located|resident|right to work) in (the )?(uk|united kingdom)", self.text)
             if m:

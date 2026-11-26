@@ -12,10 +12,13 @@ concurrency:
 jobs:
   discover:
     runs-on: ubuntu-latest
-    timeout-minutes: 30
+    timeout-minutes: 90
     env:
       REED_API_KEY: ${{ secrets.REED_API_KEY }}
       JOOBLE_API_KEY: ${{ secrets.JOOBLE_API_KEY }}
+      ADZUNA_APP_ID: ${{ secrets.ADZUNA_APP_ID }}
+      ADZUNA_API_KEY: ${{ secrets.ADZUNA_API_KEY }}
+      CAREERJET_API_KEY: ${{ secrets.CAREERJET_API_KEY }}
       WORKRADAR_DB: state/workradar.sqlite3
     steps:
       - uses: actions/checkout@v4

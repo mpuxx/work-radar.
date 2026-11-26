@@ -10,7 +10,10 @@ Decisions:
 A guessed slug is never proof: a board counts only if its live API returns the expected structure
 AND the organisation's identity checks out. Logins, CAPTCHAs and robots.txt disallows are respected.
 """
+import concurrent.futures as cf
+import datetime as dt
 import json
+import os
 import re
 import urllib.robotparser
 from urllib.parse import urljoin, urlparse
@@ -127,13 +130,14 @@ def assess(cand):
         found, unsup, note = scan_careers(cand["careers_url"])
         hints += found
     for conn, board in hints:
-        if conn in ("reed", "jooble"):  # keyed APIs: don't spend quota on discovery; the collector validates each run
-            have = "key configured as a secret" if connectors._key(conn) else f"{conn.upper()}_API_KEY secret not set yet: each run will report it until it is"
+        if conn in ("reed", "jooble", "adzuna", "careerjet"):  # keyed APIs: don't spend quota on discovery; the collector validates each run
+            have = "key configured as a secret" if connectors._key(conn) else f"{conn.upper()}_API_KEY secret not set yet: each run reports it until it is"
             return dict(connector=conn, board_id=board, state="activated", reason=f"{connectors.ACCESS[conn]}; {have}")
     guessed = not hints
     if guessed:
         slugs = list(dict.fromkeys([slugify(cand["name"]).replace("-", ""), slugify(cand["name"])]))
-        hints = [(c, s) for c in ("greenhouse", "lever", "ashby", "smartrecruiters") for s in slugs]
+        hints = [(c, s) for c in ("greenhouse", "lever", "ashby", "smartrecruiters", "recruitee", "pinpoint", "personio") for s in slugs]
+        hints += [("lever", s + "@eu") for s in slugs[:1]]
     tried = []
     for conn, board in hints:
         region = "eu" if conn == "lever" and board.endswith("@eu") else "global"
@@ -149,7 +153,10 @@ def assess(cand):
         if guessed and not jobs:
             tried.append(f"{conn}:{board} empty")
             continue  # an empty board at a guessed address proves nothing
-        ok, why = identity_ok(cand, jobs, meta)
+        if cand.get("kind") == "job_board":  # the documented API is the organisation's own: identity is the endpoint itself
+            ok, why = True, f"official {conn} API"
+        else:
+            ok, why = identity_ok(cand, jobs, meta)
         rel = relevance(jobs)
         base = dict(connector=conn, board_id=board, region=region, relevance=rel, identity=why)
         if not ok:
@@ -235,12 +242,22 @@ def run(db, candidates, limit=None, assess_fn=assess):
     run_id = D.sha("discover", D.iso(D.now()))
     db.execute("INSERT INTO runs(run_id,kind,trigger,started_at) VALUES(?,?,?,?)", (run_id, "discover", "schedule", D.iso(D.now())))
     moved = recheck_moved(db)
-    seen = {r[0]: r[1] for r in db.execute("SELECT candidate_id, assessed_at FROM discovery_candidates")}
+    fresh = {r[0] for r in db.execute("SELECT candidate_id FROM discovery_candidates WHERE state='activated' AND assessed_at > ?",
+                                       (D.iso(D.now() - dt.timedelta(days=3)),))}
+    todo = [c for c in (candidates[:limit] if limit else candidates)
+            if (c.get("candidate_id") or D.sha("cand", c.get("org_id") or slugify(c["name"]))) not in fresh]
     results = []
-    for c in candidates[:limit] if limit else candidates:
-        d = assess_fn(c)
-        with D.tx(db):
-            sid = apply_decision(db, c, d)
-        results.append(dict(name=c["name"], state=d["state"], source=sid, reason=d["reason"]))
+    # Assess in parallel (network only); write one at a time. Per-host limits in http.py still apply.
+    with cf.ThreadPoolExecutor(max_workers=int(os.environ.get("WORKRADAR_DISCOVERY_WORKERS", "8"))) as ex:
+        futs = {ex.submit(assess_fn, c): c for c in todo}
+        for f in cf.as_completed(futs):
+            c = futs[f]
+            try:
+                d = f.result()
+            except Exception as e:
+                d = dict(state="review", reason=f"Assessment error: {str(e)[:120]}")
+            with D.tx(db):
+                sid = apply_decision(db, c, d)
+            results.append(dict(name=c["name"], state=d["state"], source=sid, reason=d["reason"]))
     db.execute("UPDATE runs SET finished_at=? WHERE run_id=?", (D.iso(D.now()), run_id))
     return dict(results=results, moved=moved)
