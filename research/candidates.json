@@ -8798,5 +8798,630 @@
   "origin": "desk research 2026-11-26 (wave 3): UK IT / change / contract recruitment agency; public jobs RSS probed on the runner",
   "careers_url": null,
   "target_sector": true
+ },
+ {
+  "name": "Tomorrow",
+  "kind": "agency",
+  "domain": null,
+  "sectors": [
+   "creative"
+  ],
+  "hints": [],
+  "origin": "employer seen hiring on If You Could Jobs (ifyoucouldjobs.com) 2026-11-26; that board has no feed and its terms bar scraping, so the employer's own careers feed is checked instead",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "The Rundown AI",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [
+   "creative"
+  ],
+  "hints": [],
+  "origin": "employer seen hiring on If You Could Jobs (ifyoucouldjobs.com) 2026-11-26; that board has no feed and its terms bar scraping, so the employer's own careers feed is checked instead",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "EdenMarsh",
+  "kind": "agency",
+  "domain": null,
+  "sectors": [
+   "creative"
+  ],
+  "hints": [],
+  "origin": "employer seen hiring on If You Could Jobs (ifyoucouldjobs.com) 2026-11-26; that board has no feed and its terms bar scraping, so the employer's own careers feed is checked instead",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Gorilla Gorilla!",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [
+   "creative"
+  ],
+  "hints": [],
+  "origin": "employer seen hiring on If You Could Jobs (ifyoucouldjobs.com) 2026-11-26; that board has no feed and its terms bar scraping, so the employer's own careers feed is checked instead",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "RDP LTD",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [
+   "creative"
+  ],
+  "hints": [],
+  "origin": "employer seen hiring on If You Could Jobs (ifyoucouldjobs.com) 2026-11-26; that board has no feed and its terms bar scraping, so the employer's own careers feed is checked instead",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Anatomy",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [
+   "creative"
+  ],
+  "hints": [],
+  "origin": "employer seen hiring on If You Could Jobs (ifyoucouldjobs.com) 2026-11-26; that board has no feed and its terms bar scraping, so the employer's own careers feed is checked instead",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "TwelfthMan",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [
+   "creative"
+  ],
+  "hints": [],
+  "origin": "employer seen hiring on If You Could Jobs (ifyoucouldjobs.com) 2026-11-26; that board has no feed and its terms bar scraping, so the employer's own careers feed is checked instead",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "The Liminal Space",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [
+   "creative"
+  ],
+  "hints": [],
+  "origin": "employer seen hiring on If You Could Jobs (ifyoucouldjobs.com) 2026-11-26; that board has no feed and its terms bar scraping, so the employer's own careers feed is checked instead",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "CFH.STUDIO",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [
+   "creative"
+  ],
+  "hints": [],
+  "origin": "employer seen hiring on If You Could Jobs (ifyoucouldjobs.com) 2026-11-26; that board has no feed and its terms bar scraping, so the employer's own careers feed is checked instead",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Own the Space",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [
+   "creative"
+  ],
+  "hints": [],
+  "origin": "employer seen hiring on If You Could Jobs (ifyoucouldjobs.com) 2026-11-26; that board has no feed and its terms bar scraping, so the employer's own careers feed is checked instead",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Hollywood Secret Service",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [
+   "creative"
+  ],
+  "hints": [],
+  "origin": "employer seen hiring on If You Could Jobs (ifyoucouldjobs.com) 2026-11-26; that board has no feed and its terms bar scraping, so the employer's own careers feed is checked instead",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Lock Studios",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [
+   "creative"
+  ],
+  "hints": [],
+  "origin": "employer seen hiring on If You Could Jobs (ifyoucouldjobs.com) 2026-11-26; that board has no feed and its terms bar scraping, so the employer's own careers feed is checked instead",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Fable&Co.",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [
+   "creative"
+  ],
+  "hints": [],
+  "origin": "employer seen hiring on If You Could Jobs (ifyoucouldjobs.com) 2026-11-26; that board has no feed and its terms bar scraping, so the employer's own careers feed is checked instead",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Bulletproof",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [
+   "creative"
+  ],
+  "hints": [],
+  "origin": "employer seen hiring on If You Could Jobs (ifyoucouldjobs.com) 2026-11-26; that board has no feed and its terms bar scraping, so the employer's own careers feed is checked instead",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Newspaper Club",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [
+   "creative"
+  ],
+  "hints": [],
+  "origin": "employer seen hiring on If You Could Jobs (ifyoucouldjobs.com) 2026-11-26; that board has no feed and its terms bar scraping, so the employer's own careers feed is checked instead",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Residency Studio",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [
+   "creative"
+  ],
+  "hints": [],
+  "origin": "employer seen hiring on If You Could Jobs (ifyoucouldjobs.com) 2026-11-26; that board has no feed and its terms bar scraping, so the employer's own careers feed is checked instead",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Quercus Limited",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [
+   "creative"
+  ],
+  "hints": [],
+  "origin": "employer seen hiring on If You Could Jobs (ifyoucouldjobs.com) 2026-11-26; that board has no feed and its terms bar scraping, so the employer's own careers feed is checked instead",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Beryl",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [
+   "creative"
+  ],
+  "hints": [],
+  "origin": "employer seen hiring on If You Could Jobs (ifyoucouldjobs.com) 2026-11-26; that board has no feed and its terms bar scraping, so the employer's own careers feed is checked instead",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Twelve Marketing",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [
+   "creative"
+  ],
+  "hints": [],
+  "origin": "employer seen hiring on If You Could Jobs (ifyoucouldjobs.com) 2026-11-26; that board has no feed and its terms bar scraping, so the employer's own careers feed is checked instead",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Origin Coffee",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [
+   "creative"
+  ],
+  "hints": [],
+  "origin": "employer seen hiring on If You Could Jobs (ifyoucouldjobs.com) 2026-11-26; that board has no feed and its terms bar scraping, so the employer's own careers feed is checked instead",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Threepipe Reply",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [
+   "creative"
+  ],
+  "hints": [],
+  "origin": "employer seen hiring on If You Could Jobs (ifyoucouldjobs.com) 2026-11-26; that board has no feed and its terms bar scraping, so the employer's own careers feed is checked instead",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Plank Hardware",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [
+   "creative"
+  ],
+  "hints": [],
+  "origin": "employer seen hiring on If You Could Jobs (ifyoucouldjobs.com) 2026-11-26; that board has no feed and its terms bar scraping, so the employer's own careers feed is checked instead",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Journey Digital",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [
+   "creative"
+  ],
+  "hints": [],
+  "origin": "employer seen hiring on If You Could Jobs (ifyoucouldjobs.com) 2026-11-26; that board has no feed and its terms bar scraping, so the employer's own careers feed is checked instead",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "ORCA Studio",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [
+   "creative"
+  ],
+  "hints": [],
+  "origin": "employer seen hiring on If You Could Jobs (ifyoucouldjobs.com) 2026-11-26; that board has no feed and its terms bar scraping, so the employer's own careers feed is checked instead",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Eighty Studio",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [
+   "creative"
+  ],
+  "hints": [],
+  "origin": "employer seen hiring on If You Could Jobs (ifyoucouldjobs.com) 2026-11-26; that board has no feed and its terms bar scraping, so the employer's own careers feed is checked instead",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Deep",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [
+   "creative"
+  ],
+  "hints": [],
+  "origin": "employer seen hiring on If You Could Jobs (ifyoucouldjobs.com) 2026-11-26; that board has no feed and its terms bar scraping, so the employer's own careers feed is checked instead",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "NEXT/NOW",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [
+   "creative"
+  ],
+  "hints": [],
+  "origin": "employer seen hiring on If You Could Jobs (ifyoucouldjobs.com) 2026-11-26; that board has no feed and its terms bar scraping, so the employer's own careers feed is checked instead",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "SHERLOCK STUDIO",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [
+   "creative"
+  ],
+  "hints": [],
+  "origin": "employer seen hiring on If You Could Jobs (ifyoucouldjobs.com) 2026-11-26; that board has no feed and its terms bar scraping, so the employer's own careers feed is checked instead",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "MINK MGMT",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [
+   "creative"
+  ],
+  "hints": [],
+  "origin": "employer seen hiring on If You Could Jobs (ifyoucouldjobs.com) 2026-11-26; that board has no feed and its terms bar scraping, so the employer's own careers feed is checked instead",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Here Limited",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [
+   "creative"
+  ],
+  "hints": [],
+  "origin": "employer seen hiring on If You Could Jobs (ifyoucouldjobs.com) 2026-11-26; that board has no feed and its terms bar scraping, so the employer's own careers feed is checked instead",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "The Roundhouse",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [
+   "creative"
+  ],
+  "hints": [],
+  "origin": "employer seen hiring on If You Could Jobs (ifyoucouldjobs.com) 2026-11-26; that board has no feed and its terms bar scraping, so the employer's own careers feed is checked instead",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Arena3",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [
+   "creative"
+  ],
+  "hints": [],
+  "origin": "employer seen hiring on If You Could Jobs (ifyoucouldjobs.com) 2026-11-26; that board has no feed and its terms bar scraping, so the employer's own careers feed is checked instead",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "DNCO",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [
+   "creative"
+  ],
+  "hints": [],
+  "origin": "employer seen hiring on If You Could Jobs (ifyoucouldjobs.com) 2026-11-26; that board has no feed and its terms bar scraping, so the employer's own careers feed is checked instead",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "The Conran Shop",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [
+   "creative"
+  ],
+  "hints": [],
+  "origin": "employer seen hiring on If You Could Jobs (ifyoucouldjobs.com) 2026-11-26; that board has no feed and its terms bar scraping, so the employer's own careers feed is checked instead",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Johnson Naylor",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [
+   "creative"
+  ],
+  "hints": [],
+  "origin": "employer seen hiring on If You Could Jobs (ifyoucouldjobs.com) 2026-11-26; that board has no feed and its terms bar scraping, so the employer's own careers feed is checked instead",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "The Daily Beast",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [
+   "creative"
+  ],
+  "hints": [],
+  "origin": "employer seen hiring on If You Could Jobs (ifyoucouldjobs.com) 2026-11-26; that board has no feed and its terms bar scraping, so the employer's own careers feed is checked instead",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Lokal Group",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [
+   "creative"
+  ],
+  "hints": [],
+  "origin": "employer seen hiring on If You Could Jobs (ifyoucouldjobs.com) 2026-11-26; that board has no feed and its terms bar scraping, so the employer's own careers feed is checked instead",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "itsu",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [
+   "creative"
+  ],
+  "hints": [],
+  "origin": "employer seen hiring on If You Could Jobs (ifyoucouldjobs.com) 2026-11-26; that board has no feed and its terms bar scraping, so the employer's own careers feed is checked instead",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "The Online Studio",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [
+   "creative"
+  ],
+  "hints": [],
+  "origin": "employer seen hiring on If You Could Jobs (ifyoucouldjobs.com) 2026-11-26; that board has no feed and its terms bar scraping, so the employer's own careers feed is checked instead",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Special Projects",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [
+   "creative"
+  ],
+  "hints": [],
+  "origin": "employer seen hiring on If You Could Jobs (ifyoucouldjobs.com) 2026-11-26; that board has no feed and its terms bar scraping, so the employer's own careers feed is checked instead",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Imagination",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [
+   "creative"
+  ],
+  "hints": [],
+  "origin": "employer seen hiring on If You Could Jobs (ifyoucouldjobs.com) 2026-11-26; that board has no feed and its terms bar scraping, so the employer's own careers feed is checked instead",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Otherway",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [
+   "creative"
+  ],
+  "hints": [],
+  "origin": "employer seen hiring on If You Could Jobs (ifyoucouldjobs.com) 2026-11-26; that board has no feed and its terms bar scraping, so the employer's own careers feed is checked instead",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Proof of Work Studio",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [
+   "creative"
+  ],
+  "hints": [],
+  "origin": "employer seen hiring on If You Could Jobs (ifyoucouldjobs.com) 2026-11-26; that board has no feed and its terms bar scraping, so the employer's own careers feed is checked instead",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Frontify",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [
+   "creative"
+  ],
+  "hints": [],
+  "origin": "employer seen hiring on If You Could Jobs (ifyoucouldjobs.com) 2026-11-26; that board has no feed and its terms bar scraping, so the employer's own careers feed is checked instead",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "FROST",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [
+   "creative"
+  ],
+  "hints": [],
+  "origin": "employer seen hiring on If You Could Jobs (ifyoucouldjobs.com) 2026-11-26; that board has no feed and its terms bar scraping, so the employer's own careers feed is checked instead",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "SPOKE",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [
+   "creative"
+  ],
+  "hints": [],
+  "origin": "employer seen hiring on If You Could Jobs (ifyoucouldjobs.com) 2026-11-26; that board has no feed and its terms bar scraping, so the employer's own careers feed is checked instead",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Boulder Creative Studios",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [
+   "creative"
+  ],
+  "hints": [],
+  "origin": "employer seen hiring on If You Could Jobs (ifyoucouldjobs.com) 2026-11-26; that board has no feed and its terms bar scraping, so the employer's own careers feed is checked instead",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Spaceagency",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [
+   "creative"
+  ],
+  "hints": [],
+  "origin": "employer seen hiring on If You Could Jobs (ifyoucouldjobs.com) 2026-11-26; that board has no feed and its terms bar scraping, so the employer's own careers feed is checked instead",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Waggel",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [
+   "creative"
+  ],
+  "hints": [],
+  "origin": "employer seen hiring on If You Could Jobs (ifyoucouldjobs.com) 2026-11-26; that board has no feed and its terms bar scraping, so the employer's own careers feed is checked instead",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "Represent Recruitment",
+  "kind": "agency",
+  "domain": null,
+  "sectors": [
+   "creative"
+  ],
+  "hints": [],
+  "origin": "employer seen hiring on If You Could Jobs (ifyoucouldjobs.com) 2026-11-26; that board has no feed and its terms bar scraping, so the employer's own careers feed is checked instead",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "The Doers",
+  "kind": "employer",
+  "domain": null,
+  "sectors": [
+   "creative"
+  ],
+  "hints": [],
+  "origin": "employer seen hiring on If You Could Jobs (ifyoucouldjobs.com) 2026-11-26; that board has no feed and its terms bar scraping, so the employer's own careers feed is checked instead",
+  "careers_url": null,
+  "target_sector": true
+ },
+ {
+  "name": "If You Could Jobs",
+  "kind": "job_board",
+  "domain": "ifyoucouldjobs.com",
+  "sectors": [
+   "creative job board"
+  ],
+  "hints": [],
+  "origin": "requested by owner 2026-11-26",
+  "careers_url": null,
+  "target_sector": true,
+  "retired": "Not connected: no API, RSS or JobPosting data found; Terms of Service (terms-of-service-2026) prohibit text/data mining and web scraping and allow personal, non-commercial use only. Needs written permission or a feed from hello@ifyoucouldjobs.com. Its employers are checked directly instead."
  }
 ]
