@@ -31,7 +31,7 @@ FAMILIES = [
 ]
 FAMILY_RX = [(n, re.compile(p, re.I)) for n, p in FAMILIES]
 EXCLUDE_RX = re.compile(r"\bintern\b|internship|graduate|apprentice|recruiter\b|talent acquisition|account executive|sales development|"
-                        r"sales executive|sales manager|business development|account manager|construction|civil engineer|mechanical|"
+                        r"sales executive|sales manager|business development|account manager|account director|key account|construction|civil engineer|mechanical|"
                         r"electrical engineer|building services|\bM&E\b|fit[- ]out|refurbishment|groundworks|highways|surveyor|facilities manag|"
                         r"site manager|estates|housing officer|social worker|care assistant|\bsales\b|counsel\b|paralegal|solicitor|"
                         r"\bSDR\b|\bBDR\b|legal counsel|nurse|teacher|driver|tutor|warehouse|chef|cleaner|electrician", re.I)
