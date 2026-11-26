@@ -54,7 +54,7 @@ def fetch(src, detail_cache=None):
     if src["connector"] == "reed":
         return fn(src, detail_cache=detail_cache)
     if src["connector"] == "jooble":
-        return fn(src, budget=src.get("_budget", 12))
+        return fn(src, budget=src.get("_budget", 22))
     return fn(src)
 
 
@@ -182,7 +182,7 @@ def run(db, trigger="schedule", only=None, max_minutes=12, detail_cache_path=Non
         if lease(db, s["source_id"], started):
             v = _src_view(db, s)
             if cap and s["connector"] == "jooble":
-                v["_budget"] = max(0, min(12, int(cap - D.usage_today(db, f"requests:{s['source_id']}"))))
+                v["_budget"] = max(0, min(22, int(cap - D.usage_today(db, f"requests:{s['source_id']}"))))
             picked.append(v)
 
     detail_cache = {}

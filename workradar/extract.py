@@ -31,6 +31,9 @@ FAMILIES = [
 ]
 FAMILY_RX = [(n, re.compile(p, re.I)) for n, p in FAMILIES]
 EXCLUDE_RX = re.compile(r"\bintern\b|internship|graduate|apprentice|recruiter\b|talent acquisition|account executive|sales development|"
+                        r"sales executive|sales manager|business development|account manager|construction|civil engineer|mechanical|"
+                        r"electrical engineer|building services|\bM&E\b|fit[- ]out|refurbishment|groundworks|highways|surveyor|facilities manag|"
+                        r"site manager|estates|housing officer|social worker|care assistant|\bsales\b|counsel\b|paralegal|solicitor|"
                         r"\bSDR\b|\bBDR\b|legal counsel|nurse|teacher|driver|tutor|warehouse|chef|cleaner|electrician", re.I)
 
 SKILLS = ["requirements", "user stories", "process mapping", "BPMN", "stakeholder", "Jira", "Confluence", "Agile", "Scrum", "SAFe",
@@ -53,12 +56,11 @@ def strip_html(s):
 
 
 def family_of(title):
+    """Role family from the job title, using the published taxonomy (taxonomy.py / SEARCH_TERMS.md)."""
     if not title or EXCLUDE_RX.search(title):
         return None
-    for name, rx in FAMILY_RX:
-        if rx.search(title):
-            return name
-    return None
+    from .taxonomy import classify
+    return classify(title)[0]
 
 
 def quote(text, m, width=60):

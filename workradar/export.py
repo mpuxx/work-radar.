@@ -83,5 +83,7 @@ def write_all(db):
     WEB.mkdir(parents=True, exist_ok=True)
     for name, data in (("jobs", jobs(db)), ("sources", sources(db)), ("status", status(db)), ("notifications", notifications(db))):
         (WEB / f"{name}.json").write_text(json.dumps(data, ensure_ascii=False, default=str))
+    from .taxonomy import FAMILIES
+    (WEB / "taxonomy.json").write_text(json.dumps([{"family": f, "terms": t} for f, t in FAMILIES], ensure_ascii=False))
     n = registry_csv(db)
     return dict(registry_rows=n)

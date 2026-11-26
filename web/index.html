@@ -174,6 +174,7 @@ th { font-family: var(--mono); font-size: 12px; text-transform: uppercase; color
       <div class="row"><label class="mono" for="q">Job title</label>
         <div style="display:grid;gap:8px"><input type="text" id="q" value="Business analyst" autocomplete="off">
           <div id="rel-picked" class="muted" style="font-size:15px"></div></div></div>
+      <div class="row"><span class="mono">Or whole families</span><div class="chips" data-key="fam"></div></div>
       <div class="row"><span class="mono">Contract</span><div class="chips" data-key="eng"></div></div>
       <div class="row"><span class="mono">Where</span><div class="chips" data-key="where"></div></div>
       <div class="row"><span class="mono">Posted</span><div class="chips" data-key="posted"></div></div>
@@ -278,15 +279,19 @@ const store = {
   set(k, v) { try { localStorage.setItem("pr_" + k, JSON.stringify(v)) } catch {} }
 };
 let D = null, J = [], BYID = {};
+const FAMS = ["AI & automation", "Business analysis", "Delivery & agile", "Product", "Design, UX & research", "Architecture & consulting", "Transformation & change", "Digital, content & CMS", "MarTech & digital marketing", "Data & analytics", "Platforms & business systems"];
 const OPTS = {
+  fam: FAMS.map((n, i) => ["f" + i, n]),
   eng: [["day", "Day-rate contract"], ["fixed", "Fixed-term"], ["temp", "Temporary"], ["perm", "Permanent"]],
   where: [["remote", "Remote, UK"], ["hybrid", "Remote or hybrid"], ["any", "Anywhere in UK"]],
   posted: [["1", "Last 24 hours"], ["3", "3 days"], ["7", "7 days"], ["any", "Any time"]],
   rate: [["any", "Any"], ["400", "£400+"], ["500", "£500+"], ["600", "£600+"]],
   ir35: [["any", "Any"], ["outside", "Outside only"]],
 };
-const DEFAULT = { q: "Business analyst", eng: ["day", "fixed"], where: "hybrid", posted: "7", rate: "any", ir35: "any", related: [] };
+const DEFAULT = { q: "Business analyst", fam: [], eng: ["day", "fixed"], where: "hybrid", posted: "7", rate: "any", ir35: "any", related: [] };
 let F = Object.assign(clone(DEFAULT), store.get("filters_v2", {}));
+if (!Array.isArray(F.fam)) F.fam = [];
+const famHit = (j, f) => f.fam.length > 0 && f.fam.some(k => FAMS[+k.slice(1)] === j.family);
 const ENG = { "Day-rate contract": "day", "Fixed-term employment": "fixed", "Temporary": "temp", "Permanent": "perm" };
 const RELATED = {
   "business analyst": ["Technical business analyst", "Business process analyst", "Business systems analyst", "Data business analyst", "Product owner", "Change analyst", "Functional analyst"],
@@ -302,7 +307,7 @@ let saved = store.get("saved", []), diary = store.get("diary", []), alerts = sto
 const titleHit = (j, q) => { const t = " " + j.title.toLowerCase().replace(/[^a-z0-9]+/g, " ") + " ", w = q.toLowerCase().replace(/[^a-z0-9]+/g, " ").trim(); return w.length > 0 && t.includes(" " + w + " "); };
 function rules(j, f, skip = []) {
   const r = [];
-  if (!skip.includes("q")) r.push(["Title", titleHit(j, f.q) || f.related.some(x => titleHit(j, x)) ? "pass" : "fail"]);
+  if (!skip.includes("q")) r.push(["Title", titleHit(j, f.q) || f.related.some(x => titleHit(j, x)) || famHit(j, f) ? "pass" : "fail"]);
   if (!skip.includes("eng")) {
     const e = ENG[j.engagement];
     r.push(["Contract type", e ? (f.eng.includes(e) ? "pass" : "fail")
@@ -407,7 +412,7 @@ function chips() {
 }
 function summaryTags(f) {
   const lab = (k, v) => OPTS[k].find(x => x[0] === v)?.[1];
-  return [f.q + (f.related.length ? ` + ${f.related.length} related` : ""), "UK",
+  return [[f.q, ...f.fam.map(k => FAMS[+k.slice(1)])].filter(Boolean).join(" or ") + (f.related.length ? ` + ${f.related.length} related` : ""), "UK",
     f.eng.map(v => lab("eng", v)).join(" or ") || "No contract type picked", lab("where", f.where), lab("posted", f.posted),
     f.rate !== "any" ? lab("rate", f.rate) + " a day" : null, f.ir35 === "outside" ? "Outside IR35" : null].filter(Boolean);
 }

@@ -260,9 +260,12 @@ def rss(src, get=None):
 
 
 # ---------------- job boards with keys (agencies advertise here) ----------------
-SEARCHES = ["business analyst", "technical business analyst", "CMS", "headless CMS", "digital producer", "delivery manager",
-            "programme manager", "project manager", "PMO", "product owner", "product operations", "design operations",
-            "service designer", "AI", "automation", "transformation", "change manager"]
+from .taxonomy import SEARCH_TERMS as SEARCHES, batch as _batch
+
+
+def _slot(hours):
+    import time
+    return int(time.time() // (hours * 3600))
 
 
 def _key(name):
@@ -278,7 +281,7 @@ def reed(src, get=http.get_json, detail_cache=None):
     _need(k, "reed: REED_API_KEY not set")
     auth = {"Authorization": "Basic " + base64.b64encode(f"{k}:".encode()).decode()}
     found = {}
-    for q in SEARCHES:
+    for q in _batch(SEARCHES, src.get("_batch", 30), _slot(2)):  # ~219 terms, 30 per 2-hourly run: full sweep about every 16 h
         for flag in ("contract", "temp"):
             d = get("https://www.reed.co.uk/api/1.0/search?" + urlencode({"keywords": q, flag: "true", "resultsToTake": 100}), headers=auth)
             _need(isinstance(d.get("results"), list), "reed: no results list")
@@ -309,11 +312,11 @@ def reed(src, get=http.get_json, detail_cache=None):
     return out
 
 
-def jooble(src, get=http.get_json, budget=12):
+def jooble(src, get=http.get_json, budget=22):
     k = _key("jooble")
     _need(k, "jooble: JOOBLE_API_KEY not set")
     out = []
-    for q in SEARCHES[:budget]:
+    for q in _batch(SEARCHES, 22, _slot(6))[:budget]:  # 4 runs a day x 22 = 88 of the 100 daily requests
         d = get(f"https://jooble.org/api/{k}", data={"keywords": q, "location": "United Kingdom"})
         _need(isinstance(d.get("jobs"), list), "jooble: no jobs list")
         for j in d["jobs"]:
@@ -586,4 +589,4 @@ ACCESS = {
 }
 INTERVAL = {"workable": 60, "reed": 120, "jooble": 360, "jsonld": 60, "rss": 30, "contractsfinder": 60, "remotive": 60, "himalayas": 60,
             "remoteok": 60, "jobicy": 60, "arbeitnow": 120, "adzuna": 120, "careerjet": 120, "pinpoint": 30, "themuse": 120, "workingnomads": 60, "findatender": 120}
-DAILY_CAP = {"jooble": 60, "reed": 900, "adzuna": 240, "careerjet": 300, "remoteok": 48}
+DAILY_CAP = {"jooble": 95, "reed": 900, "adzuna": 240, "careerjet": 300, "remoteok": 48}
