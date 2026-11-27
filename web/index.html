@@ -560,7 +560,7 @@ function renderJob(id) {
   const r = rules(j, F), stated = v => v && v !== "Not stated" ? esc(v) : `<span class="unk">Not stated</span>`;
   box.innerHTML = `<article class="view" aria-labelledby="h-job">
     <div><h1 id="h-job" tabindex="-1">${esc(j.title)}</h1><p class="lede">${whoText(j)}</p></div>
-    <div class="actions"><a class="btn primary big" href="${esc(j.url)}" target="_blank" rel="noopener">Apply on ${esc(j.sourceName)}<span class="vh"> (opens in a new tab)</span> ↗</a>${saveBtn(j)}</div>
+    <div class="actions">${saveBtn(j)}<button type="button" class="btn quiet" data-goto="h-ad">Read the advert</button></div>
     <section class="box" aria-labelledby="h-ess"><h2 id="h-ess">The essentials</h2>
       <dl class="facts">
         <dt>Pay</dt><dd>${payCell(j)}</dd>
@@ -574,7 +574,10 @@ function renderJob(id) {
     <section class="box" aria-labelledby="h-against"><h2 id="h-against">Against your rules</h2>
       <ul class="checks">${r.map(x => `<li class="${x.v}"><span class="vh">${x.v === "pass" ? "Meets" : x.v === "fail" ? "Does not meet" : "Not stated"}: </span>${esc(x.v === "unknown" ? "Not stated: " + x.miss : x.why)}</li>`).join("")}</ul></section>
     ${j.flags.length ? `<p class="flag"><b>Check before you apply:</b> ${esc(j.flags.join(". "))}.</p>` : ""}
-    <section class="view" aria-labelledby="h-ad"><h2 id="h-ad">The advert</h2><div class="advert" id="advert">Loading the advert…</div></section>
+    <section class="view" aria-labelledby="h-ad"><h2 id="h-ad" tabindex="-1">The advert</h2><p class="note muted" id="ad-note" hidden></p><div class="advert" id="advert">Loading the advert…</div></section>
+    <section class="box" aria-labelledby="h-apply"><h2 id="h-apply">Ready to apply?</h2>
+      <p>Applications go through ${esc(j.sourceName)}, so the recruiter gets your application directly.</p>
+      <div class="actions"><a class="btn primary big" href="${esc(j.url)}" target="_blank" rel="noopener">Apply on ${esc(j.sourceName)}<span class="vh"> (opens in a new tab)</span> ↗</a></div></section>
     <details class="src" id="prov"><summary>Where each label came from</summary><dl class="facts" id="prov-list"><dt>Loading</dt><dd>…</dd></dl></details>
     <section class="box" aria-labelledby="h-more"><h2 id="h-more">More you can do</h2>
       <div class="actions">
@@ -587,7 +590,10 @@ function renderJob(id) {
   </article>`;
   details(id).then(d => {
     if (location.hash !== "#job-" + id) return;
-    $("#advert").textContent = d.description || "The full advert is not in the feed. Open it on the source's site.";
+    const text = d.description || "";
+    $("#advert").textContent = text || "We don't have the advert text for this job yet. We usually add it within a few hours.";
+    const note = $("#ad-note");
+    if (text && text.length < 600) { note.hidden = false; note.textContent = `This is the summary ${j.sourceName} publishes. We're adding the full text; it usually appears within a few hours.`; }
     const p = Object.entries(d.provenance || {});
     $("#prov-list").innerHTML = p.length ? p.map(([k, v]) => `<dt>${esc(LABEL[k] || k)}</dt><dd>${v.method === "inferred" ? "Our best reading: " : "The advert says: "}"${esc(v.quote || "")}"</dd>`).join("")
       : `<dt>Labels</dt><dd>No quotes recorded for this job.</dd>`;
@@ -698,6 +704,7 @@ document.addEventListener("click", e => {
     $$(`[data-save="${j.id}"]`).forEach(x => { x.setAttribute("aria-pressed", String(on)); x.firstChild.textContent = on ? "Saved" : "Save"; });
     say(on ? "Saved. It's in Saved jobs." : "Removed from Saved jobs.");
   }
+  if (d.goto) { const t = document.getElementById(d.goto); t.scrollIntoView({ behavior: motionOK() ? "smooth" : "auto" }); t.focus({ preventScroll: true }); }
   if (d.onlyfam) { F.q = ""; F.fam = [d.onlyfam]; store.set("search_v2", F); SHOWN = 20; drawOptions(); renderResults(); $("#h-res").focus(); say(`Showing ${d.onlyfam}. ` + $("#h-res").textContent); }
   if (d.relax) { F[d.relax] = d.v; store.set("search_v2", F); drawOptions(); renderResults(); $("#h-res").focus(); say("Rule changed. " + $("#h-res").textContent); }
   if (d.diary) { const open = b.getAttribute("aria-expanded") === "true"; b.setAttribute("aria-expanded", String(!open)); $("#slot-diary").innerHTML = open ? "" : diaryForm(BYID[d.diary]); if (!open) $("#d-type").focus(); }

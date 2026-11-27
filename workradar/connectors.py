@@ -119,7 +119,23 @@ def ashby(src, get=http.get_json):
     return out
 
 
-def smartrecruiters(src, get=http.get_json):
+def _sr_detail(company, pid, get):
+    d = get(f"https://api.smartrecruiters.com/v1/companies/{quote(company)}/postings/{quote(pid)}")
+    secs = ((d.get("jobAd") or {}).get("sections") or {})
+    parts = []
+    for k, head in (("jobDescription", ""), ("qualifications", "What you'll need"), ("additionalInformation", "More information"),
+                    ("companyDescription", "About the company")):
+        t = strip_html((secs.get(k) or {}).get("text") or "")
+        if t:
+            parts.append((head + "\n" if head else "") + t)
+    return "\n\n".join(parts)
+
+
+def smartrecruiters(src, get=http.get_json, detail_cache=None):
+    """Public postings API. The list has no advert text, so the full advert is fetched once per relevant posting and cached."""
+    from .extract import family_of
+    cache = detail_cache if detail_cache is not None else {}
+    left = src.get("_details", 60)
     out, offset = [], 0
     while True:
         d = get(f"https://api.smartrecruiters.com/v1/companies/{quote(src['board_id'])}/postings?limit=100&offset={offset}")
@@ -128,7 +144,16 @@ def smartrecruiters(src, get=http.get_json):
             loc = j.get("location") or {}
             pub, prec = _iso(j.get("releasedDate"))
             country = (loc.get("country") or "").upper()
-            out.append(_job(source_job_id=j["id"], title=j.get("name", "").strip(),
+            key = f"sr:{j['id']}"
+            if key not in cache and left > 0 and family_of(j.get("name", "")):
+                left -= 1
+                try:
+                    cache[key] = _sr_detail(src["board_id"], j["id"], get)
+                except http.RateLimited:
+                    raise
+                except Exception:
+                    pass
+            out.append(_job(source_job_id=j["id"], title=j.get("name", "").strip(), description=cache.get(key, ""),
                             location=", ".join(x for x in [loc.get("city"), "United Kingdom" if country == "GB" else country] if x),
                             employment_type=(j.get("typeOfEmployment") or {}).get("label", ""),
                             workplace="Remote" if loc.get("remote") else ("Hybrid" if loc.get("hybrid") else ""),
@@ -243,7 +268,23 @@ def jsonld(src, get=None):
     return out
 
 
-def rss(src, get=None):
+def _page_advert(url):
+    """Advert text from a job page's schema.org JobPosting: the structured data sites publish for job search engines."""
+    from .discovery import robots_ok
+    if not url or not robots_ok(url):
+        return ""
+    page, _ = http.get_text(url, timeout=20, retries=0)
+    for j in _jsonld_postings(page):
+        t = strip_html(j.get("description") or "")
+        if t:
+            return t
+    return ""
+
+
+def rss(src, get=None, detail_cache=None):
+    from .extract import family_of
+    cache = detail_cache if detail_cache is not None else {}
+    left = src.get("_details", 25)
     text, _ = http.get_text(src["board_id"], accept="application/rss+xml, application/xml")
     root = ET.fromstring(text)
     items = root.findall(".//item")
@@ -252,8 +293,20 @@ def rss(src, get=None):
     for it in items:
         link = it.findtext("link")
         pub, prec = _iso(it.findtext("pubDate"))
-        out.append(_job(source_job_id=it.findtext("guid") or link, title=strip_html(it.findtext("title") or ""),
-                        description=strip_html(it.findtext("description") or ""), published_at=pub, published_precision=prec,
+        title = strip_html(it.findtext("title") or "")
+        desc = strip_html(it.findtext("{http://purl.org/rss/1.0/modules/content/}encoded") or it.findtext("description") or "")
+        key = f"page:{link}"
+        if len(desc) < 600 and link and family_of(title):
+            if key not in cache and left > 0:
+                left -= 1
+                try:
+                    cache[key] = _page_advert(link)
+                except Exception:
+                    cache[key] = ""
+            if len(cache.get(key) or "") > len(desc):
+                desc = cache[key]
+        out.append(_job(source_job_id=it.findtext("guid") or link, title=title,
+                        description=desc, published_at=pub, published_precision=prec,
                         job_url=link, agency_name=src.get("org_name") if src.get("org_kind") == "agency" else None,
                         employer_name=src.get("org_name") if src.get("org_kind") == "employer" else None))
     return out
@@ -322,12 +375,12 @@ def reed(src, get=http.get_json, detail_cache=None):
     from .extract import family_of
     out = []
     cache = detail_cache if detail_cache is not None else {}
-    details_left = src.get("_details", 80)   # full advert text for new contract/temp jobs; the search snippet is used otherwise
+    details_left = src.get("_details", 250)  # full advert text, fetched once per job and cached; the search snippet until then
     for i, r in found.items():
         if not family_of(r["jobTitle"]):
             continue
         d = cache.get(str(i))
-        if d is None and (kind[i] == "permanent" or details_left <= 0):
+        if d is None and details_left <= 0:
             d = {}
         elif d is None:
             details_left -= 1

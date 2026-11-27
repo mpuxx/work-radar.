@@ -221,5 +221,35 @@ class Feeds(unittest.TestCase):
         self.assertTrue(j["published_at"].startswith("2026-11-20"))
 
 
+class FullAdverts(unittest.TestCase):
+    def test_19_smartrecruiters_full_advert_cached(self):
+        from workradar import connectors
+        lst = {"content": [{"id": "1", "name": "Business Analyst", "location": {"city": "London", "country": "gb"}}], "totalFound": 1}
+        det = {"jobAd": {"sections": {"jobDescription": {"text": "<p>Full advert here</p>"}}}}
+        calls = []
+        def get(u, **k):
+            calls.append(u)
+            return det if "/postings/1" in u else lst
+        cache = {}
+        j = connectors.smartrecruiters({"board_id": "Acme", "org_name": "Acme"}, get=get, detail_cache=cache)
+        self.assertEqual(j[0]["description"], "Full advert here")
+        connectors.smartrecruiters({"board_id": "Acme", "org_name": "Acme"}, get=get, detail_cache=cache)
+        self.assertEqual(sum("/postings/1" in u for u in calls), 1)   # fetched once, then cached
+
+    def test_20_rss_summary_replaced_by_page_jobposting(self):
+        from unittest import mock
+        from workradar import connectors
+        feed = """<?xml version="1.0"?><rss><channel><item><title>Business Analyst</title><link>https://ex.com/job/1</link>
+                  <guid>1</guid><description>Short</description></item></channel></rss>"""
+        page = '<script type="application/ld+json">{"@type":"JobPosting","description":"<p>Long full advert text</p>"}</script>'
+        gt = lambda u, **k: (feed, {}) if u == "https://ex.com/feed" else (page, {})
+        with mock.patch.object(connectors.http, "get_text", side_effect=gt), mock.patch("workradar.discovery.robots_ok", return_value=True):
+            j = connectors.rss({"board_id": "https://ex.com/feed", "org_name": "Ex", "org_kind": "agency"}, detail_cache={})
+        self.assertEqual(j[0]["description"], "Long full advert text")
+        with mock.patch.object(connectors.http, "get_text", side_effect=gt), mock.patch("workradar.discovery.robots_ok", return_value=False):
+            j = connectors.rss({"board_id": "https://ex.com/feed", "org_name": "Ex", "org_kind": "agency"}, detail_cache={})
+        self.assertEqual(j[0]["description"], "Short")   # robots.txt says no: keep the feed's own summary
+
+
 if __name__ == "__main__":
     unittest.main()

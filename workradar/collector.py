@@ -51,7 +51,7 @@ def request_check_now(db, source_id=None):
 # ---------------- fetch (no DB access in worker threads) ----------------
 def fetch(src, detail_cache=None):
     fn = connectors.CONNECTORS[src["connector"]]
-    if src["connector"] == "reed":
+    if src["connector"] in ("reed", "smartrecruiters", "rss"):
         return fn(src, detail_cache=detail_cache)
     if src["connector"] == "jooble":
         return fn(src, budget=src.get("_budget", 22))
