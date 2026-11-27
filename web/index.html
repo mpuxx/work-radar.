@@ -385,7 +385,15 @@ function readForm() {
 /* ---------- Rules: pass, fail or unknown. Unknown never counts as a match. ---------- */
 const ENG = { "Day-rate contract": "day", "Fixed-term employment": "fixed", "Temporary": "temp", "Permanent": "perm" };
 const words = s => " " + String(s || "").toLowerCase().replace(/[^a-z0-9]+/g, " ").trim() + " ";
-const titleHit = (j, q) => { const w = words(q).trim(); return w.length > 0 && words(j.title).includes(" " + w + " "); };
+// Title search: every word you type must be in the title, in any order. Common short forms count as the same word.
+const SAME = { ops: "operations", op: "operations", mgr: "manager", program: "programme", programmes: "programme", snr: "senior", sr: "senior",
+  jnr: "junior", ux: "ux", ui: "ui", designops: "design operations", researchops: "research operations", ba: "business analyst", po: "product owner" };
+const norm = s => words(s).trim().split(" ").filter(Boolean).map(w => SAME[w] || w).join(" ").split(" ");
+const titleHit = (j, q) => {
+  const want = norm(q); if (!want.length || !want[0]) return false;
+  const have = new Set(norm(j.title));
+  return want.every(w => have.has(w));
+};
 function rules(j, f) {
   const r = [];
   const t = titleHit(j, f.q), fam = f.fam.includes(j.family), all = !f.q && !f.fam.length;
