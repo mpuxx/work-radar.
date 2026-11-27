@@ -354,8 +354,8 @@ const OPTS = {
   ir35: [["any", "Any"], ["outside", "Outside IR35 only"]],
 };
 const MULTI = { eng: true, fam: true };
-// Default: everything fresh across all job families. Narrow it down from there.
-const DEFAULT = { q: "", fam: [], eng: ["day", "fixed", "temp"], where: "any", posted: "7", rate: "any", ir35: "any" };
+// Default: every contract role across all job families, newest first. Narrow it down from there.
+const DEFAULT = { q: "", fam: [], eng: ["day", "fixed", "temp"], where: "any", posted: "any", rate: "any", ir35: "any" };
 let F = Object.assign(clone(DEFAULT), store.get("search_v2", {}));
 if (!Array.isArray(F.fam)) F.fam = [];
 if (!Array.isArray(F.eng)) F.eng = clone(DEFAULT.eng);
@@ -736,7 +736,7 @@ function adapt(x, src) {
     url: x.apply_url || x.job_url, family: x.family, engagement: x.engagement || "Not stated", hours: x.hours, duration: x.duration, start: x.start,
     rate_min: x.rate_min, rate_max: x.rate_max, unit: x.currency === "GBP" ? x.pay_period : null, ir35: x.ir35 || "Not stated",
     attendance: x.attendance || "Not stated", age: x.published_at ? Math.max(0, Math.floor((Date.now() - new Date(x.published_at)) / 864e5)) : null,
-    first_detected: x.first_detected_at, dup: x.dup_group, also: [],
+    first_detected: x.first_detected_at, dup: x.dup_group, also: [], when: x.published_at || x.first_detected_at || "",
     sourceName: s.org_kind === "job_board" ? s.org_name : (s.org_name || "the employer's site"), kind: s.org_kind, orgName: s.org_name || "the employer",
     tender: s.org_kind === "public_sector",
     flags: (x.issues || []).filter(i => /conflict|visit/i.test(i)).slice(0, 2).concat(x.stale ? ["The source didn't answer at the last check, so this may be out of date"] : []) };
@@ -754,6 +754,7 @@ drawOptions(); counts();
       if (j.dup && seen[j.dup]) { if (!seen[j.dup].also.includes(j.sourceName)) seen[j.dup].also.push(j.sourceName); continue; }
       if (j.dup) seen[j.dup] = j; J.push(j);
     }
+    J.sort((a, b) => b.when.localeCompare(a.when));   // newest first, so the morning view starts with what's fresh
     J.forEach(j => BYID[j.id] = j);
     const lr = status.last_run || {}, fails = status.partial_failures || [];
     const live = sources.filter(s => s.status === "active" && s.last_success_at), by = {};

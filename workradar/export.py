@@ -7,6 +7,8 @@ from pathlib import Path
 from . import db as D
 from .taxonomy import classify
 
+OLD_FAMILY = {"AI, automation & transformation": "AI & automation", "Delivery & programme": "Delivery & agile"}
+
 ROOT = Path(__file__).resolve().parent.parent
 WEB = ROOT / "web" / "data"
 
@@ -29,7 +31,7 @@ def jobs(db, days=30):
         for k in ("provenance", "issues", "skills"):
             d[k] = json.loads(d[k] or "null")
         d["description"] = (d["description"] or "")[:6000]
-        d["family"] = classify(d["title"])[0] or d["family"]   # always the current families, even for jobs stored under old names
+        d["family"] = classify(d["title"])[0] or OLD_FAMILY.get(d["family"], d["family"])   # always the current family names
         d["changes"] = [dict(c) for c in db.execute("SELECT at, kind, old_value, new_value FROM job_changes WHERE job_id=? AND kind!='detected' ORDER BY at", (d["job_id"],))]
         out.append(d)
     return out
