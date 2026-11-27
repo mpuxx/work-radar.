@@ -279,6 +279,8 @@ def check_links(db, limit=40):
             return r["job_id"], "blocked"
         except http.HttpError as e:
             return r["job_id"], "blocked" if e.status in (401, 403, 405, 429) or e.status == 0 else "broken"
+        except Exception:   # a bad link in one advert must never stop the run (and the site update)
+            return r["job_id"], "blocked"
 
     with cf.ThreadPoolExecutor(max_workers=6) as ex:
         res = list(ex.map(one, rows))

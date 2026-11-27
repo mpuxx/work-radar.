@@ -33,7 +33,21 @@ def take_counts():
     return c
 
 
+def _ascii_url(url):
+    """Adverts sometimes carry links with non-ASCII characters; percent-encode them (the host becomes IDNA)."""
+    try:
+        url.encode("ascii")
+        return url
+    except UnicodeEncodeError:
+        from urllib.parse import quote, urlsplit, urlunsplit
+        p = urlsplit(url)
+        netloc = p.netloc.encode("idna").decode("ascii") if p.hostname and not p.hostname.isascii() else p.netloc
+        safe = "/:@!$&'()*+,;=%-._~?#[]"
+        return urlunsplit((p.scheme, netloc, quote(p.path, safe=safe), quote(p.query, safe=safe), quote(p.fragment, safe=safe)))
+
+
 def request(url, data=None, headers=None, timeout=30, retries=2, accept="application/json", method=None, sleep=time.sleep):
+    url = _ascii_url(url)
     host = urlparse(url).hostname
     h = {"User-Agent": UA, "Accept": accept}
     h.update(headers or {})

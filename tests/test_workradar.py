@@ -251,5 +251,10 @@ class FullAdverts(unittest.TestCase):
         self.assertEqual(j[0]["description"], "Short")   # robots.txt says no: keep the feed's own summary
 
 
+class Links(unittest.TestCase):
+    def test_21_non_ascii_link_is_encoded(self):
+        self.assertEqual(http._ascii_url("https://ex.com/jobs/ux\u30fbdesigner?q=\u00e9"), "https://ex.com/jobs/ux%E3%83%BBdesigner?q=%C3%A9")
+
+
 if __name__ == "__main__":
     unittest.main()
