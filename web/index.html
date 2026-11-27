@@ -123,6 +123,7 @@ details.more > div { display: grid; gap: 1rem }
 /* Results */
 .reshead { display: grid; gap: .35rem }
 .rules { font-size: .95rem; color: var(--muted) }
+.famlink { background: none; border: 0; padding: .1rem 0; margin-right: .5rem; min-height: 32px; color: var(--ink); text-decoration: underline; text-underline-offset: .18em; cursor: pointer; font-size: .95rem }
 ol.cards { list-style: none; margin: 0; padding: 0; display: grid; gap: 1rem }
 .card { background: var(--card); border: 2px solid var(--ink); border-radius: 16px; padding: 1rem; display: grid; gap: .75rem; min-width: 0 }
 .card.maybe { border-style: dashed }
@@ -224,7 +225,8 @@ footer .wrap { display: grid; gap: .5rem }
       <h2 id="h-search" class="vh">Your search</h2>
       <div class="field">
         <label for="q">What work are you looking for?</label>
-        <input type="search" id="q" name="q" autocomplete="off">
+        <input type="search" id="q" name="q" autocomplete="off" aria-describedby="q-hint">
+        <span class="hint" id="q-hint">Leave it empty to see every role in all 11 job families. Or type a title, like Business analyst.</span>
       </div>
       <fieldset><legend>Contract type</legend><div class="opts" id="o-eng"></div></fieldset>
       <fieldset><legend>Where</legend><div class="opts" id="o-where"></div></fieldset>
@@ -249,6 +251,7 @@ footer .wrap { display: grid; gap: .5rem }
       <div class="reshead">
         <h2 id="h-res" tabindex="-1">Loading jobs…</h2>
         <p class="rules" id="rules"></p>
+        <p class="rules" id="fams"></p>
       </div>
       <ol class="cards" id="exact"></ol>
       <div class="actions" id="morebox" hidden><button type="button" class="btn" id="showmore">Show 20 more jobs</button></div>
@@ -351,8 +354,9 @@ const OPTS = {
   ir35: [["any", "Any"], ["outside", "Outside IR35 only"]],
 };
 const MULTI = { eng: true, fam: true };
-const DEFAULT = { q: "Business analyst", fam: [], eng: ["day", "fixed"], where: "hybrid", posted: "7", rate: "any", ir35: "any" };
-let F = Object.assign(clone(DEFAULT), store.get("search", {}));
+// Default: everything fresh across all job families. Narrow it down from there.
+const DEFAULT = { q: "", fam: [], eng: ["day", "fixed", "temp"], where: "any", posted: "7", rate: "any", ir35: "any" };
+let F = Object.assign(clone(DEFAULT), store.get("search_v2", {}));
 if (!Array.isArray(F.fam)) F.fam = [];
 if (!Array.isArray(F.eng)) F.eng = clone(DEFAULT.eng);
 let J = [], BYID = {}, STATUS = null, SHOWN = 20;
@@ -384,8 +388,9 @@ const words = s => " " + String(s || "").toLowerCase().replace(/[^a-z0-9]+/g, " 
 const titleHit = (j, q) => { const w = words(q).trim(); return w.length > 0 && words(j.title).includes(" " + w + " "); };
 function rules(j, f) {
   const r = [];
-  const t = titleHit(j, f.q), fam = f.fam.includes(j.family);
-  r.push({ k: "title", v: (t || fam) ? "pass" : "fail", why: t ? `Title has "${f.q}"` : fam ? `In ${j.family}` : `Title doesn't have "${f.q}"` });
+  const t = titleHit(j, f.q), fam = f.fam.includes(j.family), all = !f.q && !f.fam.length;
+  r.push({ k: "title", v: (t || fam || all) ? "pass" : "fail",
+    why: t ? `Title has "${f.q}"` : (fam || all) ? (j.family || "Your job families") : `Title doesn't have "${f.q}"` });
   const e = ENG[j.engagement];
   r.push({ k: "eng", v: e ? (f.eng.includes(e) ? "pass" : "fail") : j.engagement === "Contract, type not stated" ? (f.eng.some(x => x !== "perm") ? "unknown" : "fail") : "unknown",
     why: e ? j.engagement.replace("employment", "") : "Contract type", miss: "Contract type" });
@@ -475,7 +480,7 @@ function card(j) {
 /* ---------- Find work ---------- */
 const lab = (k, v) => (OPTS[k].find(x => x[0] === v) || [])[1];
 function rulesText(f) {
-  return [[f.q && `"${f.q}"`, ...f.fam].filter(Boolean).join(" or ") || "Any title", f.eng.map(v => lab("eng", v)).join(" or ") || "No contract type picked",
+  return [[f.q && `"${f.q}"`, ...f.fam].filter(Boolean).join(" or ") || "All 11 job families", f.eng.map(v => lab("eng", v)).join(" or ") || "No contract type picked",
     lab("where", f.where), lab("posted", f.posted), f.rate !== "any" ? lab("rate", f.rate) : null, f.ir35 !== "any" ? "Outside IR35 only" : null].filter(Boolean).join(" · ");
 }
 function renderResults() {
@@ -483,6 +488,9 @@ function renderResults() {
   const n = ex.length;
   $("#h-res").textContent = n === 0 ? "No jobs match all your rules" : `${n.toLocaleString("en-GB")} job${n === 1 ? "" : "s"} match${n === 1 ? "es" : ""} your rules`;
   $("#rules").textContent = "Your rules: " + rulesText(F);
+  const byFam = {}; ex.forEach(j => byFam[j.family] = (byFam[j.family] || 0) + 1);
+  $("#fams").innerHTML = n && !F.q && F.fam.length !== 1 ? `<span class="muted">By job family:</span> ` + Object.entries(byFam).sort((a, b) => b[1] - a[1])
+    .map(([f, c]) => `<button type="button" class="famlink" data-onlyfam="${esc(f)}">${esc(f)} (${c})</button>`).join(" ") : "";
   $("#exact").innerHTML = ex.slice(0, SHOWN).map(card).join("");
   $("#exact").hidden = n === 0;
   $("#morebox").hidden = n <= SHOWN;
@@ -506,7 +514,7 @@ function renderResults() {
 $("#maybe").addEventListener("toggle", () => { if ($("#maybe").open && !$("#unknown").innerHTML) renderResults(); });
 $("#search").addEventListener("submit", e => {
   e.preventDefault();
-  F = readForm(); store.set("search", F); SHOWN = 20; renderResults(); $("#savesearch-msg").hidden = true;
+  F = readForm(); store.set("search_v2", F); SHOWN = 20; renderResults(); $("#savesearch-msg").hidden = true;
   $("#h-res").focus({ preventScroll: true });
   $("#h-res").scrollIntoView({ behavior: motionOK() ? "smooth" : "auto", block: "start" });
   say($("#h-res").textContent);
@@ -682,7 +690,8 @@ document.addEventListener("click", e => {
     $$(`[data-save="${j.id}"]`).forEach(x => { x.setAttribute("aria-pressed", String(on)); x.firstChild.textContent = on ? "Saved" : "Save"; });
     say(on ? "Saved. It's in Saved jobs." : "Removed from Saved jobs.");
   }
-  if (d.relax) { F[d.relax] = d.v; store.set("search", F); drawOptions(); renderResults(); $("#h-res").focus(); say("Rule changed. " + $("#h-res").textContent); }
+  if (d.onlyfam) { F.q = ""; F.fam = [d.onlyfam]; store.set("search_v2", F); SHOWN = 20; drawOptions(); renderResults(); $("#h-res").focus(); say(`Showing ${d.onlyfam}. ` + $("#h-res").textContent); }
+  if (d.relax) { F[d.relax] = d.v; store.set("search_v2", F); drawOptions(); renderResults(); $("#h-res").focus(); say("Rule changed. " + $("#h-res").textContent); }
   if (d.diary) { const open = b.getAttribute("aria-expanded") === "true"; b.setAttribute("aria-expanded", String(!open)); $("#slot-diary").innerHTML = open ? "" : diaryForm(BYID[d.diary]); if (!open) $("#d-type").focus(); }
   if (d.report) { const open = b.getAttribute("aria-expanded") === "true"; b.setAttribute("aria-expanded", String(!open)); $("#slot-report").innerHTML = open ? "" : reportForm(BYID[d.report]); if (!open) $("#r-field").focus(); }
   if (d.close) { $("#" + d.close).innerHTML = ""; const t = $(`[aria-controls="${d.close}"]`); if (t) { t.setAttribute("aria-expanded", "false"); t.focus(); } }
@@ -699,9 +708,9 @@ document.addEventListener("click", e => {
     persist(); $("#slot-report").innerHTML = `<p class="note" tabindex="-1" id="r-ok"><b>Thanks. Report noted.</b> For now it is kept on this device.</p>`; $("#r-ok").focus();
     $(`[data-report]`).setAttribute("aria-expanded", "false");
   }
-  if (d.similar) { const j = BYID[d.similar]; F.q = ""; F.fam = [j.family].filter(Boolean); store.set("search", F); drawOptions(); location.hash = "find"; say(`Showing jobs in ${j.family}.`); }
+  if (d.similar) { const j = BYID[d.similar]; F.q = ""; F.fam = [j.family].filter(Boolean); store.set("search_v2", F); drawOptions(); location.hash = "find"; say(`Showing jobs in ${j.family}.`); }
   if (d.unsave) { saved = saved.filter(x => x.id !== d.unsave); persist(); renderSaved(); $("#h-sj").setAttribute("tabindex", "-1"); $("#h-sj").focus(); say("Removed."); }
-  if (d.run) { const x = searches.find(s => s.key === d.run); F = clone(x.f); x.seen = split(F)[0].map(j => j.id); persist(); store.set("search", F); drawOptions(); location.hash = "find"; }
+  if (d.run) { const x = searches.find(s => s.key === d.run); F = clone(x.f); x.seen = split(F)[0].map(j => j.id); persist(); store.set("search_v2", F); drawOptions(); location.hash = "find"; }
   if (d.delsearch) { searches = searches.filter(s => s.key !== d.delsearch); persist(); renderSaved(); $("#h-ss").setAttribute("tabindex", "-1"); $("#h-ss").focus(); say("Search deleted."); }
   if (d.deldiary) { diary = diary.filter(x => x.key !== d.deldiary); persist(); renderDiary(); $("#h-dl").setAttribute("tabindex", "-1"); $("#h-dl").focus(); say("Removed from your diary."); }
   if (b.id === "c-save") {

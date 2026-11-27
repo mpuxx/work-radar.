@@ -295,25 +295,42 @@ def _key(name):
     return open(p).read().strip() if os.path.exists(p) else None
 
 
+def _reed_pay(r):
+    """Pay from the search result when the full advert wasn't fetched. Reed gives numbers without a period: day rates are small."""
+    lo, hi = r.get("minimumSalary"), r.get("maximumSalary")
+    if not lo and not hi:
+        return ""
+    lo, hi = lo or hi, hi or lo
+    return f"£{lo:,.0f} - £{hi:,.0f} " + ("per day" if hi <= 2500 else "per annum")
+
+
 def reed(src, get=http.get_json, detail_cache=None):
     k = _key("reed")
     _need(k, "reed: REED_API_KEY not set")
     auth = {"Authorization": "Basic " + base64.b64encode(f"{k}:".encode()).decode()}
-    found = {}
-    for q in _batch(SEARCHES, src.get("_batch", 30), _slot(2)):  # ~219 terms, 30 per 2-hourly run: full sweep about every 16 h
-        for flag in ("contract", "temp"):
+    found, kind = {}, {}
+    # ~219 terms, 45 per 2-hourly run: a full sweep about every 10 h. Each term is searched as contract, temporary and permanent,
+    # so the job type comes from Reed's own filter even when the advert text doesn't say.
+    terms = SEARCHES if os.environ.get("WORKRADAR_FULL_SWEEP") == "1" else _batch(SEARCHES, src.get("_batch", 45), _slot(2))
+    for q in terms:
+        for flag in ("contract", "temp", "permanent"):
             d = get("https://www.reed.co.uk/api/1.0/search?" + urlencode({"keywords": q, flag: "true", "resultsToTake": 100}), headers=auth)
             _need(isinstance(d.get("results"), list), "reed: no results list")
             for r in d["results"]:
-                found[r["jobId"]] = r
+                found.setdefault(r["jobId"], r)
+                kind.setdefault(r["jobId"], flag)
     from .extract import family_of
     out = []
     cache = detail_cache if detail_cache is not None else {}
+    details_left = src.get("_details", 80)   # full advert text for new contract/temp jobs; the search snippet is used otherwise
     for i, r in found.items():
         if not family_of(r["jobTitle"]):
             continue
         d = cache.get(str(i))
-        if d is None:
+        if d is None and (kind[i] == "permanent" or details_left <= 0):
+            d = {}
+        elif d is None:
+            details_left -= 1
             try:
                 d = get(f"https://www.reed.co.uk/api/1.0/jobs/{i}", headers=auth)
                 cache[str(i)] = d
@@ -323,9 +340,10 @@ def reed(src, get=http.get_json, detail_cache=None):
                 d = {}
         pub, prec = _iso(r.get("date"))
         out.append(_job(source_job_id=str(i), title=r["jobTitle"].strip(), description=strip_html(d.get("jobDescription") or r.get("jobDescription")),
-                        location=f"{r.get('locationName', '')}, UK", employment_type=d.get("contractType", ""),
+                        location=f"{r.get('locationName', '')}, UK",
+                        employment_type=d.get("contractType") or {"contract": "Contract", "temp": "Temporary", "permanent": "Permanent"}[kind[i]],
                         hours="Part-time" if d.get("partTime") else "Full-time" if d.get("fullTime") else "",
-                        pay_text=d.get("salary") or "", published_at=pub, published_precision=prec,
+                        pay_text=d.get("salary") or _reed_pay(r), published_at=pub, published_precision=prec,
                         job_url=r.get("jobUrl"), apply_url=d.get("externalUrl") or r.get("jobUrl"),
                         agency_name=(r.get("employerName") or "").strip() or None))
     return out
@@ -609,4 +627,4 @@ ACCESS = {
 }
 INTERVAL = {"workable": 60, "reed": 120, "jooble": 360, "jsonld": 60, "rss": 30, "xmlfeed": 60, "contractsfinder": 60, "remotive": 60, "himalayas": 60,
             "remoteok": 60, "jobicy": 60, "arbeitnow": 120, "adzuna": 120, "careerjet": 120, "pinpoint": 30, "themuse": 120, "workingnomads": 60, "findatender": 120}
-DAILY_CAP = {"jooble": 95, "reed": 900, "adzuna": 240, "careerjet": 300, "remoteok": 48}
+DAILY_CAP = {"jooble": 95, "reed": 3000, "adzuna": 240, "careerjet": 300, "remoteok": 48}

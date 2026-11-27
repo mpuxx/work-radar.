@@ -9,6 +9,11 @@ on:
         description: "Check now: a source_id (e.g. greenhouse:monzo) or 'all'"
         required: false
         default: ""
+      full_sweep:
+        description: "Search every term on the job boards in this run (slower; use after a fix)"
+        type: boolean
+        required: false
+        default: false
 permissions:
   contents: write
   pages: write
@@ -21,7 +26,7 @@ concurrency:
 jobs:
   collect:
     runs-on: ubuntu-latest
-    timeout-minutes: 14
+    timeout-minutes: 25
     env:
       REED_API_KEY: ${{ secrets.REED_API_KEY }}
       JOOBLE_API_KEY: ${{ secrets.JOOBLE_API_KEY }}
@@ -29,6 +34,7 @@ jobs:
       ADZUNA_API_KEY: ${{ secrets.ADZUNA_API_KEY }}
       CAREERJET_API_KEY: ${{ secrets.CAREERJET_API_KEY }}
       WORKRADAR_DB: state/workradar.sqlite3
+      WORKRADAR_FULL_SWEEP: ${{ inputs.full_sweep && '1' || '' }}
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -77,7 +83,7 @@ jobs:
           start=$(gh api "repos/$REPO/actions/runs/${{ github.run_id }}" --jq .run_started_at | xargs -I{} date -d {} +%s)
           wait=$(( start + 900 - $(date +%s) ))
           echo "waiting ${wait}s"; if [ "$wait" -gt 0 ]; then sleep "$wait"; fi
-      - name: Start the next check unless GitHub's schedule is working
+      - name: Start the next check unless one is already queued
         run: |
           since=$(date -u -d '-30 min' +%Y-%m-%dT%H:%M:%SZ)
           n=$(gh api "repos/$REPO/actions/workflows/collect.yml/runs?event=schedule&created=>$since" --jq .total_count)
@@ -90,4 +96,6 @@ jobs:
           disc=$(gh api "repos/$REPO/actions/workflows/discover.yml/runs?status=in_progress" --jq .total_count)
           echo "scheduled runs in last 30 min: $n; waiting runs: $queued; discovery running: $disc"
           # Discovery starts the next collection itself when it finishes, so don't queue one behind it (it would cancel it).
-          if [ "$n" = "0" ] && [ "$queued" = "0" ] && [ "$disc" = "0" ]; then gh workflow run collect.yml -R "$REPO" --ref main; fi
+          # GitHub's own schedule is unreliable (it ran twice overnight on 26-27 Nov), so the chain never stands down for it:
+          # a queued run is the only signal that the next collection is already coming.
+          if [ "$queued" = "0" ] && [ "$disc" = "0" ]; then gh workflow run collect.yml -R "$REPO" --ref main; fi

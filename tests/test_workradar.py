@@ -101,6 +101,18 @@ class Collector(Base):
         self.assertIn("reappeared", kinds)
         self.assertEqual(self.job("fx:acme", 1)["listing_status"], "listed")
 
+    def test_06b_rotating_search_keeps_unseen_jobs_for_72h(self):
+        # A job board searched in batches of terms: a job missing from one batch is not gone.
+        self.db.execute("UPDATE sources SET connector='reed' WHERE source_id='fx:b'")
+        self.feeds = {"fx:b": [raw(1), raw(2, title="Scrum Master")]}
+        self.run_()
+        self.feeds["fx:b"] = [raw(2, title="Scrum Master")]
+        self.run_(T0 + dt.timedelta(hours=2))
+        self.assertEqual(self.job("fx:b", 1)["listing_status"], "listed")
+        self.run_(T0 + dt.timedelta(hours=73))
+        self.assertEqual(self.job("fx:b", 1)["listing_status"], "no_longer_listed")
+        self.assertEqual(self.job("fx:b", 2)["listing_status"], "listed")
+
     def test_07_daily_cap(self):
         self.db.execute("UPDATE sources SET daily_request_cap=1 WHERE source_id='fx:acme'")
         D.add_usage(self.db, "requests:fx:acme", 1)

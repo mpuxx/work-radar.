@@ -86,6 +86,21 @@ def _rate_str(r):
     return None if r["rate_min"] is None else f"{r['currency']} {r['rate_min']:g}-{r['rate_max']:g}/{r['pay_period']}"
 
 
+ROTATING = {"reed", "jooble"}   # searched a batch of terms per run, not the whole board
+ROTATING_KEEP_HOURS = 72        # a full sweep of the terms takes under a day; 72 h leaves room for a missed run
+
+
+def restore_rotating(db, at=None):
+    """Jobs that a rotating search wrongly marked as gone (before ROTATING existed) come back if seen in the last 72 h."""
+    at = at or D.now()
+    cutoff = D.iso(at - dt.timedelta(hours=ROTATING_KEEP_HOURS))
+    q = """UPDATE jobs SET listing_status='listed' WHERE listing_status='no_longer_listed' AND last_observed_at >= ?
+           AND source_id IN (SELECT source_id FROM sources WHERE connector IN (%s))""" % ",".join("?" * len(ROTATING))
+    with D.tx(db):
+        n = db.execute(q, (cutoff, *ROTATING)).rowcount
+    return n
+
+
 def import_jobs(db, src, raws, at=None):
     """Atomic per source. Returns (seen, new). Only called after a fully parsed, valid fetch."""
     at = at or D.now()
@@ -122,8 +137,15 @@ def import_jobs(db, src, raws, at=None):
             row.update(listing_status="listed", stale=0)
             db.execute("UPDATE jobs SET " + ",".join(f"{k}=?" for k in row) + " WHERE job_id=?", [*row.values(), row["job_id"]])
         # Jobs this source listed before but not now: no longer listed (not "closed": we can't know that).
-        gone = [r[0] for r in db.execute("SELECT job_id FROM jobs WHERE source_id=? AND listing_status='listed'", (src["source_id"],))
-                if r[0] not in seen_ids]
+        # Job-board searches rotate through the search terms, so each run sees only part of the board: a job missing from
+        # one run is normal there. Those jobs stay listed until nothing has seen them for ROTATING_KEEP_HOURS.
+        if src.get("connector") in ROTATING:
+            cutoff = D.iso(at - dt.timedelta(hours=ROTATING_KEEP_HOURS))
+            gone = [r[0] for r in db.execute("SELECT job_id FROM jobs WHERE source_id=? AND listing_status='listed' AND last_observed_at < ?",
+                                             (src["source_id"], cutoff)) if r[0] not in seen_ids]
+        else:
+            gone = [r[0] for r in db.execute("SELECT job_id FROM jobs WHERE source_id=? AND listing_status='listed'", (src["source_id"],))
+                    if r[0] not in seen_ids]
         for jid in gone:
             db.execute("UPDATE jobs SET listing_status='no_longer_listed', stale=0 WHERE job_id=?", (jid,))
             db.execute("INSERT INTO job_changes(job_id,at,kind,old_value,new_value) VALUES(?,?,?,?,?)",
@@ -169,6 +191,9 @@ def run(db, trigger="schedule", only=None, max_minutes=12, detail_cache_path=Non
     run_id = D.sha("run", D.iso(started), os.getpid(), time.time())
     # Restart recovery: close runs a crash left open.
     db.execute("UPDATE runs SET finished_at=started_at WHERE finished_at IS NULL")
+    restore_rotating(db, started)
+    for conn, cap in connectors.DAILY_CAP.items():   # caps follow the code, not the value stored when the source was added
+        db.execute("UPDATE sources SET daily_request_cap=? WHERE connector=?", (cap, conn))
     db.execute("INSERT INTO runs(run_id,kind,trigger,started_at,host) VALUES(?,?,?,?,?)",
                (run_id, "collect", trigger, D.iso(started), socket.gethostname()[:40]))
     due = due_sources(db, started, only)
