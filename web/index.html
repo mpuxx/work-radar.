@@ -152,6 +152,7 @@ details.maybe-box[open] > summary { margin-bottom: .75rem }
 .checks li::before { font-weight: 700; display: inline-block; width: 1.6rem }
 .checks li.pass::before { content: "✓" } .checks li.fail::before { content: "✗" } .checks li.unknown::before { content: "?" }
 .flag { background: var(--warn-bg); color: var(--warn-ink); border-radius: 10px; padding: .5rem .75rem }
+.jobpanel { border-top: 2px solid var(--line); padding-top: .75rem; display: grid; gap: .75rem }
 .advert { white-space: pre-line; overflow-wrap: anywhere; max-width: 65ch }
 details.src > summary { cursor: pointer; font-weight: 700; min-height: 44px; display: flex; align-items: center; text-decoration: underline; text-underline-offset: .18em }
 .inline { background: var(--paper); border: 2px solid var(--line); border-radius: 12px; padding: 1rem; display: grid; gap: .75rem }
@@ -231,6 +232,7 @@ footer .wrap { display: grid; gap: .5rem }
       <fieldset><legend>Contract type</legend><div class="opts" id="o-eng"></div></fieldset>
       <fieldset><legend>Where</legend><div class="opts" id="o-where"></div></fieldset>
       <fieldset><legend>Posted</legend><div class="opts" id="o-posted"></div></fieldset>
+      <fieldset><legend>Security clearance</legend><div class="opts" id="o-clr"></div></fieldset>
       <details class="more" id="more">
         <summary>More filters: day rate, IR35, whole job families</summary>
         <div>
@@ -352,20 +354,21 @@ const OPTS = {
   posted: [["1", "Last 24 hours"], ["3", "Last 3 days"], ["7", "Last 7 days"], ["any", "Any time"]],
   rate: [["any", "Any rate"], ["400", "£400 a day or more"], ["500", "£500 a day or more"], ["600", "£600 a day or more"]],
   ir35: [["any", "Any"], ["outside", "Outside IR35 only"]],
+  clr: [["any", "Any"], ["need", "Only roles that need SC or DV"], ["none", "Hide roles that need SC or DV"]],
 };
 const MULTI = { eng: true, fam: true };
 // Default: every contract role across all job families, newest first. Narrow it down from there.
-const DEFAULT = { q: "", fam: [], eng: ["day", "fixed", "temp"], where: "any", posted: "any", rate: "any", ir35: "any" };
+const DEFAULT = { q: "", fam: [], eng: ["day", "fixed", "temp"], where: "any", posted: "any", rate: "any", ir35: "any", clr: "any" };
 let F = Object.assign(clone(DEFAULT), store.get("search_v2", {}));
 if (!Array.isArray(F.fam)) F.fam = [];
 if (!Array.isArray(F.eng)) F.eng = clone(DEFAULT.eng);
-let J = [], BYID = {}, STATUS = null, SHOWN = 20;
+let J = [], BYID = {}, STATUS = null, SHOWN = 20, LASTEX = [];
 let saved = store.get("saved", []), searches = store.get("searches", []), diary = store.get("diary", []), reports = store.get("reports", []);
 const STAGES = ["Saved", "Applied", "Recruiter call", "Interview", "Offer", "Not for me"];
 
 function drawOptions() {
   OPTS.fam = FAMS.map(f => [f, f]);
-  for (const k of ["eng", "where", "posted", "rate", "ir35", "fam"]) {
+  for (const k of ["eng", "where", "posted", "clr", "rate", "ir35", "fam"]) {
     const type = MULTI[k] ? "checkbox" : "radio";
     $("#o-" + k).innerHTML = OPTS[k].map(([v, l]) => {
       const on = MULTI[k] ? F[k].includes(v) : F[k] === v;
@@ -378,7 +381,7 @@ function drawOptions() {
 function readForm() {
   const f = { q: $("#q").value.trim() };
   for (const k of ["eng", "fam"]) f[k] = $$(`input[name="f-${k}"]:checked`).map(i => i.value);
-  for (const k of ["where", "posted", "rate", "ir35"]) f[k] = ($(`input[name="f-${k}"]:checked`) || {}).value || DEFAULT[k];
+  for (const k of ["where", "posted", "clr", "rate", "ir35"]) f[k] = ($(`input[name="f-${k}"]:checked`) || {}).value || DEFAULT[k];
   return f;
 }
 
@@ -409,6 +412,10 @@ function rules(j, f) {
   }
   if (f.posted !== "any")
     r.push({ k: "posted", v: j.age === null ? "unknown" : j.age <= +f.posted ? "pass" : "fail", why: postedShort(j), miss: "Posting date" });
+  if (f.clr !== "any") {
+    const need = j.clr === "SC" || j.clr === "DV";
+    r.push({ k: "clr", v: (f.clr === "need") === need ? "pass" : "fail", why: need ? `Needs ${j.clr} clearance` : "SC or DV not mentioned" });
+  }
   if (f.rate !== "any")
     r.push({ k: "rate", v: j.unit === "day" ? ((j.rate_max ?? j.rate_min) >= +f.rate ? "pass" : "fail") : "unknown", why: `£${f.rate}+ a day`, miss: "Day rate" });
   if (f.ir35 === "outside")
@@ -449,6 +456,8 @@ function payCell(j) {
   const p = payText(j), ir = j.ir35 && j.ir35 !== "Not stated" ? j.ir35 : null;
   return `${p ? `<span class="pay">${esc(p)}</span>` : `<span class="unk">Pay not stated</span>`}${ir ? `. ${esc(ir)}` : `. <span class="unk">IR35 not stated</span>`}`;
 }
+const CLR = { SC: "SC clearance needed (Security Check)", DV: "DV clearance needed (Developed Vetting)", BPSS: "Basic check only (BPSS or similar)" };
+const clrText = j => CLR[j.clr] || "";
 function whoText(j) {
   if (j.employer && j.agency && j.employer !== j.agency) return `${esc(j.employer)}, through ${esc(j.agency)}`;
   if (j.employer) return esc(j.employer);
@@ -478,10 +487,12 @@ function card(j) {
       <dt>Who's hiring</dt><dd>${whoText(j)}</dd>
       <dt>Pay</dt><dd>${payCell(j)}</dd>
       <dt>Where and how</dt><dd>${whereText(j)}</dd>
+      ${j.clr ? `<dt>Clearance</dt><dd>${esc(clrText(j))}</dd>` : ""}
       <dt>Why it matches</dt><dd>${whyList(j, F)}</dd>
     </dl>
     <p class="found">Found on ${esc(foundText(j))}${j.also.length ? `. Also on ${esc(j.also.slice(0, 2).join(", "))}${j.also.length > 2 ? ` and ${j.also.length - 2} more` : ""}` : ""}.</p>
-    <div class="actions"><a class="btn primary" href="#job-${j.id}" data-open="${j.id}">View job<span class="vh">: ${esc(j.title)}</span></a>${saveBtn(j)}</div>
+    <div class="actions"><button type="button" class="btn primary" data-expand="${j.id}" aria-expanded="false" aria-controls="panel-${j.id}"><span class="lbl">View job</span><span class="vh">: ${esc(j.title)}</span></button>${saveBtn(j)}</div>
+    <div class="jobpanel" id="panel-${j.id}" hidden></div>
   </li>`;
 }
 
@@ -489,10 +500,11 @@ function card(j) {
 const lab = (k, v) => (OPTS[k].find(x => x[0] === v) || [])[1];
 function rulesText(f) {
   return [[f.q && `"${f.q}"`, ...f.fam].filter(Boolean).join(" or ") || "All 11 job families", f.eng.map(v => lab("eng", v)).join(" or ") || "No contract type picked",
-    lab("where", f.where), lab("posted", f.posted), f.rate !== "any" ? lab("rate", f.rate) : null, f.ir35 !== "any" ? "Outside IR35 only" : null].filter(Boolean).join(" · ");
+    lab("where", f.where), lab("posted", f.posted), f.clr !== "any" ? lab("clr", f.clr) : null, f.rate !== "any" ? lab("rate", f.rate) : null, f.ir35 !== "any" ? "Outside IR35 only" : null].filter(Boolean).join(" · ");
 }
 function renderResults() {
   const [ex, un] = split(F);
+  LASTEX = ex;
   const n = ex.length;
   $("#h-res").textContent = n === 0 ? "No jobs match all your rules" : `${n.toLocaleString("en-GB")} job${n === 1 ? "" : "s"} match${n === 1 ? "es" : ""} your rules`;
   $("#rules").textContent = "Your rules: " + rulesText(F);
@@ -506,7 +518,7 @@ function renderResults() {
   const em = $("#empty"); em.hidden = n > 0;
   if (!n) {
     const tries = [["posted", "7", "Last 7 days"], ["posted", "any", "Any posting date"], ["where", "hybrid", "Remote or hybrid"], ["where", "any", "Anywhere in the UK"],
-      ["rate", "any", "Any day rate"], ["ir35", "any", "Any IR35"]]
+      ["clr", "any", "Any clearance"], ["rate", "any", "Any day rate"], ["ir35", "any", "Any IR35"]]
       .filter(([k, v]) => F[k] !== v).map(([k, v, l]) => { const g = clone(F); g[k] = v; return [k, v, l, split(g)[0].length]; }).filter(x => x[3] > 0);
     const seen = new Set(), best = tries.filter(x => !seen.has(x[0]) && seen.add(x[0])).slice(0, 3);
     em.innerHTML = `<p>We checked ${J.length.toLocaleString("en-GB")} live roles. None meets every rule. We never sneak in roles that break your rules.</p>` +
@@ -529,11 +541,19 @@ $("#search").addEventListener("submit", e => {
 });
 $("#search").addEventListener("input", () => { if (J.length) $("#dirty").hidden = JSON.stringify(readForm()) === JSON.stringify(F); });
 $("#search").addEventListener("change", () => { if (J.length) $("#dirty").hidden = JSON.stringify(readForm()) === JSON.stringify(F); });
-$("#showmore").addEventListener("click", () => {
-  const first = SHOWN; SHOWN += 20; renderResults();
-  const c = $$("#exact .card")[first]; if (c) { const a = c.querySelector("a.btn"); a.focus(); }
-  say("20 more jobs shown.");
-});
+// Infinite scroll: more jobs load as you near the end of the list. The button stays for keyboard and screen reader users.
+function showMore(byKeyboard) {
+  const n = LASTEX.length; if (SHOWN >= n) return;
+  const first = SHOWN; SHOWN = Math.min(n, SHOWN + 20);
+  $("#exact").insertAdjacentHTML("beforeend", LASTEX.slice(first, SHOWN).map(card).join(""));
+  $("#morebox").hidden = n <= SHOWN;
+  $("#showmore").textContent = `Show ${Math.min(20, n - SHOWN)} more jobs (${n - SHOWN} left)`;
+  $("#uptodate").hidden = n > SHOWN;
+  if (byKeyboard) { const c = $$("#exact .card")[first]; if (c) c.querySelector(".btn").focus(); say(`${SHOWN - first} more jobs shown.`); }
+}
+$("#showmore").addEventListener("click", () => showMore(true));
+if ("IntersectionObserver" in window)
+  new IntersectionObserver(es => { if (es.some(e => e.isIntersecting) && current === "find") showMore(false); }, { rootMargin: "800px 0px" }).observe($("#morebox"));
 $("#savesearch").addEventListener("click", () => {
   const f = readForm();
   searches.push({ key: Date.now().toString(36), name: rulesText(f), f, at: Date.now(), seen: split(f)[0].map(j => j.id) });
@@ -565,6 +585,7 @@ function renderJob(id) {
       <dl class="facts">
         <dt>Pay</dt><dd>${payCell(j)}</dd>
         <dt>Where and how</dt><dd>${whereText(j)}</dd>
+        <dt>Security clearance</dt><dd>${j.clr ? esc(clrText(j)) : `<span class="unk">Not mentioned</span>`}</dd>
         <dt>Duration</dt><dd>${stated(j.duration)}</dd>
         <dt>Start</dt><dd>${stated(j.start)}</dd>
         <dt>Hours</dt><dd>${stated(j.hours)}</dd>
@@ -598,6 +619,39 @@ function renderJob(id) {
     $("#prov-list").innerHTML = p.length ? p.map(([k, v]) => `<dt>${esc(LABEL[k] || k)}</dt><dd>${v.method === "inferred" ? "Our best reading: " : "The advert says: "}"${esc(v.quote || "")}"</dd>`).join("")
       : `<dt>Labels</dt><dd>No quotes recorded for this job.</dd>`;
   });
+}
+// "View job" opens the job right here in the list: no new page, no new tab, your place in the list is kept.
+function panelHTML(j) {
+  const stated = v => v && v !== "Not stated" ? esc(v) : `<span class="unk">Not stated</span>`;
+  return `<dl class="five">
+      <dt>Security clearance</dt><dd>${j.clr ? esc(clrText(j)) : `<span class="unk">Not mentioned</span>`}</dd>
+      <dt>Duration</dt><dd>${stated(j.duration)}</dd>
+      <dt>Start</dt><dd>${stated(j.start)}</dd>
+      <dt>Hours</dt><dd>${stated(j.hours)}</dd>
+      <dt>Posted</dt><dd>${esc(postedShort(j))}. We first found it ${esc(ukDate(j.first_detected))}.</dd>
+    </dl>
+    ${j.flags.length ? `<p class="flag"><b>Check before you apply:</b> ${esc(j.flags.join(". "))}.</p>` : ""}
+    <h4 id="ad-h-${j.id}">The advert</h4>
+    <div class="advert" aria-labelledby="ad-h-${j.id}">Loading the advert…</div>
+    <div class="actions"><a class="btn primary" href="${esc(j.url)}" target="_blank" rel="noopener">Apply on ${esc(j.sourceName)}<span class="vh"> (opens in a new tab)</span> ↗</a>
+      <button type="button" class="btn quiet" data-collapse="${j.id}">Close job<span class="vh">: ${esc(j.title)}</span></button>
+      <a class="btn quiet" href="#job-${j.id}" data-open="${j.id}">More: diary, similar jobs<span class="vh"> for ${esc(j.title)}</span></a></div>`;
+}
+function toggleJob(id, open) {
+  const j = BYID[id], btn = $(`[data-expand="${id}"]`), panel = $("#panel-" + id); if (!j || !btn || !panel) return;
+  if (open === undefined) open = btn.getAttribute("aria-expanded") !== "true";
+  btn.setAttribute("aria-expanded", String(open)); btn.querySelector(".lbl").textContent = open ? "Hide job" : "View job";
+  panel.hidden = !open;
+  if (!open) { panel.innerHTML = ""; return; }
+  store.set("last_job", id);
+  panel.innerHTML = panelHTML(j);
+  details(id).then(d => {
+    const ad = panel.querySelector(".advert"); if (!ad) return;
+    const text = d.description || "";
+    ad.textContent = text || "We don't have the advert text for this job yet. We usually add it within a few hours.";
+    if (text && text.length < 600) ad.insertAdjacentHTML("afterend", `<p class="note muted">This is the summary ${esc(j.sourceName)} publishes. The full text usually appears within a few hours.</p>`);
+  });
+  say("Job details opened below.");
 }
 function diaryForm(j) {
   const d = new Date(Date.now() + 2 * 864e5).toISOString().slice(0, 10);
@@ -679,7 +733,7 @@ function route(first) {
   if (v === "find") {
     renderResults();
     const back = store.get("last_job", null), c = back && document.getElementById("card-" + back);
-    if (current === "job" && c) { c.querySelector("a.btn").focus({ preventScroll: true }); c.scrollIntoView({ block: "center" }); }
+    if (current === "job" && c) { c.querySelector(".btn").focus({ preventScroll: true }); c.scrollIntoView({ block: "center" }); }
     else if (first) scrollTo(0, store.get("scroll", 0));
     else scrollTo(0, 0);
   } else {
@@ -697,6 +751,8 @@ document.addEventListener("click", e => {
   const b = e.target.closest("button, a[data-open]"); if (!b) return;
   const d = b.dataset;
   if (d.open) store.set("last_job", d.open);
+  if (d.expand) toggleJob(d.expand);
+  if (d.collapse) { toggleJob(d.collapse, false); const c = $("#card-" + d.collapse); if (c) { c.scrollIntoView({ block: "nearest" }); $(`[data-expand="${d.collapse}"]`).focus({ preventScroll: true }); } }
   if (d.save) {
     const j = BYID[d.save];
     if (isSaved(j.id)) saved = saved.filter(s => s.id !== j.id); else saved.push(Object.assign(snap(j), { stage: "Saved", at: Date.now() }));
@@ -749,7 +805,7 @@ function adapt(x, src) {
   const s = src[x.source_id] || {};
   return { id: x.job_id, title: x.title || "Untitled role", employer: x.employer_name, agency: x.agency_name, location: x.location || "",
     url: x.apply_url || x.job_url, family: x.family, engagement: x.engagement || "Not stated", hours: x.hours, duration: x.duration, start: x.start,
-    rate_min: x.rate_min, rate_max: x.rate_max, unit: x.currency === "GBP" ? x.pay_period : null, ir35: x.ir35 || "Not stated",
+    rate_min: x.rate_min, rate_max: x.rate_max, unit: x.currency === "GBP" ? x.pay_period : null, ir35: x.ir35 || "Not stated", clr: x.clearance || "",
     attendance: x.attendance || "Not stated", age: x.published_at ? Math.max(0, Math.floor((Date.now() - new Date(x.published_at)) / 864e5)) : null,
     first_detected: x.first_detected_at, dup: x.dup_group, also: [], when: x.published_at || x.first_detected_at || "",
     sourceName: s.org_kind === "job_board" ? s.org_name : (s.org_name || "the employer's site"), kind: s.org_kind, orgName: s.org_name || "the employer",

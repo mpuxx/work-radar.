@@ -256,5 +256,16 @@ class Links(unittest.TestCase):
         self.assertEqual(http._ascii_url("https://ex.com/jobs/ux\u30fbdesigner?q=\u00e9"), "https://ex.com/jobs/ux%E3%83%BBdesigner?q=%C3%A9")
 
 
+class Clearance(unittest.TestCase):
+    def test_22_security_clearance_tag(self):
+        from workradar.extract import clearance as c
+        self.assertEqual(c("Business Analyst (SC Cleared)", ""), "SC")
+        self.assertEqual(c("BA", "Candidates must hold active SC clearance."), "SC")
+        self.assertEqual(c("BA", "You must be eligible for DV security clearance."), "DV")
+        self.assertEqual(c("BA", "SC or above is required; DV is a bonus."), "SC")
+        self.assertEqual(c("BA", "BPSS checks apply."), "BPSS")
+        self.assertEqual(c("BA", "Describe the scope of work and discuss options."), "")
+
+
 if __name__ == "__main__":
     unittest.main()

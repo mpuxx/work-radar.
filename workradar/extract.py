@@ -248,6 +248,28 @@ class Labeller:
         return "Unknown"
 
 
+# Security clearance asked for in the advert. Checked strongest first, so "SC or DV" counts as DV-level only when DV is required.
+_DV = re.compile(r"\b(e?DV)[ -]?(clear(ed|ance)|vetted|vetting|level|security)\b|\bdeveloped vetting\b|\b(active|current|hold|holding|existing|live|full|require[sd]?|need) (e?DV)\b|\bDV[ -]?(cleared|clearance)\b")
+_DV_OR = re.compile(r"\b(SC|security check)\s*(or|/)\s*(above|DV|higher)\b|\bSC\s*\(?or above\)?|\bminimum (of )?SC\b", re.I)
+_SC = re.compile(r"\bSC[ -]?(clear(ed|ance)?|vetted|vetting|level|eligible|eligibility|security)\b|\bsecurity check(ed)? \(?SC\)?|\bsecurity check (clearance|vetting|level)\b|"
+                 r"\b(active|current|hold|holding|existing|live|valid|obtain|require[sd]?|need|eligible for|able to (gain|obtain|get)) SC\b|\bSC\b(?=[^.\n]{0,25}\bclearance)")
+_BPSS = re.compile(r"\bBPSS\b|\bbaseline personnel security\b|\bNPPV|\bCTC (clear|vett|level)", re.I)
+
+
+def clearance(title, text):
+    """'DV', 'SC', 'BPSS' or '' (none mentioned). Case matters for SC and DV so ordinary words never match."""
+    t = f"{title or ''}\n{text or ''}"
+    if _DV.search(t) and not _DV_OR.search(t):
+        return "DV"
+    if _SC.search(t) or _DV_OR.search(t) or re.search(r"\bSC\b", title or ""):
+        return "SC"
+    if re.search(r"\bDV\b", title or ""):
+        return "DV"
+    if _BPSS.search(t):
+        return "BPSS"
+    return ""
+
+
 def label(raw):
     L = Labeller(raw)
     out = dict(engagement=L.engagement(), hours=L.hours(), ir35=L.ir35(), duration=L.duration(), start=L.start(),
