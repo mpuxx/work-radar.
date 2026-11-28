@@ -43,6 +43,8 @@ jobs:
         run: |
           mkdir -p state
           if git fetch --depth 1 origin state 2>/dev/null; then git --work-tree=state checkout origin/state -- . || true; fi
+          # State is stored gzipped so it stays far below GitHub's 100 MB file limit
+          for g in state/*.gz; do if [ -e "$g" ]; then gunzip -f "$g"; fi; done
           ls -la state
       - name: First run seeds the registry and the test account
         run: |
@@ -55,6 +57,8 @@ jobs:
         run: |
           cd state
           cp ../SOURCE_REGISTRY.csv . 2>/dev/null || true
+          for big in workradar.sqlite3 reed_details.json; do if [ -f "$big" ]; then gzip -f "$big"; fi; done
+          ls -la
           git init -q -b state && git add -A
           git -c user.name="work-radar bot" -c user.email="actions@users.noreply.github.com" commit -qm "state $(date -u +%FT%TZ)"
           git push -qf "https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}.git" state:state
