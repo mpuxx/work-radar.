@@ -11,7 +11,15 @@
 <script>
 /* Apply text settings before the page draws, so nothing jumps. */
 try { const t = JSON.parse(localStorage.getItem("wr_text")) || {}; for (const k of ["size", "spacing", "font"]) if (t[k]) document.documentElement.dataset[k] = t[k]; } catch (e) {}
+/* A/B design test. ?v=a or ?v=b picks a design (preview links, never counted). Otherwise each visitor gets one at random and keeps it. See ab.js. */
+(() => { let ab = null; const q = (location.search.match(/[?&]v=([ab])(?:&|$)/) || [])[1];
+  try { ab = JSON.parse(localStorage.getItem("wr_ab")); } catch (e) {}
+  if (q) ab = { v: q, how: "link" }; else if (!ab || !/^[ab]$/.test(ab.v)) ab = { v: Math.random() < .5 ? "a" : "b", how: "random" };
+  try { localStorage.setItem("wr_ab", JSON.stringify(ab)); } catch (e) {}
+  document.documentElement.dataset.v = ab.v; window.WR_AB = ab; })();
 </script>
+<link rel="stylesheet" href="variant-b.css">
+<script src="ab.js" defer></script>
 <style>
 /* One column. Warm white, charcoal, one accent. Calm controls. Everything sized in rem so text settings and zoom scale it all. */
 :root {
@@ -479,7 +487,35 @@ function foundText(j) {
   if (j.kind === "agency") return `${pos(j.orgName)} own site`;
   return j.sourceName;
 }
+const isB = () => document.documentElement.dataset.v === "b";
+const CHEV = `<svg class="chev" aria-hidden="true" focusable="false" viewBox="0 0 24 24" width="20" height="20"><path d="M6 9l6 6 6-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square"/></svg>`;
+function whereShort(j) {
+  const w = j.attendance;
+  return w === "Remote" ? "Remote" : w.startsWith("Hybrid, ") ? "Hybrid, " + w.slice(8) : w === "Hybrid" ? "Hybrid" : w === "On-site" ? "In the office" : null;
+}
+function cardB(j) {
+  const maybe = verdict(rules(j, F)) === "unknown", p = payText(j), ir = j.ir35 && j.ir35 !== "Not stated" ? j.ir35 : null;
+  const eng = ENG[j.engagement] ? j.engagement.replace(" employment", "") : null, ws = whereShort(j);
+  const fact = (k, v, miss) => `<li><span class="k">${k}</span> ${v ? esc(v) : `<span class="unk">${miss}</span>`}</li>`;
+  return `<li class="card cb${maybe ? " maybe" : ""}" id="card-${j.id}">
+    <h3>${esc(j.title)}</h3>
+    <p class="by">${esc(postedShort(j))}, by ${whoText(j)}</p>
+    <ul class="facts4">
+      ${fact("Pay", p ? p + (ir ? ", " + ir : "") : null, "Pay not stated")}
+      ${fact("Type", eng, "Contract type not stated")}
+      ${fact("Place", town(j), "Place not stated")}
+      ${fact("Mode", ws, "Office days not stated")}
+    </ul>
+    ${j.clr ? `<p class="clr">${esc(clrText(j))}</p>` : ""}
+    <div class="cardfoot">
+      <button type="button" class="seemore" data-expand="${j.id}" data-off="See more" data-on="See less" aria-expanded="false" aria-controls="panel-${j.id}"><span class="lbl">See more</span><span class="vh">: ${esc(j.title)}</span>${CHEV}</button>
+      <span class="actions">${saveBtn(j)}<a class="btn primary" href="${esc(j.url)}" target="_blank" rel="noopener" data-apply="${j.id}">Apply<span class="vh">: ${esc(j.title)} on ${esc(j.sourceName)} (opens in a new tab)</span></a></span>
+    </div>
+    <div class="jobpanel" id="panel-${j.id}" hidden></div>
+  </li>`;
+}
 function card(j) {
+  if (isB()) return cardB(j);
   const maybe = verdict(rules(j, F)) === "unknown";
   return `<li class="card${maybe ? " maybe" : ""}" id="card-${j.id}">
     <h3>${esc(j.title)}</h3>
@@ -549,7 +585,7 @@ function showMore(byKeyboard) {
   $("#morebox").hidden = n <= SHOWN;
   $("#showmore").textContent = `Show ${Math.min(20, n - SHOWN)} more jobs (${n - SHOWN} left)`;
   $("#uptodate").hidden = n > SHOWN;
-  if (byKeyboard) { const c = $$("#exact .card")[first]; if (c) c.querySelector(".btn").focus(); say(`${SHOWN - first} more jobs shown.`); }
+  if (byKeyboard) { const c = $$("#exact .card")[first]; if (c) c.querySelector("[data-expand]").focus(); say(`${SHOWN - first} more jobs shown.`); }
 }
 $("#showmore").addEventListener("click", () => showMore(true));
 if ("IntersectionObserver" in window)
@@ -598,7 +634,7 @@ function renderJob(id) {
     <section class="view" aria-labelledby="h-ad"><h2 id="h-ad" tabindex="-1">The advert</h2><p class="note muted" id="ad-note" hidden></p><div class="advert" id="advert">Loading the advert…</div></section>
     <section class="box" aria-labelledby="h-apply"><h2 id="h-apply">Ready to apply?</h2>
       <p>Applications go through ${esc(j.sourceName)}, so the recruiter gets your application directly.</p>
-      <div class="actions"><a class="btn primary big" href="${esc(j.url)}" target="_blank" rel="noopener">Apply on ${esc(j.sourceName)}<span class="vh"> (opens in a new tab)</span> ↗</a></div></section>
+      <div class="actions"><a class="btn primary big" href="${esc(j.url)}" target="_blank" rel="noopener" data-apply="${j.id}">Apply on ${esc(j.sourceName)}<span class="vh"> (opens in a new tab)</span> ↗</a></div></section>
     <details class="src" id="prov"><summary>Where each label came from</summary><dl class="facts" id="prov-list"><dt>Loading</dt><dd>…</dd></dl></details>
     <section class="box" aria-labelledby="h-more"><h2 id="h-more">More you can do</h2>
       <div class="actions">
@@ -633,14 +669,14 @@ function panelHTML(j) {
     ${j.flags.length ? `<p class="flag"><b>Check before you apply:</b> ${esc(j.flags.join(". "))}.</p>` : ""}
     <h4 id="ad-h-${j.id}">The advert</h4>
     <div class="advert" aria-labelledby="ad-h-${j.id}">Loading the advert…</div>
-    <div class="actions"><a class="btn primary" href="${esc(j.url)}" target="_blank" rel="noopener">Apply on ${esc(j.sourceName)}<span class="vh"> (opens in a new tab)</span> ↗</a>
+    <div class="actions"><a class="btn primary" href="${esc(j.url)}" target="_blank" rel="noopener" data-apply="${j.id}">Apply on ${esc(j.sourceName)}<span class="vh"> (opens in a new tab)</span> ↗</a>
       <button type="button" class="btn quiet" data-collapse="${j.id}">Close job<span class="vh">: ${esc(j.title)}</span></button>
       <a class="btn quiet" href="#job-${j.id}" data-open="${j.id}">More: diary, similar jobs<span class="vh"> for ${esc(j.title)}</span></a></div>`;
 }
 function toggleJob(id, open) {
   const j = BYID[id], btn = $(`[data-expand="${id}"]`), panel = $("#panel-" + id); if (!j || !btn || !panel) return;
   if (open === undefined) open = btn.getAttribute("aria-expanded") !== "true";
-  btn.setAttribute("aria-expanded", String(open)); btn.querySelector(".lbl").textContent = open ? "Hide job" : "View job";
+  btn.setAttribute("aria-expanded", String(open)); btn.querySelector(".lbl").textContent = open ? (btn.dataset.on || "Hide job") : (btn.dataset.off || "View job");
   panel.hidden = !open;
   if (!open) { panel.innerHTML = ""; return; }
   store.set("last_job", id);
@@ -733,7 +769,7 @@ function route(first) {
   if (v === "find") {
     renderResults();
     const back = store.get("last_job", null), c = back && document.getElementById("card-" + back);
-    if (current === "job" && c) { c.querySelector(".btn").focus({ preventScroll: true }); c.scrollIntoView({ block: "center" }); }
+    if (current === "job" && c) { c.querySelector("[data-expand]").focus({ preventScroll: true }); c.scrollIntoView({ block: "center" }); }
     else if (first) scrollTo(0, store.get("scroll", 0));
     else scrollTo(0, 0);
   } else {
